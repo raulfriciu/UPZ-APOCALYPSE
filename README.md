@@ -12,5 +12,11 @@ Funciones
 
 -	PUT: Actualizar usuario-NO OK
 
+Implementa login en web
+
+Funciones 
+
+-	POST: Login usuario-OK
+
 
 
