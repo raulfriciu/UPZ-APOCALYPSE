@@ -3,6 +3,8 @@ package edu.upc.dsa.services;
 
 import edu.upc.dsa.GameManager;
 import edu.upc.dsa.GameManagerImpl;
+import edu.upc.dsa.exception.EmailUsedException;
+import edu.upc.dsa.models.Credenciales;
 import edu.upc.dsa.models.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,74 +15,82 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Api(value = "/game", description = "Endpoint to Game Service")
 @Path("/game")
 public class GameService {
-
     private GameManager gm;
 
-    public GameService() {
+    public GameService() throws EmailUsedException {
         this.gm = GameManagerImpl.getInstance();
-        if (gm.size()==0) {
-            this.gm.addUser("Juan","juan356@gmail.com", "pWmJ85");
-            this.gm.addUser("Pedro","pedritoperales@yahoo.com" ,"PLANQE77777DFjfhhh");
-            this.gm.addUser("Antonio", "antonio5perez@hotmail.com","85difhhfffff");
+        if (gm.findAll().size()==0) {
+            this.gm.registrarUser(new User("Juan","juan356@gmail.com", "pWmJ85"));
+            this.gm.registrarUser(new User("Pedro","pedritoperales@yahoo.com" ,"PLANQE77777DFjfhhh"));
+            this.gm.registrarUser(new User("Antonio", "antonio5perez@hotmail.com","85difhhfffff"));
         }
     }
 
-    @GET
-    @ApiOperation(value = "get all users", notes = "asdasd")
+    @POST
+    @ApiOperation(value = "Registrar usuario", notes = "Register a new user")
     @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful", response = User.class, responseContainer="List"),
+            @ApiResponse(code = 201, message = "User successfully registered", response = User.class),
+            @ApiResponse(code = 404, message = "This email address is already in use"),
+            @ApiResponse(code = 500, message = "Empty credentials")
     })
-    @Path("/")
+    @Path("/usuarios/register")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response Register(User user) throws EmailUsedException {
+        if (user.getName().equals("")  || user.getEmail().equals("") || user.getPassword().equals("")) return Response.status(500).entity(user).build();
+        try{
+            this.gm.registrarUser(new User(user.getName(), user.getEmail(), user.getPassword()));
+            return Response.status(201).entity(user).build();
+        }
+        catch (EmailUsedException e){
+            return Response.status(222).entity(user).build();
+        }
+
+    }
+
+    @GET
+    @ApiOperation(value = "Listado usuarios", notes = "asdasd")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful", response = User.class, responseContainer = "List"),
+    })
+    @Path("/usuarios/lUsuarios")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUsers() {
 
         List<User> users = this.gm.findAll();
 
         GenericEntity<List<User>> entity = new GenericEntity<List<User>>(users) {};
-        return Response.status(201).entity(entity).build()  ;
+        return Response.status(201).entity(entity).build();
 
-    }
-
-    @GET
-    @ApiOperation(value = "get a User", notes = "asdasd")
-    @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful", response = User.class),
-            @ApiResponse(code = 404, message = "User not found")
-    })
-    @Path("/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getUser(@PathParam("id") String id) {
-        User t = this.gm.getUser(id);
-        if (t == null) return Response.status(404).build();
-        else  return Response.status(201).entity(t).build();
     }
 
     @DELETE
-    @ApiOperation(value = "delete a User", notes = "asdasd")
+    @ApiOperation(value = "Eliminar usuario", notes = "asdasd")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful"),
-            @ApiResponse(code = 404, message = "User not found")
+            @ApiResponse(code = 500, message = "User not found")
     })
-    @Path("/{id}")
-    public Response deleteUser(@PathParam("id") String id) {
-        User t = this.gm.getUser(id);
-        if (t == null) return Response.status(404).build();
-        else this.gm.deleteUser(id);
+    @Path("/usuarios/delUser/{name}&{password}")
+    public Response deleteUser(@PathParam("name") String name, @PathParam("password") String password) {
+        User t = this.gm.getUser(name, password);
+        if (t == null) return Response.status(500).build();
+        else this.gm.deleteUser(name, password);
         return Response.status(201).build();
     }
 
     @PUT
-    @ApiOperation(value = "update a User", notes = "asdasd")
+    @ApiOperation(value = "Actualizar usuario", notes = "asdasd")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful"),
             @ApiResponse(code = 404, message = "User not found")
     })
-    @Path("/")
+    @Path("/usuarios/actualizarUsuario/{email}/{newPassword}/{newName}/{newEmail}")
     public Response updateUser(User user) {
 
         User t = this.gm.updateUser(user);
@@ -88,23 +98,6 @@ public class GameService {
         if (t == null) return Response.status(404).build();
 
         return Response.status(201).build();
-    }
-
-    @POST
-    @ApiOperation(value = "create a new User", notes = "asdasd")
-    @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful", response= User.class),
-            @ApiResponse(code = 500, message = "Validation Error")
-
-    })
-
-    @Path("/")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response newTrack(User user) {
-
-        if (user.getName()==null || user.getEmail()==null ||user.getPassword()==null)  return Response.status(500).entity(user).build();
-        this.gm.addUser(user);
-        return Response.status(201).entity(user).build();
     }
 
 }

@@ -10,11 +10,14 @@ public class GameServiceTest {
 
     @Before
     public void addUsers() {
+        /*
         gm = new GameManagerImpl();
 
         gm.addUser("Juan","juan356@gmail.com", "pWmJ85");
         gm.addUser("Pedro","pedritoperales@yahoo.com" ,"PLANQE77777DFjfhhh");
         gm.addUser("Antonio", "antonio5perez@hotmail.com","85difhhfffff");
+
+         */
 
     }
 

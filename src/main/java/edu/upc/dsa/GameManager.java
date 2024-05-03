@@ -1,18 +1,20 @@
 package edu.upc.dsa;
 
+import edu.upc.dsa.exception.EmailUsedException;
+import edu.upc.dsa.models.Credenciales;
 import edu.upc.dsa.models.User;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface GameManager {
-
-
-    public User addUser(String name, String email, String password);
-    public User addUser(User t);
-    public User getUser(String id);
+    public User registrarUser(User user) throws EmailUsedException;
+    public void deleteUser(String name, String password);
+    public User getUser(String name, String password);
+    public User getUserByEmail(String email);
     public List<User> findAll();
-    public void deleteUser(String id);
     public User updateUser(User t);
+
 
     public int size();
 }

@@ -1,8 +1,16 @@
 # REST API Inicial de UPZ-APOCALYPSE
 
-Clase User: idUser, name, email y password
+Implementa registro en web-OK, a implementar ventana de inicio para web
 
-Implementa CRUD de User, funcionamiento correcto
+Funciones 
 
-A añadir la gestion de la botiga (clase necesaria), registrar y log in
+-	POST: Registrar usuario-OK
+
+-	GET: Listado usuarios-OK
+
+-	DELETE: Eliminar usuario-OK
+
+-	PUT: Actualizar usuario-NO OK
+
+
 

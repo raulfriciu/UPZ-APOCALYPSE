@@ -16,15 +16,16 @@ public class User {
 
     public User(String name, String email, String password) {
         this();
-        this.setName(name);
-        this.setEmail(email);
-        this.setPassword(password);
+        this.name=name;
+        this.email=email;
+        this.password=password;
 
     }
 
     public String getIdUser() {
-        return this.idUser;
+        return idUser;
     }
+
     public void setIdUser(String idUser) {
         this.idUser = idUser;
     }

@@ -1,21 +1,24 @@
 package edu.upc.dsa;
 
+import edu.upc.dsa.exception.EmailUsedException;
 import edu.upc.dsa.models.User;
-
-import java.util.LinkedList;
-import java.util.List;
 import org.apache.log4j.Logger;
 
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+
 public class GameManagerImpl implements GameManager {
-
     private static GameManager instance;
-    protected List<User> users;
     final static Logger logger = Logger.getLogger(GameManagerImpl.class);
+    private HashMap<String, User> HMUser;
+    protected List<User> users;
 
-    public GameManagerImpl() {
+    private  GameManagerImpl() {
         this.users = new LinkedList<>();
+        HMUser = new HashMap<String, User>();
     }
-
     public static GameManager getInstance() {
         if (instance==null) instance = new GameManagerImpl();
         return instance;
@@ -28,41 +31,49 @@ public class GameManagerImpl implements GameManager {
         return ret;
     }
 
-    public User addUser(User t) {
-        logger.info("new user " + t);
-
-        this.users.add (t);
-        logger.info("new user added");
-        return t;
+    //REGISTRAR USUARIO, datos del html, excepcion email
+    @Override
+    public User registrarUser(User user) throws EmailUsedException {
+        User u = HMUser.get(user.getEmail());
+        if (u == null)
+        {
+            this.users.add(user);
+            this.HMUser.put(user.getEmail(), user);
+            logger.info("User registered");
+            return user;
+        } else
+        {
+            logger.info("Email used");
+            throw new EmailUsedException();
+        }
     }
 
-    public User addUser(String name, String email, String password) {
-        return this.addUser(new User(name, email, password));
+    //LISTA USUARIOS, todos los usuarios
+    public List<User> findAll(){
+        return users;
     }
 
-    public User getUser(String id) {
-        logger.info("getUser("+id+")");
-
+    //GET USER, obten usuario por su nombre y constraseña
+    public User getUser(String name, String password) {
+        logger.info("getUser("+name+")");
+        logger.info("getUser("+password+")");
         for (User t: this.users) {
-            if (t.getIdUser().equals(id)) {
-                logger.info("getUser("+id+"): "+t);
+            if (t.getName().equals(name) & t.getPassword().equals(password)) {
+                logger.info("getUser("+name+"): "+t);
+                logger.info("getUser("+password+"): "+t);
 
                 return t;
             }
         }
 
-        logger.warn("not found " + id);
+        logger.warn("not found " + name );
         return null;
     }
 
-    public List<User> findAll() {
-        return this.users;
-    }
+    //DELETE USUARIO, elimina el usuario con el nombre y la contraseña recibidos
+    public void deleteUser(String name, String password) {
 
-    @Override
-    public void deleteUser(String id) {
-
-        User t = this.getUser(id);
+        User t = this.getUser(name, password);
         if (t==null) {
             logger.warn("not found " + t);
         }
@@ -72,9 +83,22 @@ public class GameManagerImpl implements GameManager {
 
     }
 
-    @Override
+    //GET USER BY EMAIL, obten usuario por email
+    public User getUserByEmail(String email) {
+        logger.info("getUserByEmail("+email+")");
+        for (User t: this.users) {
+            if (t.getName().equals(email)) {
+                logger.info("getUserByEmail("+email+"): "+t);
+                return t;
+            }
+        }
+        logger.warn("not found " + email );
+        return null;
+    }
+
+    //UPDATE USUARIO, recibe un usuario y actualiza sus datos
     public User updateUser(User p) {
-        User t = this.getUser(p.getIdUser());
+        User t = this.getUserByEmail(p.getEmail());
 
         if (t!=null) {
             logger.info(p+" rebut!!!! ");
