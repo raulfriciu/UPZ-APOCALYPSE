@@ -4,6 +4,8 @@ package edu.upc.dsa.services;
 import edu.upc.dsa.GameManager;
 import edu.upc.dsa.GameManagerImpl;
 import edu.upc.dsa.exception.EmailUsedException;
+import edu.upc.dsa.exception.IncorrectPasswordException;
+import edu.upc.dsa.exception.UserNotRegisteredException;
 import edu.upc.dsa.models.Credenciales;
 import edu.upc.dsa.models.User;
 import io.swagger.annotations.Api;
@@ -53,6 +55,27 @@ public class GameService {
         }
 
     }
+
+    @POST
+    @ApiOperation(value = "User login", notes = "log in using credentials")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful", response= User.class),
+            @ApiResponse(code = 404, message = "Incorrect credentials")
+
+    })
+
+    @Path("/usuarios/login")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response Login(Credenciales credenciales) throws IncorrectPasswordException, UserNotRegisteredException {
+        User user = this.gm.Login(credenciales.getEmail(), credenciales.getPassword());
+        if (user!= null) {
+            return Response.status(201).entity(user).build();
+        }
+        else {
+            return Response.status(404).entity(user).build();
+        }
+    }
+
 
     @GET
     @ApiOperation(value = "Listado usuarios", notes = "asdasd")

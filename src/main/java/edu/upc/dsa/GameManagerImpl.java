@@ -1,6 +1,8 @@
 package edu.upc.dsa;
 
 import edu.upc.dsa.exception.EmailUsedException;
+import edu.upc.dsa.exception.IncorrectPasswordException;
+import edu.upc.dsa.exception.UserNotRegisteredException;
 import edu.upc.dsa.models.User;
 import org.apache.log4j.Logger;
 
@@ -46,6 +48,22 @@ public class GameManagerImpl implements GameManager {
             logger.info("Email used");
             throw new EmailUsedException();
         }
+    }
+
+    //LOGIN USUARIO, datos del html, excepcion email
+    public User Login(String email, String password) throws UserNotRegisteredException, IncorrectPasswordException {
+        User userLogIn = HMUser.get(email);
+        if (userLogIn != null) {
+            if (!password.equals(userLogIn.getPassword())) {
+                logger.warn("Incorrect password");
+                throw new IncorrectPasswordException();
+            }
+            else {
+                logger.warn("User logged in");
+                return userLogIn;
+            }
+        } else
+            throw new UserNotRegisteredException();
     }
 
     //LISTA USUARIOS, todos los usuarios
