@@ -1,6 +1,6 @@
-# REST API Inicial de UPZ-APOCALYPSE
+# REST API de UPZ-APOCALYPSE
 
-Implementa registro en web-OK, a implementar ventana de inicio para web
+register.html, index.html (login), main.html
 
 Funciones 
 
@@ -12,11 +12,7 @@ Funciones
 
 -	PUT: Actualizar usuario-NO OK
 
-Implementa login en web
-
-Funciones 
-
 -	POST: Login usuario-OK
 
-
+Arreglos: contraseña oculta, confirmación de contraseña, redirección a main.html al hacer login
 
