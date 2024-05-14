@@ -14,5 +14,6 @@ Funciones
 
 -	POST: Login usuario-OK
 
-Arreglos: contraseña oculta, confirmación de contraseña, redirección a main.html al hacer login
+
+Nuevo: PRIMERA IMPLEMENTACION BBDD
 
