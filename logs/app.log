@@ -1,0 +1,17 @@
+2024-05-23 17:03:09 INFO  GameManagerImpl:60 - User registered
+2024-05-23 17:03:20 INFO  GameManagerImpl:87 - Error
+2024-05-23 17:03:20 WARN  GameManagerImpl:90 - Incorrect password
+2024-05-23 19:19:26 INFO  GameManagerImpl:60 - User registered
+2024-05-23 19:19:41 INFO  GameManagerImpl:87 - Error
+2024-05-23 19:19:41 WARN  GameManagerImpl:90 - Incorrect password
+2024-05-23 19:31:54 INFO  GameManagerImpl:73 - User registered
+2024-05-23 19:39:30 INFO  GameManagerImpl:93 - login(edu.upc.dsa.models.Credenciales@3baefb75)
+2024-05-23 19:39:30 WARN  GameManagerImpl:110 - User with email pere111@gmail.com not found
+2024-05-23 19:41:20 INFO  GameManagerImpl:82 - User registered
+2024-05-23 19:41:33 INFO  GameManagerImpl:93 - login(edu.upc.dsa.models.Credenciales@22dfb541)
+2024-05-23 19:41:33 INFO  GameManagerImpl:104 - Login successful for user: peret1
+2024-05-23 19:42:45 INFO  GameManagerImpl:93 - login(edu.upc.dsa.models.Credenciales@14e0ca29)
+2024-05-23 19:42:45 INFO  GameManagerImpl:104 - Login successful for user: peret1
+2024-05-23 19:57:03 INFO  GameManagerImpl:82 - User registered
+2024-05-23 19:57:12 INFO  GameManagerImpl:93 - login(edu.upc.dsa.models.Credenciales@53edee29)
+2024-05-23 19:57:12 INFO  GameManagerImpl:104 - Login successful for user: peret2

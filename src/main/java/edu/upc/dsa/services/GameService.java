@@ -38,6 +38,19 @@ public class GameService {
          */
     }
 
+    @GET
+    @ApiOperation(value = "get all Users", notes = "asdasd")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful", response = User.class, responseContainer="List"),
+    })
+    @Path("/usuarios")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUsuarios() {
+        List<User> Users = this.gm.getallusers();
+        GenericEntity<List<User>> entity = new GenericEntity<List<User>>(Users) {};
+        return Response.status(201).entity(entity).build();
+    }
+
     @POST
     @ApiOperation(value = "Registrar usuario", notes = "Register a new user")
     @ApiResponses(value = {
@@ -85,4 +98,45 @@ public class GameService {
         } catch (IncorrectPasswordException e) {
             return Response.status(401).build();
         }}
+
+    @DELETE
+    @ApiOperation(value = "delete user", notes = "asdasd")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful"),
+            @ApiResponse(code = 404, message = "User not found"),
+            @ApiResponse(code = 301, message = "Contraseña incorrecta")
+    })
+    @Path("/delete/{email}&{password}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response deleteUser(@PathParam("email") String email, @PathParam("password") String password) {
+        Credenciales credenciales = new Credenciales(email, password);
+        if (gm.getUser(email) == null) return Response.status(404).build();
+        if(this.gm.deleteUser(credenciales) == 1)
+            return Response.status(201).build();
+        //En caso de un valor inesperado, devolver código de Internal Server Error
+        return Response.status(500).build();
+    }
+    @PUT
+    @ApiOperation(value = "Actualizar usuario", notes = "Actualiza la información del usuario")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Actualización exitosa"),
+            @ApiResponse(code = 404, message = "Usuario no encontrado"),
+            @ApiResponse(code = 301, message = "Contraseña incorrecta"),
+            @ApiResponse(code = 5, message = "Correo electrónico ya en uso")
+    })
+    @Path("/actualizar/{mail}/{newPassword}/{newName}/{newMail}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response actualizarUsuario(
+            @PathParam("mail") String mail,
+            @PathParam("newPassword") String newPassword,
+            @PathParam("newName") String newName,
+            @PathParam("newMail") String newMail) {
+        User usuarioActualizado = this.gm.updateUser(mail, newName, newPassword, newMail);
+
+        if (usuarioActualizado != null) {
+            return Response.status(201).entity(usuarioActualizado).build(); // Retornar código 201 para indicar actualización exitosa
+        } else {
+            return Response.status(404).build(); // Retornar código 404 para indicar que el usuario no fue encontrado
+        }
+    }
 }

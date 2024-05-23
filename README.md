@@ -10,6 +10,10 @@ Funciones BBDD
 
 -	Login(get): Sí
 
+-	Borrar usuario: Si
+
+-	Actualizar usuario: Si
+
 -   Shop(findall): No
 
 
