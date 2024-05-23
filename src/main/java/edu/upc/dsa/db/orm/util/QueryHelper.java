@@ -36,6 +36,11 @@ public class QueryHelper {
 
         return sb.toString();
     }
+    public static String createQuerySELECTAll(Class theClass) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("SELECT * FROM ").append(theClass.getSimpleName());
+        return sb.toString();
+    }
 
 
     public static String createSelectFindAll(Class theClass, HashMap<String, String> params) {

@@ -13,15 +13,22 @@ import org.apache.log4j.Logger;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class GameManagerImpl implements GameManager {
+    private static Map<String, User> HMUser = new HashMap<>();
     private static GameManager instance;
     final static Logger logger = Logger.getLogger(GameManagerImpl.class);
-    private HashMap<String, User> HMUser;
-    protected List<User> users;
 
+    protected List<User> users;
+    protected List<User> logged;
+    public List<User> getUsers(){
+        return users;
+    }
     private  GameManagerImpl() {
         this.users = new LinkedList<>();
+        this.logged = new LinkedList<>();
+        HMUser = new HashMap<>();
         HMUser = new HashMap<String, User>();
     }
     public static GameManager getInstance() {
@@ -39,14 +46,17 @@ public class GameManagerImpl implements GameManager {
     //REGISTRAR USUARIO, datos del html, excepcion email
     @Override
     public User registrarUser(User user) throws EmailUsedException {
-        User u = HMUser.get(user.getEmail());
+        String email = user.getEmail().trim().toLowerCase();  // Normalizar el email
+        User u = HMUser.get(email);
+
         if (u == null)
         {
             String name= user.getName();
-            String email= user.getEmail();
+
             String password= user.getPassword();
             IUserDAO userDAO = new UserDAOImpl();
             userDAO.addUser(name, email,password );
+            HMUser.put(email, user);  // Añadir usuario al HashMap
             logger.info("User registered");
             return user;
         } else
@@ -80,6 +90,12 @@ public class GameManagerImpl implements GameManager {
         logger.warn("Incorrect password");
         throw new IncorrectPasswordException();
     }
+
+    public int UserNumber() {
+        return this.users.size();
+    }
+
+    public int LoggedNumber(){return this.logged.size();}
 /*
     //LISTA USUARIOS, todos los usuarios
     public List<User> findAll(){

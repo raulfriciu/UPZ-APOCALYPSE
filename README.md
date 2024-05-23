@@ -2,13 +2,15 @@
 
 register.html, index.html (login), main.html
 
+Falta HTML: shop
+
 Funciones BBDD
 
--	Registrar: Casi
+-	Registrar(save): Sí
 
--	Login: NO
+-	Login(get): Sí
 
--   Shop: NO
+-   Shop(findall): No
 
 
 

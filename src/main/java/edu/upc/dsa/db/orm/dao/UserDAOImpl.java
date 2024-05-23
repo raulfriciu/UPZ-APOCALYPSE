@@ -2,13 +2,20 @@ package edu.upc.dsa.db.orm.dao;
 
 import edu.upc.dsa.db.orm.FactorySession;
 import edu.upc.dsa.db.orm.Session;
-import edu.upc.dsa.models.*;
+import edu.upc.dsa.models.User;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
+import org.apache.log4j.Logger;
+
+import static edu.upc.dsa.db.orm.FactorySession.getConnection;
 
 public class UserDAOImpl implements IUserDAO {
-
+    final static Logger logger = Logger.getLogger(UserDAOImpl.class);
 
     public int addUser(String name, String email, String password) {
         Session session = null;
@@ -101,7 +108,7 @@ public class UserDAOImpl implements IUserDAO {
 
     }
 
-
+/*
     public List<User> getUser() {
         Session session = null;
         List<User> userList =null;
@@ -117,6 +124,8 @@ public class UserDAOImpl implements IUserDAO {
         }
         return userList;
     }
+
+ */
 
 
     public List<User> getEmployeeByDept(int deptID) {

@@ -118,6 +118,71 @@ public class SessionImpl implements Session {
     }
 
     public List<Object> findAll(Class theClass) {
+        String query = QueryHelper.createQuerySELECTAll(theClass);
+        PreparedStatement pstm =null;
+        ResultSet rs;
+        List<Object> list = new LinkedList<>();
+        try {
+            pstm = conn.prepareStatement(query);
+            pstm.executeQuery();
+            rs = pstm.getResultSet();
+
+            ResultSetMetaData metadata = rs.getMetaData();
+            int numberOfColumns = metadata.getColumnCount();
+
+            while (rs.next()){
+                Object o = theClass.newInstance();
+                for (int j=1; j<=numberOfColumns; j++){
+                    String columnName = metadata.getColumnName(j);
+                    ObjectHelper.setter(o, columnName, rs.getObject(j));
+                }
+                list.add(o);
+
+            }
+            return list;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<Object> getList(Class theClass, String key, Object value) {
+
+        String selectQuery =  QueryHelper.createQuerySELECT(theClass, key);
+        ResultSet rs;
+        PreparedStatement pstm;
+        List<Object> list = new LinkedList<>();
+
+        try {
+            pstm = conn.prepareStatement(selectQuery);
+            pstm.setObject(1, value);
+            rs = pstm.executeQuery();
+            ResultSetMetaData rsmd = rs.getMetaData();
+
+            int numberOfColumns = rsmd.getColumnCount();
+            while (rs.next()){
+                Object o = theClass.newInstance();
+                for (int i=1; i<=numberOfColumns; i++){
+                    String columnName = rsmd.getColumnName(i);
+                    ObjectHelper.setter(o, columnName, rs.getObject(i));
+                }
+                list.add(o);
+            }
+            return list;
+
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
         return null;
     }
 

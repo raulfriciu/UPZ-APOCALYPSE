@@ -19,11 +19,12 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.HashMap;
 import java.util.List;
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 @Api(value = "/game", description = "Endpoint to Game Service")
 @Path("/game")
 public class GameService {
+    final static Logger logger = Logger.getLogger(GameService.class);
     private GameManager gm;
 
     public GameService() throws EmailUsedException {
@@ -47,7 +48,11 @@ public class GameService {
     @Path("/usuarios/register")
     @Produces(MediaType.APPLICATION_JSON)
     public Response Register(User user) throws EmailUsedException {
-        if (user.getName().equals("") ||  user.getEmail().equals("") || user.getPassword().equals("")) return Response.status(500).entity(user).build();
+        if (user.getName() == null || user.getName().isEmpty() ||
+                user.getEmail() == null || user.getEmail().isEmpty() ||
+                user.getPassword() == null || user.getPassword().isEmpty()) {
+            return Response.status(500).entity(user).build();
+        }
         try{
             this.gm.registrarUser(new User(user.getName(), user.getEmail(), user.getPassword()));
             return Response.status(201).entity(user).build();

@@ -28,7 +28,11 @@
                         location.href = "/main.html"
                     })
                     .fail(function (xhr, err) {
-                        alert("No estás registrado");
+                        if (xhr.status === 401) { // Unauthorized
+                            alert("Contraseña incorrecta. Por favor, inténtalo de nuevo");
+                        } else {
+                            alert("No estás registrado");
+                        }
                         location.reload();
                     })
             });
