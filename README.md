@@ -2,18 +2,13 @@
 
 register.html, index.html (login), main.html
 
-Funciones 
+Funciones BBDD
 
--	POST: Registrar usuario-OK
+-	Registrar: Casi
 
--	GET: Listado usuarios-OK
+-	Login: NO
 
--	DELETE: Eliminar usuario-OK
-
--	PUT: Actualizar usuario-NO OK
-
--	POST: Login usuario-OK
+-   Shop: NO
 
 
-Nuevo: PRIMERA IMPLEMENTACION BBDD
 

@@ -28,11 +28,13 @@ public class GameService {
 
     public GameService() throws EmailUsedException {
         this.gm = GameManagerImpl.getInstance();
-        if (gm.findAll().size()==0) {
+        /*if (gm.findAll().size()==0) {
             this.gm.registrarUser(new User("Juan","juan356@gmail.com", "pWmJ85"));
             this.gm.registrarUser(new User("Pedro","pedritoperales@yahoo.com" ,"PLANQE77777DFjfhhh"));
             this.gm.registrarUser(new User("Antonio", "antonio5perez@hotmail.com","85difhhfffff"));
         }
+
+         */
     }
 
     @POST
@@ -45,13 +47,14 @@ public class GameService {
     @Path("/usuarios/register")
     @Produces(MediaType.APPLICATION_JSON)
     public Response Register(User user) throws EmailUsedException {
-        if (user.getName().equals("")  || user.getEmail().equals("") || user.getPassword().equals("")) return Response.status(500).entity(user).build();
+        if (user.getName().equals("") ||  user.getEmail().equals("") || user.getPassword().equals("")) return Response.status(500).entity(user).build();
         try{
             this.gm.registrarUser(new User(user.getName(), user.getEmail(), user.getPassword()));
             return Response.status(201).entity(user).build();
         }
         catch (EmailUsedException e){
-            return Response.status(222).entity(user).build();
+            e.printStackTrace();
+            return Response.status(404).entity(user).build();
         }
 
     }
@@ -60,67 +63,21 @@ public class GameService {
     @ApiOperation(value = "User login", notes = "log in using credentials")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful", response= User.class),
-            @ApiResponse(code = 404, message = "Incorrect credentials")
+            @ApiResponse(code = 404, message = "User not registered"),
+            @ApiResponse(code = 401, message = "Incorrect credentials")
 
     })
 
     @Path("/usuarios/login")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response Login(Credenciales credenciales) throws IncorrectPasswordException, UserNotRegisteredException {
-        User user = this.gm.Login(credenciales.getEmail(), credenciales.getPassword());
-        if (user!= null) {
-            return Response.status(201).entity(user).build();
-        }
-        else {
-            return Response.status(404).entity(user).build();
-        }
-    }
-
-
-    @GET
-    @ApiOperation(value = "Listado usuarios", notes = "asdasd")
-    @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful", response = User.class, responseContainer = "List"),
-    })
-    @Path("/usuarios/lUsuarios")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUsers() {
-
-        List<User> users = this.gm.findAll();
-
-        GenericEntity<List<User>> entity = new GenericEntity<List<User>>(users) {};
-        return Response.status(201).entity(entity).build();
-
-    }
-
-    @DELETE
-    @ApiOperation(value = "Eliminar usuario", notes = "asdasd")
-    @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful"),
-            @ApiResponse(code = 500, message = "User not found")
-    })
-    @Path("/usuarios/delUser/{name}&{password}")
-    public Response deleteUser(@PathParam("name") String name, @PathParam("password") String password) {
-        User t = this.gm.getUser(name, password);
-        if (t == null) return Response.status(500).build();
-        else this.gm.deleteUser(name, password);
-        return Response.status(201).build();
-    }
-
-    @PUT
-    @ApiOperation(value = "Actualizar usuario", notes = "asdasd")
-    @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful"),
-            @ApiResponse(code = 404, message = "User not found")
-    })
-    @Path("/usuarios/actualizarUsuario/{email}/{newPassword}/{newName}/{newEmail}")
-    public Response updateUser(User user) {
-
-        User t = this.gm.updateUser(user);
-
-        if (t == null) return Response.status(404).build();
-
-        return Response.status(201).build();
-    }
-
+    public Response Login(Credenciales credenciales) throws IncorrectPasswordException, UserNotRegisteredException {
+        try {
+            User user = this.gm.Login(credenciales);
+            return Response.status(201).entity(user).build();
+        } catch (UserNotRegisteredException e) {
+            return Response.status(404).build();
+        } catch (IncorrectPasswordException e) {
+            return Response.status(401).build();
+        }}
 }

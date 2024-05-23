@@ -10,8 +10,10 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface GameManager {
-    public User registrarUser(User user) throws EmailUsedException;
-    public User Login(String email, String password) throws UserNotRegisteredException, IncorrectPasswordException;
+    User registrarUser(User user) throws EmailUsedException;
+    //User login(String email, String password) throws UserNotRegisteredException, IncorrectPasswordException;
+    User Login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException;
+    /*
     public void deleteUser(String name, String password);
     public User getUser(String name, String password);
     public User getUserByEmail(String email);
@@ -19,5 +21,8 @@ public interface GameManager {
     public User updateUser(User t);
 
 
+     */
+
     public int size();
+
 }

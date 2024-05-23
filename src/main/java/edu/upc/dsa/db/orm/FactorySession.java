@@ -5,7 +5,6 @@ import edu.upc.dsa.db.DBUtils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class FactorySession {
 
@@ -27,16 +26,12 @@ public class FactorySession {
 
         Connection connection = null;
         try {
-            DriverManager.getConnection("jdbc:mariadb://"+host+":"+port+"/"+
+            connection=DriverManager.getConnection("jdbc:mariadb://"+host+":"+port+"/"+
                     db+"?user="+user+"&password="+pass);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         return connection;
-    }
-
-    public static Session openSession(String url, String user, String password) {
-        return null;
     }
 }

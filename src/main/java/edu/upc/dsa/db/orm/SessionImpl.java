@@ -6,6 +6,7 @@ import edu.upc.dsa.db.orm.util.QueryHelper;
 
 import java.sql.*;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -44,42 +45,72 @@ public class SessionImpl implements Session {
     }
 
     public void close() {
-
+        try {
+            this.conn.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    @Override
-    public Object get(Class theClass, Object ID) {
-        return null;
-    }
-
-    public Object get(Class theClass, int ID) {
-/*
-        String sql = QueryHelper.createQuerySELECT(theClass);
-
-        Object o = theClass.newInstance();
 
 
-        ResultSet res = null;
+    public Object get(Class theClass, String pk, Object value) {
+        String selectQuery  = QueryHelper.createQuerySELECT(theClass, pk);
+        ResultSet rs;
+        PreparedStatement pstm = null;
+        boolean empty = true;
 
-        ResultSetMetaData rsmd = res.getMetaData();
+        try {
+            pstm = conn.prepareStatement(selectQuery);
+            pstm.setObject(1, value); //son los ?
+            rs = pstm.executeQuery();
 
-        int numColumns = rsmd.getColumnCount();
-        int i=0;
+            ResultSetMetaData rsmd = rs.getMetaData();
 
-        while (i<numColumns) {
-            String key = rsmd.getColumnName(i);
-            String value = res.getObject(i);
+            int numberOfColumns = rsmd.getColumnCount();
 
-            ObjectHelper.setter(o, key, value);
+            Object o = theClass.newInstance();
 
+            Object valueColumn = null;
+            while (rs.next()){
+                for (int i=1; i<=numberOfColumns; i++){
+                    String columnName = rsmd.getColumnName(i);
+                    ObjectHelper.setter(o, columnName, rs.getObject(i));
+                    System.out.println(columnName);
+                    System.out.println(rs.getObject(i));
+                    valueColumn = rs.getObject(i);
+                    //if (valueColumn!=null) ObjectHelper.setter(o, columnName, rs.getObject(i));
+                }
+            }
+            return o;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
         }
 
-*/
         return null;
     }
 
-    public void update(Object object) {
+    public void update(Class theClass, String SET, String valueSET, String WHERE, String valueWHERE) {
+        String updateQuery = QueryHelper.createQueryUPDATE(theClass, SET, WHERE);
+        ResultSet rs;
+        PreparedStatement pstm;
 
+        try {
+            pstm = conn.prepareStatement(updateQuery);
+            pstm.setObject(1, valueSET);
+            pstm.setObject(2, valueWHERE);
+            pstm.executeQuery();
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void delete(Object object) {
@@ -91,21 +122,49 @@ public class SessionImpl implements Session {
     }
 
     public List<Object> findAll(Class theClass, HashMap params) {
-     /*   String theQuery = QueryHelper.createSelectFindAll(theClass, params);
+        String query = QueryHelper.createQuerySelectWithParams(theClass, params);
         PreparedStatement pstm = null;
-        pstm = conn.prepareStatement(theQuery);
 
-        int i=1;
-        for (Object value : params.values()) {
-            pstm.setObject(i++, value );
+        try {
+            pstm = conn.prepareStatement(query);
+
+
+            int i = 1;
+            for(Object v : params.values()){
+                pstm.setObject(i++, v);
+            }
+
+
+            pstm.executeQuery();
+
+            ResultSet rs = pstm.getResultSet();
+
+            ResultSetMetaData metadata = rs.getMetaData();
+            int numberOfColumns = metadata.getColumnCount();
+            List<Object> l = new LinkedList<>();
+
+
+            while (rs.next()){
+                Object o = theClass.newInstance();
+                for (int j=1; j<=numberOfColumns; j++){
+                    String columnName = metadata.getColumnName(j);
+                    ObjectHelper.setter(o, columnName, rs.getObject(j));
+                }
+                l.add(o);
+            }
+
+
+            return l;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
         }
-        //ResultSet rs = pstm.executeQuery();
 
 
-
-
-        return result;
-*/
         return null;
     }
 

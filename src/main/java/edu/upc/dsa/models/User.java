@@ -4,15 +4,21 @@ import edu.upc.dsa.util.RandomUtils;
 
 public class User {
 
-    String idUser;
+
     String name;
     String email;
     String password;
+
+    public static int getLastId() {
+        return lastId;
+    }
+
+
     static int lastId;
 
-    public User() {
-        this.idUser = RandomUtils.getId();
-    }
+
+
+    public User() {};
 
     public User(String name, String email, String password) {
         this();
@@ -22,13 +28,6 @@ public class User {
 
     }
 
-    public String getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(String idUser) {
-        this.idUser = idUser;
-    }
 
     public String getName() {
         return name;
@@ -52,7 +51,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [idUser="+ idUser +", name=" + name + ", email=" + email +", password=" + password +"]";
+        return "User [name=" + name + ", email=" + email +", password=" + password +"]";
     }
 
 }

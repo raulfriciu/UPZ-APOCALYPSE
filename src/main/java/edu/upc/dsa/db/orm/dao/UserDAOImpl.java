@@ -2,7 +2,7 @@ package edu.upc.dsa.db.orm.dao;
 
 import edu.upc.dsa.db.orm.FactorySession;
 import edu.upc.dsa.db.orm.Session;
-import edu.upc.dsa.db.orm.model.*;
+import edu.upc.dsa.models.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -34,7 +34,7 @@ public class UserDAOImpl implements IUserDAO {
         User user = null;
         try {
             session = FactorySession.openSession();
-            user = (User)session.get(User.class, userID);
+            user = (User)session.get(User.class, "id", userID);
         }
         catch (Exception e) {
             // LOG
@@ -46,7 +46,25 @@ public class UserDAOImpl implements IUserDAO {
         return user;
     }
 
+    public User getUserByEmail(String email) {
+        Session session = null;
+        User user = null;
+        try {
+            session = FactorySession.openSession();
+            user = (User)session.get(User.class, "email", email);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // LOG
+        }
+        finally {
+            session.close();
+        }
 
+        return user;
+    }
+
+/*
     public void updateUser(int employeeID, String name, String email, String password) {
         User user = this.getUser(employeeID);
         user.setName(name);
@@ -65,7 +83,7 @@ public class UserDAOImpl implements IUserDAO {
             session.close();
         }
     }
-
+ */
 
     public void deleteUser(int employeeID) {
         User user = this.getUser(employeeID);

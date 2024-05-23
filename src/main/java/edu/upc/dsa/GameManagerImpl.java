@@ -1,8 +1,11 @@
 package edu.upc.dsa;
 
+import edu.upc.dsa.db.orm.dao.IUserDAO;
+import edu.upc.dsa.db.orm.dao.UserDAOImpl;
 import edu.upc.dsa.exception.EmailUsedException;
 import edu.upc.dsa.exception.IncorrectPasswordException;
 import edu.upc.dsa.exception.UserNotRegisteredException;
+import edu.upc.dsa.models.Credenciales;
 import edu.upc.dsa.models.User;
 import org.apache.log4j.Logger;
 
@@ -39,33 +42,45 @@ public class GameManagerImpl implements GameManager {
         User u = HMUser.get(user.getEmail());
         if (u == null)
         {
-            this.users.add(user);
-            this.HMUser.put(user.getEmail(), user);
+            String name= user.getName();
+            String email= user.getEmail();
+            String password= user.getPassword();
+            IUserDAO userDAO = new UserDAOImpl();
+            userDAO.addUser(name, email,password );
             logger.info("User registered");
             return user;
         } else
         {
-            logger.info("Email used");
+            logger.info("This email is already being used");
             throw new EmailUsedException();
         }
     }
 
     //LOGIN USUARIO, datos del html, excepcion email
-    public User Login(String email, String password) throws UserNotRegisteredException, IncorrectPasswordException {
-        User userLogIn = HMUser.get(email);
-        if (userLogIn != null) {
-            if (!password.equals(userLogIn.getPassword())) {
-                logger.warn("Incorrect password");
-                throw new IncorrectPasswordException();
-            }
-            else {
-                logger.warn("User logged in");
+    public User Login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException {
+        try {
+            IUserDAO userDAO = new UserDAOImpl();
+            HashMap<String, String> credentialsHash = new HashMap<>();
+            credentialsHash.put("email", credenciales.getEmail());
+            credentialsHash.put("password", credenciales.getPassword());
+            User userLogIn = userDAO.getUserByEmail(credenciales.getEmail());
+            logger.info(userLogIn.getEmail());
+            logger.info(userLogIn.getPassword());
+            if (userLogIn.getPassword().equals(credenciales.getPassword())) {
+                logger.info("Succesful login " + credenciales.getEmail());
                 return userLogIn;
+            } else if (userLogIn.getEmail() == null) {
+                logger.info("User not registered");
+                throw new UserNotRegisteredException();
             }
-        } else
-            throw new UserNotRegisteredException();
-    }
+        } catch (Exception e) {
+            logger.info("Error");
+        }
 
+        logger.warn("Incorrect password");
+        throw new IncorrectPasswordException();
+    }
+/*
     //LISTA USUARIOS, todos los usuarios
     public List<User> findAll(){
         return users;
@@ -133,4 +148,6 @@ public class GameManagerImpl implements GameManager {
 
         return t;
     }
+
+ */
 }
