@@ -11,6 +11,7 @@ public interface IUserDAO {
     //public void updateUser(int employeeID, String name, String email, String password);
     public void deleteUser(int employeeID);
     public List <User> getEmployeeByDept(int deptId);
+    public List<Item> getItems();
 
     User getUserByEmail(String email);
 }

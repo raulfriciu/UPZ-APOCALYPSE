@@ -2,7 +2,7 @@
 
 register.html, index.html (login), main.html
 
-Falta HTML: shop
+Falta HTML: shop (en proceso de implementación del DAO)
 
 Funciones BBDD
 
@@ -14,7 +14,7 @@ Funciones BBDD
 
 -	Actualizar usuario: Si
 
--   Shop(findall): No
+-   Shop(findall): En proceso
 
 
 

@@ -127,6 +127,23 @@ public class UserDAOImpl implements IUserDAO {
 
  */
 
+    public List<Item> getItems() {
+
+        Session session = null;
+        List<Item> items=null;
+        try {
+            session = FactorySession.openSession();
+            items = session.findAll(User.class);
+        }
+        catch (Exception e) {
+            // LOG
+        }
+        finally {
+            session.close();
+        }
+        return items;
+    }
+
 
     public List<User> getEmployeeByDept(int deptID) {
 
@@ -166,5 +183,57 @@ public class UserDAOImpl implements IUserDAO {
 
         }
 */
+    public User buyItem (String item, String user){
+        Session session = null;
+        User user1 = null;
+        Item item1 = null;
+        boolean inposession = false;
+
+        try {
+            session = FactorySession.openSession();
+            user1 = (User)session.get(User.class, "NAME: ", user);
+            logger.info(user1.getName());
+            item1 = (Item) session.get(Item.class, "ITEM: ", item);
+            List<Inventory> list = new ArrayList<>();
+
+            if (user1.getMoney()>= item1.getPrice())
+            {
+                double balance = user1.getMoney()- item1.getPrice();
+                session.update(User.class, "MONEY", String.valueOf(balance),"NAME: ",user);
+                list = (List<Inventory>)session.getList(Inventory.class, "NAME: ", user);
+                int i=0;
+                while (i< list.size())
+                {
+                    if (list.get(i).getItem().equals(item))
+                    {
+                        inposession = true;
+                        int qty = list.get(i).getQuantity() +1;
+                        session.reupdate(Inventory.class, "QUANTITY", String.valueOf(qty),"USER: ",user, "ITEM", item);
+                    }
+                    i++;
+                }
+                if (inposession == false)
+                {
+                    session.save(new Inventory());
+                    session.reupdate(Inventory.class, "QUANTITY", String.valueOf(1),"USER: ",user, "ITEM: ", item);
+                }
+
+                user1= (User)session.get(User.class,"USER", user);
+
+            }
+            else
+            {
+                logger.info("Not enough money to buy item");
+
+            }
+        }
+        catch (Exception e) {
+
+        }
+        finally {
+            session.close();
+        }
+        return user1;
+    }
 
 }

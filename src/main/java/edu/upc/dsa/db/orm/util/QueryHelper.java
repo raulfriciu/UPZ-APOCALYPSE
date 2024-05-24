@@ -76,6 +76,29 @@ public class QueryHelper {
         return sb.toString();
     }
 
+    public static String createQueryREUPDATE(Class clase, String SET, String Where, String Where2) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("UPDATE ").append(clase.getSimpleName());
+        if (Objects.equals(SET, "PASSWORD")){
+            sb.append(" SET ").append(SET);
+            sb.append(" = MD5(?) ");
+            sb.append(" WHERE ");
+            sb.append(Where);
+            sb.append(" = ?");
+        }
+        else{
+            sb.append(" SET ").append(SET);
+            sb.append(" = ? ");
+            sb.append(" WHERE ");
+            sb.append(Where);
+            sb.append(" = ? ");
+            sb.append(" AND ");
+            sb.append(Where2);
+            sb.append(" = ?");
+        }
+        return sb.toString();
+    }
+
     public static String createQuerySelectWithParams(Class theClass, HashMap params) {
         StringBuffer sb = new StringBuffer();
         sb.append("SELECT * FROM ").append(theClass.getSimpleName());
