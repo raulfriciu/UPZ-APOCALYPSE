@@ -12,10 +12,10 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface GameManager {
+    //public int addUser(String name, String mail, String password);
     User registrarUser(User user) throws EmailUsedException;
     User Login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException;
     List<Item> Shop();
-
 
     /*
     public void deleteUser(String name, String password);
@@ -26,7 +26,6 @@ public interface GameManager {
 
 
      */
-
     public int size();
 
 }

@@ -44,6 +44,8 @@ public class GameService {
          */
     }
 
+
+
     @POST
     @ApiOperation(value = "Registrar usuario", notes = "Register a new user")
     @ApiResponses(value = {
@@ -122,5 +124,3 @@ public class GameService {
         }
     }
 }
-
-

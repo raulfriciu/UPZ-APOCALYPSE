@@ -8,16 +8,15 @@ import edu.upc.dsa.models.*;
 
 public interface IUserDAO {
 
-    int addUser (String name, String email, String password);
+    public int addUser (String name, String email, String password);
+    public User getUser(int userID);
+    //public void updateUser(int employeeID, String name, String email, String password);
+    public void deleteUser(int employeeID);
+    public User buyItem (String item, String user) throws MoneyException;
+    public List<Item> getItems();
 
-    User getUser(int userID);
-    List<Item> getItems();
-    User buyItem (String item, String user) throws MoneyException;
 
     User getUserByEmail(String email);
 
-    //public void updateUser(int employeeID, String name, String email, String password);
-
-    void deleteUser(int employeeID);
 
 }

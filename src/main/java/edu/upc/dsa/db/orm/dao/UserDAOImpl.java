@@ -112,8 +112,11 @@ public class UserDAOImpl implements IUserDAO {
         return items;
     }
 
+
+
     //COMPRA OBJETO, selecciona el item por el nombre, excepcion dinero insuficiente
     public User buyItem (String item, String user) throws MoneyException{
+
         Session session = null;
         User user1 = null;
         Item item1 = null;
@@ -163,7 +166,5 @@ public class UserDAOImpl implements IUserDAO {
         }
         return user1;
     }
-
-
 
 }

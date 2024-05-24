@@ -4,7 +4,6 @@ import edu.upc.dsa.util.RandomUtils;
 
 public class User {
 
-
     String name;
     String email;
     String password;
@@ -12,11 +11,7 @@ public class User {
     public static int getLastId() {
         return lastId;
     }
-
-
     static int lastId;
-
-
 
     public User() {};
 
@@ -26,9 +21,8 @@ public class User {
         this.email=email;
         this.password=password;
         this.money=500;
+
     }
-
-
     public String getName() {
         return name;
     }

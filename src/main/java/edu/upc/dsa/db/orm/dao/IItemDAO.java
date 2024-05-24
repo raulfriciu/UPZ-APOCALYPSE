@@ -10,3 +10,4 @@ public interface IItemDAO {
     Item getItemByName(String name);
 
 }
+
