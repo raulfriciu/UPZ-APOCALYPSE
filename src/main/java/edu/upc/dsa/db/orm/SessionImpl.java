@@ -113,6 +113,23 @@ public class SessionImpl implements Session {
         }
     }
 
+    public void reupdate(Class theClass, String SET, String valueSET, String WHERE, String valueWHERE, String WHERE2, String valueWHERE2) {
+        String updateQuery = QueryHelper.createQueryREUPDATE(theClass, SET, WHERE, WHERE2);
+        ResultSet rs;
+        PreparedStatement pstm;
+
+        try {
+            pstm = conn.prepareStatement(updateQuery);
+            pstm.setObject(1, valueSET);
+            pstm.setObject(2, valueWHERE);
+            pstm.setObject(3, valueWHERE2);
+            pstm.executeQuery();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void delete(Object object) {
 
     }

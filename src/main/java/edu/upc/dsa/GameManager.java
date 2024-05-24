@@ -4,6 +4,8 @@ import edu.upc.dsa.exception.IncorrectPasswordException;
 import edu.upc.dsa.exception.UserNotRegisteredException;
 import edu.upc.dsa.exception.EmailUsedException;
 import edu.upc.dsa.models.Credenciales;
+import edu.upc.dsa.models.Inventory;
+import edu.upc.dsa.models.Item;
 import edu.upc.dsa.models.User;
 
 import java.util.HashMap;
@@ -11,8 +13,10 @@ import java.util.List;
 
 public interface GameManager {
     User registrarUser(User user) throws EmailUsedException;
-    //User login(String email, String password) throws UserNotRegisteredException, IncorrectPasswordException;
     User Login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException;
+    List<Item> Shop();
+
+
     /*
     public void deleteUser(String name, String password);
     public User getUser(String name, String password);

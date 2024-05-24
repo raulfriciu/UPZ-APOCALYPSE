@@ -37,7 +37,7 @@
           <description value="Prueba" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="11.3" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />

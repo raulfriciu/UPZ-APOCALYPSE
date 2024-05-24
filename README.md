@@ -2,15 +2,19 @@
 
 register.html, index.html (login), main.html
 
-Falta HTML: shop
+Falta: Shop comprar, Registrar empty credentals y bug
 
 Funciones BBDD
 
--	Registrar(save): Sí
+- Registrar(save): Sí
 
--	Login(get): Sí
+- Login(get): Sí
 
--   Shop(findall): No
+- Borrar usuario: Si
+
+- Actualizar usuario: Si
+
+- Shop(findall): Sí
 
 
 

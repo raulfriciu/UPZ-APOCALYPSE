@@ -1,11 +1,15 @@
 package edu.upc.dsa;
 
+import edu.upc.dsa.db.orm.dao.IItemDAO;
 import edu.upc.dsa.db.orm.dao.IUserDAO;
+import edu.upc.dsa.db.orm.dao.ItemDAOImpl;
 import edu.upc.dsa.db.orm.dao.UserDAOImpl;
 import edu.upc.dsa.exception.EmailUsedException;
 import edu.upc.dsa.exception.IncorrectPasswordException;
 import edu.upc.dsa.exception.UserNotRegisteredException;
 import edu.upc.dsa.models.Credenciales;
+import edu.upc.dsa.models.Item;
+import edu.upc.dsa.models.Inventory;
 import edu.upc.dsa.models.User;
 import org.apache.log4j.Logger;
 
@@ -21,18 +25,23 @@ public class GameManagerImpl implements GameManager {
     final static Logger logger = Logger.getLogger(GameManagerImpl.class);
 
     protected List<User> users;
+    protected List<Item> items;
     protected List<User> logged;
-    public List<User> getUsers(){
+
+    public List<User> getUsers() {
         return users;
     }
-    private  GameManagerImpl() {
+
+    private GameManagerImpl() {
         this.users = new LinkedList<>();
+        this.items = new LinkedList<>();
         this.logged = new LinkedList<>();
         HMUser = new HashMap<>();
         HMUser = new HashMap<String, User>();
     }
+
     public static GameManager getInstance() {
-        if (instance==null) instance = new GameManagerImpl();
+        if (instance == null) instance = new GameManagerImpl();
         return instance;
     }
 
@@ -43,30 +52,28 @@ public class GameManagerImpl implements GameManager {
         return ret;
     }
 
-    //REGISTRAR USUARIO, datos del html, excepcion email
+    //REGISTRAR USUARIO, añade usuario al HashMap, excepcion email
     @Override
     public User registrarUser(User user) throws EmailUsedException {
-        String email = user.getEmail().trim().toLowerCase();  // Normalizar el email
+        String email = user.getEmail().trim().toLowerCase();  // Normaliza email
         User u = HMUser.get(email);
 
-        if (u == null)
-        {
-            String name= user.getName();
+        if (u == null) {
+            String name = user.getName();
 
-            String password= user.getPassword();
+            String password = user.getPassword();
             IUserDAO userDAO = new UserDAOImpl();
-            userDAO.addUser(name, email,password );
-            HMUser.put(email, user);  // Añadir usuario al HashMap
+            userDAO.addUser(name, email, password);
+            HMUser.put(email, user);
             logger.info("User registered");
             return user;
-        } else
-        {
+        } else {
             logger.info("This email is already being used");
             throw new EmailUsedException();
         }
     }
 
-    //LOGIN USUARIO, datos del html, excepcion email
+    //LOGIN USUARIO, login user sin credenciales OK, excepcion password y sin registrar
     public User Login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException {
         try {
             IUserDAO userDAO = new UserDAOImpl();
@@ -91,11 +98,16 @@ public class GameManagerImpl implements GameManager {
         throw new IncorrectPasswordException();
     }
 
-    public int UserNumber() {
-        return this.users.size();
+    //LISTA OBJETOS, selecciona lista de la database
+    public List<Item> Shop() {
+        IItemDAO itemDAO = new ItemDAOImpl();
+        List<Item> lItemDAO = itemDAO.getItems();
+        logger.info("Lista Objetos Correcta");
+        return lItemDAO;
     }
 
-    public int LoggedNumber(){return this.logged.size();}
+
+
 /*
     //LISTA USUARIOS, todos los usuarios
     public List<User> findAll(){

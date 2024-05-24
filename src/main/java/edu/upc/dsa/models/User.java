@@ -8,7 +8,7 @@ public class User {
     String name;
     String email;
     String password;
-
+    int money;
     public static int getLastId() {
         return lastId;
     }
@@ -25,7 +25,7 @@ public class User {
         this.name=name;
         this.email=email;
         this.password=password;
-
+        this.money=500;
     }
 
 
@@ -47,6 +47,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
     }
 
     @Override
