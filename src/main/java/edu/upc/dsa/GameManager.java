@@ -3,10 +3,7 @@ package edu.upc.dsa;
 import edu.upc.dsa.exception.IncorrectPasswordException;
 import edu.upc.dsa.exception.UserNotRegisteredException;
 import edu.upc.dsa.exception.EmailUsedException;
-import edu.upc.dsa.models.Credenciales;
-import edu.upc.dsa.models.Inventory;
-import edu.upc.dsa.models.Item;
-import edu.upc.dsa.models.User;
+import edu.upc.dsa.models.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -27,5 +24,8 @@ public interface GameManager {
 
      */
     public int size();
+
+    List<FAQ> getPreguntasFrequentes();
+    public void addPreguntasFrequentes(List<FAQ> faqs);
 
 }

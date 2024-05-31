@@ -4,7 +4,6 @@ package edu.upc.dsa.services;
 import edu.upc.dsa.GameManager;
 import edu.upc.dsa.GameManagerImpl;
 import edu.upc.dsa.db.orm.dao.IUserDAO;
-import edu.upc.dsa.db.orm.dao.UserDAOImpl;
 import edu.upc.dsa.exception.EmailUsedException;
 import edu.upc.dsa.exception.IncorrectPasswordException;
 import edu.upc.dsa.exception.MoneyException;
@@ -16,14 +15,13 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.apache.log4j.Logger;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.HashMap;
 import java.util.List;
-import org.apache.log4j.Logger;
 
 @Api(value = "/game", description = "Endpoint to Game Service")
 @Path("/game")

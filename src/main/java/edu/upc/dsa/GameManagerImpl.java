@@ -10,6 +10,7 @@ import edu.upc.dsa.exception.UserNotRegisteredException;
 import edu.upc.dsa.models.Credenciales;
 import edu.upc.dsa.models.Item;
 import edu.upc.dsa.models.Inventory;
+import edu.upc.dsa.models.FAQ;
 import edu.upc.dsa.models.User;
 import org.apache.log4j.Logger;
 
@@ -214,4 +215,12 @@ public class GameManagerImpl implements GameManager {
         return users;
     }
  */
+
+    protected List<FAQ> PreguntasFrequentes = new ArrayList<>();
+    public List<FAQ> getPreguntasFrequentes() {
+        return new ArrayList<>(this.PreguntasFrequentes);
+    }
+    public void addPreguntasFrequentes(List<FAQ> faqs) {
+        this.PreguntasFrequentes.addAll(faqs);
+    }
 }
