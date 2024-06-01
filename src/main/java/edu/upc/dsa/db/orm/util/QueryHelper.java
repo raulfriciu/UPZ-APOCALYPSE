@@ -13,7 +13,7 @@ public class QueryHelper {
         sb.append(entity.getClass().getSimpleName()).append(" ");
         sb.append("(");
 
-        String [] fields = edu.upc.dsa.db.orm.util.ObjectHelper.getFields(entity);
+        String [] fields = ObjectHelper.getFields(entity);
 
         sb.append("ID");
         for (String field: fields) {

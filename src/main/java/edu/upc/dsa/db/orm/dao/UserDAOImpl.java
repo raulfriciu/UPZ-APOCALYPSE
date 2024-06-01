@@ -6,6 +6,8 @@ import edu.upc.dsa.exception.MoneyException;
 import edu.upc.dsa.models.Inventory;
 import edu.upc.dsa.models.Item;
 import edu.upc.dsa.models.User;
+<<<<<<< HEAD
+=======
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,9 +16,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+>>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
 import org.apache.log4j.Logger;
 
-import static edu.upc.dsa.db.orm.FactorySession.getConnection;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAOImpl implements IUserDAO {
     final static Logger logger = Logger.getLogger(UserDAOImpl.class);

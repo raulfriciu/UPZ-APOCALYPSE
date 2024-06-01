@@ -1,6 +1,5 @@
 package edu.upc.dsa.db.orm;
 
-import edu.upc.dsa.db.orm.Session;
 import edu.upc.dsa.db.orm.util.ObjectHelper;
 import edu.upc.dsa.db.orm.util.QueryHelper;
 

@@ -8,6 +8,10 @@ public class User {
     String email;
     String password;
     int money;
+<<<<<<< HEAD
+
+=======
+>>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
     public static int getLastId() {
         return lastId;
     }
@@ -21,7 +25,10 @@ public class User {
         this.email=email;
         this.password=password;
         this.money=500;
+<<<<<<< HEAD
+=======
 
+>>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
     }
     public String getName() {
         return name;

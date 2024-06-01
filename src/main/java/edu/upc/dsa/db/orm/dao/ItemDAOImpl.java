@@ -3,6 +3,10 @@ package edu.upc.dsa.db.orm.dao;
 import edu.upc.dsa.db.orm.FactorySession;
 import edu.upc.dsa.db.orm.Session;
 import edu.upc.dsa.models.Item;
+<<<<<<< HEAD
+
+=======
+>>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
 import java.util.List;
 
 

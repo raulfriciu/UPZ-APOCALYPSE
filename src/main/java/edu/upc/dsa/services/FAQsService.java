@@ -31,6 +31,23 @@ public class FAQsService {
         gm.addPreguntasFrequentes(preguntasFrequentes);
     }
 
+<<<<<<< HEAD
+    @GET
+    @ApiOperation(value = "get all FAQs", notes = "asdasd")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful", response = FAQ.class, responseContainer="List"),
+    })
+
+    @Path("/FAQs")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getPreguntasFrequentes() {
+        List<FAQ> faqs = this.gm.getPreguntasFrequentes();
+
+        GenericEntity<List<FAQ>> entity = new GenericEntity<List<FAQ>>(faqs) {};
+        return Response.status(201).entity(entity).build();
+    }
+}
+=======
         @GET
         @ApiOperation(value = "get all FAQs", notes = "asdasd")
         @ApiResponses(value = {
@@ -46,6 +63,7 @@ public class FAQsService {
             return Response.status(201).entity(entity).build();
         }
     }
+>>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
 
 
 

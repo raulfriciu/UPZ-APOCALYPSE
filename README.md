@@ -6,15 +6,17 @@ Falta: Shop comprar, Registrar empty credentals y bug
 
 Funciones BBDD
 
-- Registrar(save): Sí
+-	Registrar(save): Sí
 
-- Login(get): Sí
+-	Login(get): Sí
 
-- Borrar usuario: Si
+-	Borrar usuario: Sí
 
-- Actualizar usuario: Si
+-	Actualizar usuario: Sí
 
-- Shop(findall): Sí
+-	Shop(findall): Sí
+
+-	Minimo 2: Sí
 
 
 

@@ -11,6 +11,21 @@ import java.util.List;
 public interface GameManager {
     //public int addUser(String name, String mail, String password);
     User registrarUser(User user) throws EmailUsedException;
+<<<<<<< HEAD
+    public User Login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException;
+    public int deleteUser(Credenciales credenciales);
+    public User updateUser(String mail, String newName, String newPassword, String newMail);
+    public User getUser(String email);
+    List<User> getallusers();
+    public int size();
+    List<Item> Shop();
+    public void addDenuncia(Denuncia denuncia);
+    public List<Denuncia> getDenuncias();
+    List<FAQ> getPreguntasFrequentes();
+    public void addPreguntasFrequentes(List<FAQ> faqs);
+    int realizarConsulta(Question consulta);
+    List<Question> getLQuestions();
+=======
     User Login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException;
     List<Item> Shop();
 
@@ -28,4 +43,5 @@ public interface GameManager {
     List<FAQ> getPreguntasFrequentes();
     public void addPreguntasFrequentes(List<FAQ> faqs);
 
+>>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
 }
