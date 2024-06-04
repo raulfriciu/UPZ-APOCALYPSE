@@ -1,5 +1,6 @@
 package edu.upc.dsa.models;
 
+import edu.upc.dsa.exception.MoneyException;
 import edu.upc.dsa.util.RandomUtils;
 
 public class User {
@@ -8,10 +9,7 @@ public class User {
     String email;
     String password;
     int money;
-<<<<<<< HEAD
 
-=======
->>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
     public static int getLastId() {
         return lastId;
     }
@@ -25,10 +23,6 @@ public class User {
         this.email=email;
         this.password=password;
         this.money=500;
-<<<<<<< HEAD
-=======
-
->>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
     }
     public String getName() {
         return name;
@@ -57,7 +51,17 @@ public class User {
     public void setMoney(int money) {
         this.money = money;
     }
-
+    public void compraItem(Item item) throws MoneyException {
+        if(item.getPrice()>this.money){
+            throw new MoneyException();
+        }
+        this.money = this.money - item.getPrice();
+    }
+    public void update(String name, String surname, String email, String password){
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
     @Override
     public String toString() {
         return "User [name=" + name + ", email=" + email +", password=" + password +"]";

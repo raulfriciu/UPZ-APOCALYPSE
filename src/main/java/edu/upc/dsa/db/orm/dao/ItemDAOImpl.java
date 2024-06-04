@@ -3,27 +3,20 @@ package edu.upc.dsa.db.orm.dao;
 import edu.upc.dsa.db.orm.FactorySession;
 import edu.upc.dsa.db.orm.Session;
 import edu.upc.dsa.models.Item;
-<<<<<<< HEAD
-
-=======
->>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
 import java.util.List;
+import org.apache.log4j.Logger;
 
 
 public class ItemDAOImpl implements IItemDAO{
-
-    public Item getItemByName(String name) {
+    final static Logger logger = Logger.getLogger(ItemDAOImpl.class);
+    public Item getItem(String idItem) {
         Session session = null;
         Item item = null;
         try {
             session = FactorySession.openSession();
-            item = (Item) session.get(Item.class, "name", name);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-            // LOG
-        }
-        finally {
+            item = (Item) session.get(Item.class, "idItem", idItem);
+        } finally {
+            //session.save(item);
             session.close();
         }
 

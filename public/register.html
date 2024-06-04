@@ -15,26 +15,23 @@
         $(document).ready(function () {
             $("#registerButton").click(function () {
                 event.preventDefault();
-
+                var name = $("#name").val();
+                var email = $("#email").val();
                 var password = $("#password").val();
                 var password2 = $("#password2").val();
 
-                /*
                 // Verificar campos vacíos
-                if (name.trim() === "" || email.trim() === "" || password.trim() === "" || password2.trim() === "") {
+                if (!name || !email || !password || !password2) {
                     alert("Por favor, completa todos los campos");
                     return;
                 }
-                 */
-
-
 
                 if (password === password2) {
                     var dataBody=
                         {
-                            name: $("#name").val(),
-                            email: $("#email").val(),
-                            password: $("#password").val()
+                            name: name,
+                            email: email,
+                            password: password
                         }
                     //solicitud POST se realiza a la URL
                     var URL = "/dsaApp/game/usuarios/register";

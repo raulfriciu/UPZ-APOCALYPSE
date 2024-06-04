@@ -8,47 +8,77 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        function buyItem(idItem) {
+            $.ajax({
+                type: 'PUT',
+                url: '/dsaApp/game/tienda/comprarObjeto/' + idItem + '/' + sessionStorage.getItem('idUser'),
+                data: { get_param: 'value' },
+                dataType: 'text',
+                success: function () {
+                    alert("Objeto comprado!");
+                },
+                error: function () {
+                    alert("Objeto no comprado");
+                }
+            });
+        }
+
         $(document).ready(function () {
-            var url = "/dsaApp/game/tienda/objetos";
-            $.get(url, function (data) {
-                $("#tabla").empty();
-                data.forEach(function(item) {
-                    $("#tabla").append(`<tr><td>${item.name}</td><td>${item.description}</td><td>${item.price}</td></tr>`);
-                });
+            $.ajax({
+                type: 'GET',
+                url: '/dsaApp/game/tienda/objetos',
+                dataType: 'json',
+                success: function (data) {
+                    var htmlLine = '';
+
+                    if (data.length > 0) {
+                        for (let i = 0; i < data.length; i++) {
+                            if (i % 3 === 0) {
+                                htmlLine += '<div class="row">';
+                            }
+                            htmlLine += '<div class="col-md-4">' +
+                                '<div class="card">' +
+                                '<img src="' + data[i].image + '" class="card-img-top" alt="' + data[i].name + '" width="200" height="200">' +
+                                '<div class="card-body">' +
+                                '<h5 class="card-title display-5">' + data[i].name + '</h5>' +
+                                '<p class="card-text">' + data[i].description + '</p>' +
+                                '<p class="card-text"><strong>' + data[i].price + ' coins</strong></p>' +
+                                '<div class="d-flex justify-content-center">' +
+                                '<button type="button" class="btn btn-outline-info" onclick="buyItem(' + data[i].idItem + ')">BUY</button>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
+                            if ((i + 1) % 3 === 0) {
+                                htmlLine += '</div>';
+                            }
+                        }
+                        if (data.length % 3 !== 0) {
+                            htmlLine += '</div>';
+                        }
+                        $('#itemCards').html(htmlLine);
+                    }
+                },
+                error: function() {
+                    alert("Failed to load items.");
+                }
             });
 
             $("#logoutButton").click(function () {
                 window.location.href = "index.html";
             });
 
-            $("#shopButton").click(function () {
-            });
         });
     </script>
 </head>
 <body>
-<div class="container mt-3" style="text-align:center">
-    <h3>UPZ-APOCALYPSE!</h3>
-    <p>Tienda</p>
+<div class="container mt-3 text-center">
+    <h1 class="display-3">UPZ-APOCALYPSE!</h1>
+    <p class="lead display-6">Tienda</p>
 </div>
-<div class="container" style="margin: auto; width: 90%">
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-        </tr>
-        </thead>
-        <tbody id="tabla">
-        </tbody>
-    </table>
-    <div class="form-group">
-        <button type="button" class="btn btn-primary btn-block" id="shopButton">Tienda</button>
-    </div>
-    <div class="form-group">
-        <button type="button" class="btn btn-primary btn-block" id="logoutButton">Log Out</button>
-    </div>
+<div id="itemCards" class="container"></div>
+<div class="container mt-3">
+    <button type="button" class="btn btn-primary btn-block" id="logoutButton">Log Out</button>
 </div>
 </body>
 </html>

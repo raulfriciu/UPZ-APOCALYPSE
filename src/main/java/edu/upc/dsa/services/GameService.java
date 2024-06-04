@@ -3,21 +3,12 @@ package edu.upc.dsa.services;
 import edu.upc.dsa.GameManager;
 import edu.upc.dsa.GameManagerImpl;
 import edu.upc.dsa.db.orm.dao.IUserDAO;
-<<<<<<< HEAD
+
 import edu.upc.dsa.exception.MoneyException;
-=======
->>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
 import edu.upc.dsa.exception.EmailUsedException;
 import edu.upc.dsa.exception.IncorrectPasswordException;
-import edu.upc.dsa.exception.MoneyException;
 import edu.upc.dsa.exception.UserNotRegisteredException;
-<<<<<<< HEAD
 import edu.upc.dsa.models.*;
-=======
-import edu.upc.dsa.models.Credenciales;
-import edu.upc.dsa.models.Item;
-import edu.upc.dsa.models.User;
->>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -28,6 +19,8 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
 @Api(value = "/game", description = "Endpoint to Game Service")
@@ -47,8 +40,6 @@ public class GameService {
         }*/
     }
 
-
-
     @POST
     @ApiOperation(value = "Registrar usuario", notes = "Register a new user")
     @ApiResponses(value = {
@@ -58,7 +49,7 @@ public class GameService {
     })
     @Path("/usuarios/register")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response Register(User user) throws EmailUsedException {
+    public Response register(User user) throws EmailUsedException, SQLIntegrityConstraintViolationException {
         if (user.getName() == null || user.getName().isEmpty() ||
                 user.getEmail() == null || user.getEmail().isEmpty() ||
                 user.getPassword() == null || user.getPassword().isEmpty()) {
@@ -70,8 +61,10 @@ public class GameService {
         } catch (EmailUsedException e) {
             e.printStackTrace();
             return Response.status(404).entity(user).build();
+        }catch (SQLIntegrityConstraintViolationException e) {
+            e.printStackTrace();
+            return Response.status(404).entity(user).build();
         }
-
     }
 
     @POST
@@ -86,15 +79,14 @@ public class GameService {
     @Path("/usuarios/login")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response Login(Credenciales credenciales) throws IncorrectPasswordException, UserNotRegisteredException {
+    public Response login(Credenciales credenciales) throws IncorrectPasswordException, UserNotRegisteredException {
         try {
-            User user = this.gm.Login(credenciales);
+            User user = this.gm.login(credenciales);
             return Response.status(201).entity(user).build();
         } catch (UserNotRegisteredException e) {
             return Response.status(404).build();
         } catch (IncorrectPasswordException e) {
             return Response.status(401).build();
-<<<<<<< HEAD
         }}
 
     @GET
@@ -115,7 +107,8 @@ public class GameService {
     @ApiOperation(value = "Comprar objeto", notes = "Buy items")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful"),
-            @ApiResponse(code = 403, message = "No tienes suficiente dinero")
+            @ApiResponse(code = 403, message = "No tienes suficiente dinero"),
+            @ApiResponse(code = 409, message = "Objeto ya en el inventario")
     })
     @Path("/tienda/comprarObjeto/{idItem}/{idUser}")
     public Response buyItems(@PathParam("idItem") String idItem, @PathParam("idUser") String idUser) {
@@ -124,6 +117,8 @@ public class GameService {
             return Response.status(201).build();
         } catch (MoneyException e) {
             return Response.status(403).build();
+        }catch (SQLException e) {
+            return Response.status(409).build();
         }
     }
 
@@ -219,38 +214,4 @@ public class GameService {
 
     }
 }
-=======
-        }
-    }
 
-    @GET
-    @ApiOperation(value = "Lista de objetos", notes = "View items")
-    @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful", response = Item.class, responseContainer = "List"),
-    })
-    @Path("/tienda/objetos")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getShop() {
-
-        List<Item> items = this.gm.Shop();
-        GenericEntity<List<Item>> entity = new GenericEntity<List<Item>>(items) {
-        };
-        return Response.status(201).entity(entity).build();
-    }
-    @PUT
-    @ApiOperation(value = "Comprar objeto", notes = "Buy items")
-    @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful"),
-            @ApiResponse(code = 403, message = "No tienes suficiente dinero")
-    })
-    @Path("/tienda/comprarObjeto/{idItem}/{idUser}")
-    public Response buyItems(@PathParam("idItem") String idItem, @PathParam("idUser") String idUser) {
-        try {
-            this.userDAO.buyItem(idItem, idUser);
-            return Response.status(201).build();
-        } catch (MoneyException e) {
-            return Response.status(403).build();
-        }
-    }
-}
->>>>>>> c090a840db8f76b5898d03c380f3a787fe72808a

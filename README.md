@@ -2,7 +2,7 @@
 
 register.html, index.html (login), main.html
 
-Falta: Shop comprar, Registrar empty credentals y bug
+Falta: Shop comprar, anular y bug
 
 Funciones BBDD
 
@@ -14,7 +14,7 @@ Funciones BBDD
 
 -	Actualizar usuario: Sí
 
--	Shop(findall): Sí
+-	Shop(findall): Sí -> Con foto
 
 -	Minimo 2: Sí
 

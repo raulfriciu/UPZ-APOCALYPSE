@@ -4,14 +4,24 @@ public class Item {
     String name;
     String description;
     int price;
+    String image;
+
 
     public Item() {};
 
-    public Item(String name, String description, int price){
-        this();
+    public Item(String name, String description, int price, String image){
         this.name = name;
         this.description = description;
         this.price = price;
+        this.image=image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getName() {

@@ -95,21 +95,16 @@ public class SessionImpl implements Session {
         return null;
     }
 
-    public void update(Class theClass, String SET, String valueSET, String WHERE, String valueWHERE) {
-        String updateQuery = QueryHelper.createQueryUPDATE(theClass, SET, WHERE);
-        ResultSet rs;
-        PreparedStatement pstm;
+    public void update(Object object) throws SQLException {
+        String updateQuery = QueryHelper.createQueryUPDATE(object);
+        PreparedStatement statement = conn.prepareStatement(updateQuery);
+        int i = 1;
 
-        try {
-            pstm = conn.prepareStatement(updateQuery);
-            pstm.setObject(1, valueSET);
-            pstm.setObject(2, valueWHERE);
-            pstm.executeQuery();
-
+        for(String field: ObjectHelper.getFields(object)) {
+            statement.setObject(i++, ObjectHelper.getter(object, field));
         }
-        catch (SQLException e) {
-            e.printStackTrace();
-        }
+        statement.setObject(i, ObjectHelper.getter(object, ObjectHelper.getAttributeName(object.getClass(), "id")));
+        statement.executeQuery();
     }
 
     public void reupdate(Class theClass, String SET, String valueSET, String WHERE, String valueWHERE, String WHERE2, String valueWHERE2) {

@@ -56,24 +56,22 @@ public class QueryHelper {
         return sb.toString();
     }
 
-    public static String createQueryUPDATE(Class clase, String SET, String Where) {
-        StringBuffer sb = new StringBuffer();
-        sb.append("UPDATE ").append(clase.getSimpleName());
-        if (Objects.equals(SET, "PASSWORD")){
-            sb.append(" SET ").append(SET);
-            sb.append(" = MD5(?) ");
-            sb.append(" WHERE ");
-            sb.append(Where);
-            sb.append(" = ?");
+    public static String createQueryUPDATE(Object entity) {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("UPDATE ").append(entity.getClass().getSimpleName().toLowerCase());
+        buffer.append(" SET ");
+        String[] fields = ObjectHelper.getFields(entity);
+        String[] var3 = fields;
+        int var4 = fields.length;
+
+        for(int var5 = 0; var5 < var4; ++var5) {
+            String field = var3[var5];
+            buffer.append(field).append(" = ?, ");
         }
-        else{
-            sb.append(" SET ").append(SET);
-            sb.append(" = ? ");
-            sb.append(" WHERE ");
-            sb.append(Where);
-            sb.append(" = ?");
-        }
-        return sb.toString();
+
+        buffer.setLength(buffer.length() - 2);
+        buffer.append(" WHERE ").append(ObjectHelper.getIdAttributeName(entity.getClass())).append(" = ?");
+        return buffer.toString();
     }
 
     public static String createQueryREUPDATE(Class clase, String SET, String Where, String Where2) {

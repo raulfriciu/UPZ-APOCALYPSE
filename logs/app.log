@@ -60,3 +60,210 @@
 2024-06-01 18:28:39 WARN  GameManagerImpl:210 - perejs17@gmail.comnot found
 2024-06-01 18:32:54 INFO  GameManagerImpl:203 - getName(perejs17@gmail.com)
 2024-06-01 18:32:54 WARN  GameManagerImpl:210 - perejs17@gmail.com not found
+2024-06-04 12:13:50 INFO  GameManagerImpl:92 - luis@gmail.com
+2024-06-04 12:13:50 INFO  GameManagerImpl:93 - 8
+2024-06-04 12:13:50 WARN  GameManagerImpl:104 - Incorrect password
+2024-06-04 12:13:57 INFO  GameManagerImpl:92 - luis@gmail.com
+2024-06-04 12:13:57 INFO  GameManagerImpl:93 - 8
+2024-06-04 12:13:57 WARN  GameManagerImpl:104 - Incorrect password
+2024-06-04 12:14:05 INFO  GameManagerImpl:92 - luis@gmail.com
+2024-06-04 12:14:05 INFO  GameManagerImpl:93 - 8
+2024-06-04 12:14:05 INFO  GameManagerImpl:95 - Succesful login luis@gmail.com
+2024-06-04 12:14:06 INFO  GameManagerImpl:112 - Lista Objetos Correcta
+2024-06-04 12:14:28 INFO  GameManagerImpl:76 - User registered
+2024-06-04 12:14:33 INFO  GameManagerImpl:79 - This email is already being used
+2024-06-04 12:14:40 INFO  GameManagerImpl:92 - andreapinonrattia@hotmail.com
+2024-06-04 12:14:40 INFO  GameManagerImpl:93 - 4
+2024-06-04 12:14:40 INFO  GameManagerImpl:95 - Succesful login andreapinonrattia@hotmail.com
+2024-06-04 12:14:41 INFO  GameManagerImpl:112 - Lista Objetos Correcta
+2024-06-04 12:32:50 INFO  GameManagerImpl:209 - Consulta Realizada
+2024-06-04 12:33:00 INFO  GameManagerImpl:184 - Denuncia añadida
+2024-06-04 12:33:14 INFO  GameManagerImpl:203 - Pregunta añadida
+2024-06-04 12:33:31 INFO  GameManagerImpl:107 - Lista Objetos Correcta
+2024-06-04 12:33:54 INFO  GameManagerImpl:87 - andreapinonrattia@hotmail.com
+2024-06-04 12:33:54 INFO  GameManagerImpl:88 - 4
+2024-06-04 12:33:54 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:34:00 INFO  GameManagerImpl:87 - andreapinonrattia@hotmail.com
+2024-06-04 12:34:00 INFO  GameManagerImpl:88 - 4
+2024-06-04 12:34:00 INFO  GameManagerImpl:90 - Succesful login andreapinonrattia@hotmail.com
+2024-06-04 12:34:02 INFO  GameManagerImpl:107 - Lista Objetos Correcta
+2024-06-04 12:34:20 INFO  GameManagerImpl:87 - luis@gmail.com
+2024-06-04 12:34:20 INFO  GameManagerImpl:88 - 8
+2024-06-04 12:34:20 INFO  GameManagerImpl:90 - Succesful login luis@gmail.com
+2024-06-04 12:34:21 INFO  GameManagerImpl:107 - Lista Objetos Correcta
+2024-06-04 12:34:26 INFO  GameManagerImpl:87 - 
+2024-06-04 12:34:26 INFO  GameManagerImpl:88 - 
+2024-06-04 12:34:26 INFO  GameManagerImpl:97 - Error
+2024-06-04 12:34:26 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:37:11 INFO  GameManagerImpl:71 - User registered
+2024-06-04 12:50:43 INFO  GameManagerImpl:71 - User registered
+2024-06-04 12:50:52 INFO  GameManagerImpl:87 - andreapinonrattia@hotmail.com
+2024-06-04 12:50:52 INFO  GameManagerImpl:88 - a
+2024-06-04 12:50:52 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:50:56 INFO  GameManagerImpl:87 - andreapinonrattia@hotmail.com
+2024-06-04 12:50:56 INFO  GameManagerImpl:88 - a
+2024-06-04 12:50:56 INFO  GameManagerImpl:90 - Succesful login andreapinonrattia@hotmail.com
+2024-06-04 12:50:57 INFO  GameManagerImpl:107 - Lista Objetos Correcta
+2024-06-04 12:51:03 INFO  GameManagerImpl:87 - luis@gmail.com
+2024-06-04 12:51:03 INFO  GameManagerImpl:88 - 8
+2024-06-04 12:51:03 INFO  GameManagerImpl:90 - Succesful login luis@gmail.com
+2024-06-04 12:51:04 INFO  GameManagerImpl:107 - Lista Objetos Correcta
+2024-06-04 12:54:51 INFO  GameManagerImpl:87 - andreapinonrattia@hotmail.com
+2024-06-04 12:54:51 INFO  GameManagerImpl:88 - a
+2024-06-04 12:54:51 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:54:56 INFO  GameManagerImpl:87 - andreapinonrattia@hotmail.com
+2024-06-04 12:54:56 INFO  GameManagerImpl:88 - a
+2024-06-04 12:54:56 INFO  GameManagerImpl:90 - Succesful login andreapinonrattia@hotmail.com
+2024-06-04 12:54:57 INFO  GameManagerImpl:107 - Lista Objetos Correcta
+2024-06-04 12:55:04 INFO  GameManagerImpl:87 - 
+2024-06-04 12:55:04 INFO  GameManagerImpl:88 - 
+2024-06-04 12:55:04 INFO  GameManagerImpl:97 - Error
+2024-06-04 12:55:04 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:55:26 INFO  GameManagerImpl:87 - 
+2024-06-04 12:55:26 INFO  GameManagerImpl:88 - 
+2024-06-04 12:55:26 INFO  GameManagerImpl:97 - Error
+2024-06-04 12:55:26 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:55:55 INFO  GameManagerImpl:71 - User registered
+2024-06-04 12:57:05 INFO  GameManagerImpl:71 - User registered
+2024-06-04 12:57:11 INFO  GameManagerImpl:71 - User registered
+2024-06-04 12:57:16 INFO  GameManagerImpl:71 - User registered
+2024-06-04 12:57:37 INFO  GameManagerImpl:71 - User registered
+2024-06-04 12:57:44 INFO  GameManagerImpl:87 - andreapinonrattia@hotmail.com
+2024-06-04 12:57:44 INFO  GameManagerImpl:88 - a
+2024-06-04 12:57:44 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:57:46 INFO  GameManagerImpl:87 - 
+2024-06-04 12:57:46 INFO  GameManagerImpl:88 - 
+2024-06-04 12:57:46 INFO  GameManagerImpl:97 - Error
+2024-06-04 12:57:46 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:57:53 INFO  GameManagerImpl:87 - luis@gmail.com
+2024-06-04 12:57:53 INFO  GameManagerImpl:88 - 8
+2024-06-04 12:57:53 WARN  GameManagerImpl:99 - Incorrect password
+2024-06-04 12:58:14 INFO  GameManagerImpl:71 - User registered
+2024-06-04 12:58:28 INFO  GameManagerImpl:71 - User registered
+2024-06-04 13:00:22 INFO  GameManagerImpl:72 - User registered
+2024-06-04 13:01:24 INFO  GameManagerImpl:88 - 
+2024-06-04 13:01:24 INFO  GameManagerImpl:89 - 
+2024-06-04 13:01:24 INFO  GameManagerImpl:98 - Error
+2024-06-04 13:01:24 WARN  GameManagerImpl:100 - Incorrect password
+2024-06-04 13:01:33 INFO  GameManagerImpl:72 - User registered
+2024-06-04 13:01:35 INFO  GameManagerImpl:75 - This email is already being used
+2024-06-04 13:11:46 INFO  GameManagerImpl:88 - 
+2024-06-04 13:11:46 INFO  GameManagerImpl:89 - 
+2024-06-04 13:11:46 INFO  GameManagerImpl:98 - Error
+2024-06-04 13:11:46 WARN  GameManagerImpl:100 - Incorrect password
+2024-06-04 13:11:58 INFO  GameManagerImpl:72 - User registered
+2024-06-04 13:15:42 INFO  GameManagerImpl:74 - User registered
+2024-06-04 13:22:24 INFO  GameManagerImpl:74 - User registered
+2024-06-04 13:22:43 INFO  GameManagerImpl:77 - This email is already being used
+2024-06-04 13:22:43 INFO  GameManagerImpl:81 - This email is already being used
+2024-06-04 13:33:24 INFO  GameManagerImpl:94 - juan
+2024-06-04 13:33:24 INFO  GameManagerImpl:95 - 6
+2024-06-04 13:33:24 WARN  GameManagerImpl:106 - Incorrect password
+2024-06-04 17:27:39 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 17:27:39 INFO  GameManagerImpl:95 - 8
+2024-06-04 17:27:39 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 17:27:41 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:29:19 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:29:22 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:29:32 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 17:29:32 INFO  GameManagerImpl:95 - 8
+2024-06-04 17:29:32 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 17:29:33 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:32:09 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 17:32:09 INFO  GameManagerImpl:95 - 8
+2024-06-04 17:32:09 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 17:32:33 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:36:12 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 17:36:12 INFO  GameManagerImpl:95 - 8
+2024-06-04 17:36:12 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 17:36:13 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:41:03 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:41:09 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 17:41:09 INFO  GameManagerImpl:95 - 8
+2024-06-04 17:41:09 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 17:41:10 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:41:11 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:41:41 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:50:18 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:50:23 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:50:25 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:51:00 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 17:51:00 INFO  GameManagerImpl:95 - 8
+2024-06-04 17:51:00 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 17:51:02 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:51:04 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:52:30 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 17:52:30 INFO  GameManagerImpl:95 - 8
+2024-06-04 17:52:30 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 17:52:31 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 17:54:46 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 17:54:46 INFO  GameManagerImpl:95 - 8
+2024-06-04 17:54:46 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 17:54:48 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 18:03:40 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 18:03:40 INFO  GameManagerImpl:95 - 8
+2024-06-04 18:03:40 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 18:03:41 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 18:05:24 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 18:21:41 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 18:58:40 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 18:58:40 INFO  GameManagerImpl:95 - 8
+2024-06-04 18:58:40 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 18:58:41 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 18:59:09 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 18:59:13 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 18:59:13 INFO  GameManagerImpl:95 - 8
+2024-06-04 18:59:13 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 18:59:15 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:07:19 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:07:19 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:07:19 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:07:20 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:08:08 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:08:18 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:08:18 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:08:18 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:08:20 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:16:26 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:16:26 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:16:26 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:16:27 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:16:44 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:18:30 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:18:40 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:18:53 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:18:53 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:18:53 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:18:54 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:22:24 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:22:39 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:22:39 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:22:39 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:22:40 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:24:10 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:24:23 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:24:23 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:24:23 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:24:24 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:28:48 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:28:48 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:28:48 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:28:50 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:31:17 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:31:35 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:31:35 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:31:35 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:31:37 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:32:18 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:33:26 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:39:19 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:43:33 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:46:03 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:47:31 INFO  GameManagerImpl:94 - luis@gmail.com
+2024-06-04 19:47:31 INFO  GameManagerImpl:95 - 8
+2024-06-04 19:47:31 INFO  GameManagerImpl:97 - Succesful login luis@gmail.com
+2024-06-04 19:47:32 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:49:44 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:52:20 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 19:55:47 INFO  GameManagerImpl:114 - Lista Objetos Correcta
+2024-06-04 20:05:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
