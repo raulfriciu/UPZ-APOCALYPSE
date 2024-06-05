@@ -6,7 +6,7 @@ import java.util.List;
 public interface IItemDAO {
 
     List<Item> getItems();
-    Item getItem(String idItem) ;
+    Item getItem(int idItem) ;
 
 }
 

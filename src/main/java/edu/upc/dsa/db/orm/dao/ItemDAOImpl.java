@@ -7,37 +7,42 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 
-public class ItemDAOImpl implements IItemDAO{
+public class ItemDAOImpl implements IItemDAO {
     final static Logger logger = Logger.getLogger(ItemDAOImpl.class);
-    public Item getItem(String idItem) {
+
+    @Override
+    public Item getItem(int idItem) {
         Session session = null;
         Item item = null;
         try {
             session = FactorySession.openSession();
-            item = (Item) session.get(Item.class, "idItem", idItem);
+            item = (Item) session.get(Item.class, "ID", idItem);
+        } catch (Exception e) {
+            logger.error("Error getting item", e);
         } finally {
-            //session.save(item);
-            session.close();
+            if (session != null) {
+                session.close();
+            }
         }
-
         return item;
     }
 
+    @Override
     public List<Item> getItems() {
         Session session = null;
-        List<Item> items=null;
+        List<Item> items = null;
         try {
             session = FactorySession.openSession();
             items = session.findAll(Item.class);
-        }
-        catch (Exception e) {
-            // LOG
-        }
-        finally {
-            session.close();
+        } catch (Exception e) {
+            logger.error("Error getting items", e);
+        } finally {
+            if (session != null) {
+                session.close();
+            }
         }
         return items;
     }
-
 }
+
 

@@ -2,7 +2,7 @@
 
 register.html, index.html (login), main.html
 
-Falta: Shop comprar, anular y bug
+Falta: Shop comprar(funciona en Swagger), anular , Inventario y bug
 
 Funciones BBDD
 

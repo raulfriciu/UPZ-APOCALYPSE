@@ -267,3 +267,1513 @@
 2024-06-04 19:52:20 INFO  GameManagerImpl:114 - Lista Objetos Correcta
 2024-06-04 19:55:47 INFO  GameManagerImpl:114 - Lista Objetos Correcta
 2024-06-04 20:05:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 11:04:51 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 11:18:32 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 11:18:32 INFO  GameManagerImpl:92 - 8
+2024-06-05 11:18:32 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 11:18:33 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 11:18:43 INFO  GameManagerImpl:71 - User registered
+2024-06-05 11:18:45 INFO  GameManagerImpl:74 - This email is already being used
+2024-06-05 11:18:45 INFO  GameManagerImpl:78 - This email is already being used
+2024-06-05 11:42:32 INFO  UserDAOImpl:114 - Buying item 1 for User 70
+2024-06-05 11:42:33 INFO  UserDAOImpl:119 - 250
+2024-06-05 11:42:33 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=132) Duplicate entry 'pedro@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:107)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:118)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 11:43:43 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 11:43:54 INFO  UserDAOImpl:114 - Buying item 1 for User 70
+2024-06-05 11:43:54 INFO  UserDAOImpl:119 - 250
+2024-06-05 11:43:54 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=136) Duplicate entry 'pedro@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:107)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:118)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 11:46:02 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 11:46:02 INFO  GameManagerImpl:92 - 8
+2024-06-05 11:46:02 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 11:46:03 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 11:46:05 INFO  UserDAOImpl:114 - Buying item undefined for User null
+2024-06-05 11:46:05 INFO  UserDAOImpl:119 - 0
+2024-06-05 11:46:05 INFO  UserDAOImpl:126 - Objeto comprado
+2024-06-05 11:46:44 INFO  UserDAOImpl:114 - Buying item 1 for User 70
+2024-06-05 11:46:44 INFO  UserDAOImpl:119 - 250
+2024-06-05 11:46:44 WARN  UserDAOImpl:128 - No tienes suficiente dinero
+edu.upc.dsa.exception.MoneyException
+	at edu.upc.dsa.models.User.compraItem(User.java:56)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:122)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:118)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 11:48:25 INFO  GameManagerImpl:71 - User registered
+2024-06-05 11:49:07 INFO  UserDAOImpl:114 - Buying item 1 for User 77
+2024-06-05 11:49:07 INFO  UserDAOImpl:119 - 250
+2024-06-05 11:49:07 INFO  UserDAOImpl:126 - Objeto comprado
+2024-06-05 12:31:56 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 12:32:16 INFO  UserDAOImpl:114 - Buying item undefined for User null
+2024-06-05 12:32:16 INFO  UserDAOImpl:119 - 0
+2024-06-05 12:32:16 INFO  UserDAOImpl:126 - Objeto comprado
+2024-06-05 12:33:33 INFO  GameManagerImpl:91 - 
+2024-06-05 12:33:33 INFO  GameManagerImpl:92 - 
+2024-06-05 12:33:33 INFO  GameManagerImpl:101 - Error
+2024-06-05 12:33:33 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 12:33:49 INFO  GameManagerImpl:71 - User registered
+2024-06-05 12:33:51 INFO  GameManagerImpl:74 - This email is already being used
+2024-06-05 12:33:51 INFO  GameManagerImpl:78 - This email is already being used
+2024-06-05 12:33:59 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 12:33:59 INFO  GameManagerImpl:92 - 8
+2024-06-05 12:33:59 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 12:34:00 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 12:34:05 INFO  UserDAOImpl:114 - Buying item undefined for User null
+2024-06-05 12:34:05 INFO  UserDAOImpl:119 - 0
+2024-06-05 12:34:05 INFO  UserDAOImpl:126 - Objeto comprado
+2024-06-05 12:35:26 INFO  UserDAOImpl:114 - Buying item 1 for User 1
+2024-06-05 12:35:26 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:35:26 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=173) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:36:13 INFO  UserDAOImpl:114 - Buying item 1 for User 1
+2024-06-05 12:36:13 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:36:13 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=176) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:36:27 INFO  UserDAOImpl:114 - Buying item 2 for User 1
+2024-06-05 12:36:27 INFO  UserDAOImpl:119 - 100
+2024-06-05 12:36:27 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=179) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:36:38 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 12:36:49 INFO  UserDAOImpl:114 - Buying item 1 for User 1
+2024-06-05 12:36:49 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:36:49 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=183) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:37:09 INFO  GameManagerImpl:71 - User registered
+2024-06-05 12:37:26 INFO  UserDAOImpl:114 - Buying item 1 for User 79
+2024-06-05 12:37:26 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:37:26 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=187) Duplicate entry 'string' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:39:03 INFO  UserDAOImpl:114 - Buying item 1 for User 79
+2024-06-05 12:39:03 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:39:03 INFO  UserDAOImpl:126 - Objeto comprado
+2024-06-05 12:40:10 INFO  GameManagerImpl:71 - User registered
+2024-06-05 12:40:39 INFO  UserDAOImpl:114 - Buying item 1 for User 80
+2024-06-05 12:40:39 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:40:39 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=194) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:41:10 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 12:41:18 INFO  UserDAOImpl:114 - Buying item 1 for User 80
+2024-06-05 12:41:18 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:41:18 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=198) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:45:41 INFO  UserDAOImpl:114 - Buying item 1 for User 80
+2024-06-05 12:45:42 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:45:42 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=201) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:46:37 INFO  UserDAOImpl:114 - Buying item 1 for User 80
+2024-06-05 12:46:37 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:46:50 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=204) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:52:51 INFO  UserDAOImpl:115 - Buying item 1 for User 80
+2024-06-05 12:52:51 ERROR UserDAOImpl:145 - Error al acceder a la base de datos
+java.sql.SQLIntegrityConstraintViolationException: (conn=205) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:137)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:53:48 INFO  GameManagerImpl:71 - User registered
+2024-06-05 12:54:05 INFO  UserDAOImpl:115 - Buying item 1 for User 81
+2024-06-05 12:54:05 ERROR UserDAOImpl:145 - Error al acceder a la base de datos
+java.sql.SQLIntegrityConstraintViolationException: (conn=209) Duplicate entry 'a' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:137)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:55:35 INFO  UserDAOImpl:114 - Buying item 1 for User 81
+2024-06-05 12:55:36 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:55:36 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=214) Duplicate entry 'a' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:55:49 INFO  UserDAOImpl:114 - Buying item 1 for User 80
+2024-06-05 12:55:49 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:55:49 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=217) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 12:57:20 INFO  UserDAOImpl:114 - Buying item 1 for User 80
+2024-06-05 12:57:20 INFO  UserDAOImpl:119 - 250
+2024-06-05 12:57:20 WARN  UserDAOImpl:131 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=220) Duplicate entry 'pep@gmail.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:288)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:106)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:123)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:00:38 INFO  UserDAOImpl:114 - Buying item 1 for User 80
+2024-06-05 13:00:38 INFO  UserDAOImpl:119 - 250
+2024-06-05 13:00:38 INFO  UserDAOImpl:126 - Objeto comprado
+2024-06-05 13:03:17 INFO  UserDAOImpl:104 - Buying item 1 for User 81
+2024-06-05 13:03:17 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:03:17 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLIntegrityConstraintViolationException: (conn=227) Duplicate entry 'a' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:872)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:811)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:730)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:654)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:107)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:05:14 INFO  UserDAOImpl:104 - Buying item 1 for User 81
+2024-06-05 13:05:14 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:05:14 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=230) Parameter at position 6 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:110)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:07:24 INFO  UserDAOImpl:104 - Buying item 1 for User 81
+2024-06-05 13:07:24 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:07:24 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=233) Parameter at position 6 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:07:54 INFO  UserDAOImpl:104 - Buying item 1 for User 81
+2024-06-05 13:07:54 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:07:54 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=236) Parameter at position 6 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:08:49 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 13:08:49 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:08:49 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=239) Parameter at position 6 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:11:49 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 13:11:49 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:11:49 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=242) Parameter at position 5 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:12:23 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 13:12:23 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:12:23 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=245) Parameter at position 5 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:14:24 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 13:14:24 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:14:24 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=248) Parameter at position 5 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:17:04 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 13:17:04 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:17:04 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=251) Parameter at position 5 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:18:50 INFO  GameManagerImpl:71 - User registered
+2024-06-05 13:19:10 INFO  UserDAOImpl:104 - Buying item 1 for User 82
+2024-06-05 13:19:10 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:19:10 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=255) Parameter at position 5 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:22:32 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 13:22:32 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:22:32 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 13:26:48 INFO  UserDAOImpl:104 - Buying item 1 for User 81
+2024-06-05 13:26:48 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:26:48 WARN  UserDAOImpl:121 - Objeto ya en el inventario
+java.sql.SQLTransientConnectionException: (conn=262) Parameter at position 5 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:302)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:347)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:372)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:88)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:334)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:311)
+	at edu.upc.dsa.db.orm.SessionImpl.update(SessionImpl.java:111)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:113)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:35:01 INFO  UserDAOImpl:104 - Buying item 1 for User 82
+2024-06-05 13:35:02 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:35:02 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 13:41:20 INFO  UserDAOImpl:104 - Buying item 1 for User 81
+2024-06-05 13:41:20 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:41:20 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 13:42:03 INFO  UserDAOImpl:104 - Buying item 1 for User 79
+2024-06-05 13:42:03 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:42:03 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 13:42:18 INFO  UserDAOImpl:104 - Buying item 1 for User 79
+2024-06-05 13:42:18 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:42:18 WARN  UserDAOImpl:118 - No tienes suficiente dinero
+edu.upc.dsa.exception.MoneyException
+	at edu.upc.dsa.models.User.compraItem(User.java:56)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:112)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 13:42:49 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 13:42:49 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:42:49 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 13:43:15 INFO  UserDAOImpl:104 - Buying item 1 for User 82
+2024-06-05 13:43:15 INFO  UserDAOImpl:109 - 250
+2024-06-05 13:43:15 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 13:45:50 INFO  GameManagerImpl:91 - 
+2024-06-05 13:45:50 INFO  GameManagerImpl:92 - 
+2024-06-05 13:45:50 INFO  GameManagerImpl:101 - Error
+2024-06-05 13:45:50 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 13:46:12 INFO  GameManagerImpl:91 - 
+2024-06-05 13:46:12 INFO  GameManagerImpl:92 - 
+2024-06-05 13:46:12 INFO  GameManagerImpl:101 - Error
+2024-06-05 13:46:12 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 13:46:16 INFO  GameManagerImpl:91 - 
+2024-06-05 13:46:16 INFO  GameManagerImpl:92 - 
+2024-06-05 13:46:16 INFO  GameManagerImpl:101 - Error
+2024-06-05 13:46:16 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 13:46:45 INFO  GameManagerImpl:71 - User registered
+2024-06-05 13:46:54 INFO  GameManagerImpl:74 - This email is already being used
+2024-06-05 13:46:54 INFO  GameManagerImpl:78 - This email is already being used
+2024-06-05 13:46:59 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 13:46:59 INFO  GameManagerImpl:92 - 1
+2024-06-05 13:46:59 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 13:47:03 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 13:47:03 INFO  GameManagerImpl:92 - 1
+2024-06-05 13:47:03 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 13:47:04 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 13:47:10 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 13:47:10 INFO  UserDAOImpl:109 - 0
+2024-06-05 13:47:10 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 13:57:57 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 13:58:24 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 13:58:24 INFO  GameManagerImpl:92 - 1
+2024-06-05 13:58:24 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 13:58:25 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 13:58:29 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 13:58:29 INFO  UserDAOImpl:109 - 0
+2024-06-05 13:58:29 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 14:02:51 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 14:02:51 INFO  GameManagerImpl:92 - 1
+2024-06-05 14:02:51 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 14:02:53 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 14:02:57 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 14:02:57 INFO  UserDAOImpl:109 - 0
+2024-06-05 14:02:57 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 14:03:26 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 14:03:26 INFO  UserDAOImpl:109 - 0
+2024-06-05 14:03:26 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 14:04:24 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 14:04:24 INFO  GameManagerImpl:92 - 1
+2024-06-05 14:04:24 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 14:04:26 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 14:04:33 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 14:04:33 INFO  UserDAOImpl:109 - 0
+2024-06-05 14:04:33 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 14:05:09 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 14:05:39 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 14:05:39 INFO  UserDAOImpl:109 - 0
+2024-06-05 14:05:39 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 14:07:11 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 14:07:17 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 14:07:17 INFO  UserDAOImpl:109 - 0
+2024-06-05 14:07:17 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 14:10:53 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 14:10:56 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 14:10:56 INFO  UserDAOImpl:109 - 0
+2024-06-05 14:10:56 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 14:13:21 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 14:13:21 INFO  GameManagerImpl:92 - 1
+2024-06-05 14:13:21 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 14:13:23 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 14:13:25 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 14:13:25 INFO  UserDAOImpl:109 - 0
+2024-06-05 14:13:25 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 16:30:37 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 16:30:37 INFO  GameManagerImpl:92 - 1
+2024-06-05 16:30:37 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 16:30:39 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 16:30:41 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 16:30:41 INFO  UserDAOImpl:109 - 0
+2024-06-05 16:30:41 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 16:31:39 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 16:31:39 INFO  GameManagerImpl:92 - 1
+2024-06-05 16:31:39 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 16:31:41 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 16:31:46 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 16:31:46 INFO  UserDAOImpl:109 - 0
+2024-06-05 16:31:46 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 16:35:01 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 16:35:01 INFO  UserDAOImpl:109 - 0
+2024-06-05 16:35:01 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 16:41:54 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 16:41:57 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 16:41:57 INFO  UserDAOImpl:109 - 0
+2024-06-05 16:41:57 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 16:46:58 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 16:47:00 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 16:47:00 INFO  UserDAOImpl:109 - 0
+2024-06-05 16:47:00 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 16:48:25 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 16:48:27 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 16:48:27 INFO  UserDAOImpl:109 - 0
+2024-06-05 16:48:27 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 16:49:07 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 16:49:07 INFO  GameManagerImpl:92 - 1
+2024-06-05 16:49:07 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 16:49:09 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 16:49:13 INFO  UserDAOImpl:104 - Buying item undefined for User null
+2024-06-05 16:49:13 INFO  UserDAOImpl:109 - 0
+2024-06-05 16:49:13 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 16:49:32 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 16:49:32 INFO  UserDAOImpl:109 - 250
+2024-06-05 16:49:32 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 17:01:00 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:01:00 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:01:00 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:01:02 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:01:03 INFO  UserDAOImpl:104 - Buying item 0 for User null
+2024-06-05 17:01:03 INFO  UserDAOImpl:109 - 0
+2024-06-05 17:01:03 INFO  UserDAOImpl:116 - Objeto comprado
+2024-06-05 17:12:18 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:12:18 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:12:18 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:12:19 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:13:11 INFO  UserDAOImpl:104 - Buying item 1 for User 80
+2024-06-05 17:13:11 INFO  UserDAOImpl:109 - 250
+2024-06-05 17:13:11 WARN  UserDAOImpl:118 - No tienes suficiente dinero
+edu.upc.dsa.exception.MoneyException
+	at edu.upc.dsa.models.User.compraItem(User.java:56)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:112)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 17:19:02 INFO  GameManagerImpl:92 - luis@gmail.com
+2024-06-05 17:19:02 INFO  GameManagerImpl:93 - 1
+2024-06-05 17:19:02 INFO  GameManagerImpl:95 - Succesful login luis@gmail.com
+2024-06-05 17:19:03 INFO  GameManagerImpl:112 - Lista Objetos Correcta
+2024-06-05 17:19:35 INFO  GameManagerImpl:72 - User registered
+2024-06-05 17:23:25 INFO  GameManagerImpl:72 - User registered
+2024-06-05 17:23:59 INFO  GameManagerImpl:72 - User registered
+2024-06-05 17:24:47 INFO  GameManagerImpl:75 - This email is already being used
+2024-06-05 17:24:47 INFO  GameManagerImpl:79 - This email is already being used
+2024-06-05 17:26:46 INFO  UserDAOImpl:103 - Buying item 1 for User 83
+2024-06-05 17:26:46 INFO  UserDAOImpl:108 - 250
+2024-06-05 17:26:46 INFO  UserDAOImpl:115 - Objeto comprado
+2024-06-05 17:27:26 INFO  GameManagerImpl:72 - User registered
+2024-06-05 17:29:37 INFO  GameManagerImpl:72 - User registered
+2024-06-05 17:31:35 INFO  GameManagerImpl:72 - User registered
+2024-06-05 17:34:35 INFO  GameManagerImpl:71 - User registered
+2024-06-05 17:35:09 INFO  UserDAOImpl:103 - Buying item 2 for User 89
+2024-06-05 17:35:09 INFO  UserDAOImpl:108 - 100
+2024-06-05 17:35:09 INFO  UserDAOImpl:115 - Objeto comprado
+2024-06-05 17:35:31 INFO  GameManagerImpl:91 - pl
+2024-06-05 17:35:31 INFO  GameManagerImpl:92 - a
+2024-06-05 17:35:31 INFO  GameManagerImpl:94 - Succesful login pl
+2024-06-05 17:35:32 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:38:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:38:33 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:38:33 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:38:33 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 17:38:40 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:38:40 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:38:40 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:38:41 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:38:57 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:39:21 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:39:49 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:40:06 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:40:06 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:40:06 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:40:07 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:40:21 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:40:21 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:40:21 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:40:22 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:40:47 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:40:53 INFO  GameManagerImpl:91 - 
+2024-06-05 17:40:53 INFO  GameManagerImpl:92 - 
+2024-06-05 17:40:53 INFO  GameManagerImpl:101 - Error
+2024-06-05 17:40:53 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 17:40:58 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:40:58 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:40:58 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:40:59 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:41:45 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:51:04 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:51:04 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:51:04 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:51:06 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:52:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:52:25 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:52:25 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:52:25 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:52:26 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 17:53:31 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 17:53:31 INFO  GameManagerImpl:92 - 1
+2024-06-05 17:53:31 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 17:53:32 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 18:01:48 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:01:48 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:01:48 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:01:49 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 18:02:37 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:02:37 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:02:37 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:02:38 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 18:03:32 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:03:32 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:03:32 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:03:33 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 18:12:13 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:12:13 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:12:13 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:12:19 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 18:16:13 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:16:13 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:16:13 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:16:14 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 18:17:25 INFO  GameManagerImpl:91 - 
+2024-06-05 18:17:25 INFO  GameManagerImpl:92 - 
+2024-06-05 18:17:25 INFO  GameManagerImpl:101 - Error
+2024-06-05 18:17:25 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 18:17:51 INFO  GameManagerImpl:91 - 
+2024-06-05 18:17:51 INFO  GameManagerImpl:92 - 
+2024-06-05 18:17:51 INFO  GameManagerImpl:101 - Error
+2024-06-05 18:17:51 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 18:18:30 INFO  GameManagerImpl:71 - User registered
+2024-06-05 18:18:41 INFO  GameManagerImpl:91 - 
+2024-06-05 18:18:41 INFO  GameManagerImpl:92 - 
+2024-06-05 18:18:41 INFO  GameManagerImpl:101 - Error
+2024-06-05 18:18:41 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 18:20:29 INFO  GameManagerImpl:91 - 
+2024-06-05 18:20:29 INFO  GameManagerImpl:92 - 
+2024-06-05 18:20:29 INFO  GameManagerImpl:101 - Error
+2024-06-05 18:20:29 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 18:20:35 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:20:35 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:20:35 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:20:59 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:20:59 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:20:59 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:21:29 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:21:29 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:21:29 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:21:40 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:21:40 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:21:40 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:22:40 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:22:40 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:22:40 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:22:49 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 18:22:56 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:22:56 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:22:56 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:23:51 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:23:51 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:23:51 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:25:25 INFO  GameManagerImpl:91 - andreapinonrattia@hotmail.com
+2024-06-05 18:25:25 INFO  GameManagerImpl:92 - d
+2024-06-05 18:25:25 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-05 18:25:33 INFO  GameManagerImpl:91 - andreapinonrattia@hotmail.com
+2024-06-05 18:25:33 INFO  GameManagerImpl:92 - d
+2024-06-05 18:25:33 INFO  GameManagerImpl:94 - Succesful login andreapinonrattia@hotmail.com
+2024-06-05 18:27:31 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:27:31 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:27:31 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:28:44 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:28:44 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:28:44 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:29:47 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 18:29:47 INFO  GameManagerImpl:92 - 1
+2024-06-05 18:29:47 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 18:29:47 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-05 18:45:01 ERROR ItemDAOImpl:57 - Error occurred while retrieving inventory for user with ID: 89
+java.lang.IllegalArgumentException: argument type mismatch
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:107)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at edu.upc.dsa.db.orm.util.ObjectHelper.setter(ObjectHelper.java:36)
+	at edu.upc.dsa.db.orm.SessionImpl.findAll(SessionImpl.java:239)
+	at edu.upc.dsa.db.orm.dao.InventoryDAOImpl.getInventory(InventoryDAOImpl.java:39)
+	at edu.upc.dsa.services.GameService.getInventory(GameService.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 22:02:59 INFO  UserDAOImpl:103 - Buying item 1 for User 89
+2024-06-05 22:02:59 INFO  UserDAOImpl:108 - 250
+2024-06-05 22:02:59 INFO  UserDAOImpl:115 - Objeto comprado
+2024-06-05 22:03:23 INFO  UserDAOImpl:103 - Buying item 2 for User 89
+2024-06-05 22:03:23 INFO  UserDAOImpl:108 - 100
+2024-06-05 22:03:23 INFO  UserDAOImpl:115 - Objeto comprado
+2024-06-05 22:04:49 INFO  UserDAOImpl:103 - Buying item 1 for User 90
+2024-06-05 22:04:49 INFO  UserDAOImpl:108 - 250
+2024-06-05 22:04:49 INFO  UserDAOImpl:115 - Objeto comprado

@@ -2,17 +2,18 @@ package edu.upc.dsa.services;
 
 import edu.upc.dsa.GameManager;
 import edu.upc.dsa.GameManagerImpl;
+import edu.upc.dsa.db.orm.dao.IInventoryDAO;
 import edu.upc.dsa.db.orm.dao.IUserDAO;
 
-import edu.upc.dsa.exception.MoneyException;
-import edu.upc.dsa.exception.EmailUsedException;
-import edu.upc.dsa.exception.IncorrectPasswordException;
-import edu.upc.dsa.exception.UserNotRegisteredException;
+import edu.upc.dsa.db.orm.dao.InventoryDAOImpl;
+import edu.upc.dsa.db.orm.dao.UserDAOImpl;
+import edu.upc.dsa.exception.*;
 import edu.upc.dsa.models.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import io.swagger.models.auth.In;
 import org.apache.log4j.Logger;
 
 import javax.ws.rs.*;
@@ -29,9 +30,12 @@ public class GameService {
     final static Logger logger = Logger.getLogger(GameService.class);
     private GameManager gm;
     private IUserDAO userDAO;
+    private IInventoryDAO inventoryDAO;
 
     public GameService() throws EmailUsedException {
         this.gm = GameManagerImpl.getInstance();
+        this.userDAO = new UserDAOImpl(); // Inicialización manual
+        this.inventoryDAO=new InventoryDAOImpl();
 
         /*if (gm.findAll().size()==0) {
             this.gm.registrarUser(new User("Juan","juan356@gmail.com", "pWmJ85"));
@@ -111,15 +115,41 @@ public class GameService {
             @ApiResponse(code = 409, message = "Objeto ya en el inventario")
     })
     @Path("/tienda/comprarObjeto/{idItem}/{idUser}")
-    public Response buyItems(@PathParam("idItem") String idItem, @PathParam("idUser") String idUser) {
+    public Response buyItems(@PathParam("idItem") int idItem, @PathParam("idUser") int idUser) {
         try {
-            this.userDAO.buyItem(idItem, idUser);
+            userDAO.buyItem(idItem, idUser);
             return Response.status(201).build();
         } catch (MoneyException e) {
             return Response.status(403).build();
         }catch (SQLException e) {
             return Response.status(409).build();
         }
+    }
+
+    @GET
+    @ApiOperation(value = "Visualizar inventario", notes = "Inventorio")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful"),
+            @ApiResponse(code = 401, message = "User has an empty inventory"),
+            @ApiResponse(code = 500, message = "SQL Exception")
+    })
+    @Path("/inventory/{idUser}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getInventory(@PathParam("idUser") int idUser) {
+
+        try {
+            List<Inventory> inventory = this.inventoryDAO.getInventory(idUser);
+            GenericEntity<List<Inventory>> entity = new GenericEntity<List<Inventory>>(inventory) {
+            };
+            return Response.status(201).entity(entity).build();
+        } catch (SQLException e) {
+            return Response.status(500).build();
+        } catch (NotInInventoryException e) {
+            return Response.status(401).build();
+        } catch (NonExistentItemException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @DELETE

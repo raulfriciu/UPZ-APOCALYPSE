@@ -8,17 +8,23 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function buyItem(idItem) {
+        function buyItem(ID) {
             $.ajax({
                 type: 'PUT',
-                url: '/dsaApp/game/tienda/comprarObjeto/' + idItem + '/' + sessionStorage.getItem('idUser'),
+                url: '/dsaApp/game/tienda/comprarObjeto/' + ID + '/' + sessionStorage.getItem('idUser'),
                 data: { get_param: 'value' },
                 dataType: 'text',
                 success: function () {
                     alert("Objeto comprado!");
                 },
-                error: function () {
-                    alert("Objeto no comprado");
+                error: function (xhr, status, error) {
+                    if(xhr.status == 403) {
+                        alert("No tienes suficiente dinero");
+                    } else if (xhr.status == 409) {
+                        alert("Objeto ya en el inventario");
+                    } else {
+                        alert("Error al comprar objeto: " + xhr.status + " - " + error);
+                    }
                 }
             });
         }
@@ -44,7 +50,7 @@
                                 '<p class="card-text">' + data[i].description + '</p>' +
                                 '<p class="card-text"><strong>' + data[i].price + ' coins</strong></p>' +
                                 '<div class="d-flex justify-content-center">' +
-                                '<button type="button" class="btn btn-outline-info" onclick="buyItem(' + data[i].idItem + ')">BUY</button>' +
+                                '<button type="button" class="btn btn-outline-info" onclick="buyItem(' + data[i].ID + ')">BUY</button>' +
                                 '</div>' +
                                 '</div>' +
                                 '</div>' +
@@ -68,6 +74,39 @@
                 window.location.href = "index.html";
             });
 
+            $("#inventoryButton").click(function(){
+                $.ajax({
+                    type: 'GET',
+                    url: '/dsaApp/game/inventory/' + sessionStorage.getItem('idUser'),
+                    dataType: 'text',
+                    success: function(data){
+                        const json = $.parseJSON(data);
+                        var htmlLine;
+
+                        if(json.length > 0) {
+                            htmlLine = '<div class="row">' +
+                                '<div class="column">' +
+                                '<div class="flex-container">' +
+                                '<div><b>' + json[0].name + '</b></div>' +
+                                '</div>' +
+                                '</div>';
+
+                            for (let i = 1; i < json.length; i++) {
+                                htmlLine += '</div>' +
+                                    '<div class="row">' +
+                                    '<div class="column">' +
+                                    '<div class="flex-container">' +
+                                    '<div><b>' + json[i].name + '</b></div>' +
+                                    '</div>' +
+                                    '</div>';
+                            }
+                            htmlLine = htmlLine + '</div>';
+                            $('#inventoryCards').append(htmlLine);
+                        }
+                    }
+                });
+            });
+
         });
     </script>
 </head>
@@ -77,8 +116,14 @@
     <p class="lead display-6">Tienda</p>
 </div>
 <div id="itemCards" class="container"></div>
+<div id="inventoryCards" class="center" style="text-align: center"></div>
+<div class="container mt-3">
+    <button type="button" class="btn btn-primary btn-block" id="inventoryButton">Inventory</button>
+    <div class="signup_link" style="text-align:center"></div>
+</div>
 <div class="container mt-3">
     <button type="button" class="btn btn-primary btn-block" id="logoutButton">Log Out</button>
 </div>
+
 </body>
 </html>

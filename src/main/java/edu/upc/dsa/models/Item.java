@@ -1,6 +1,7 @@
 package edu.upc.dsa.models;
 
 public class Item {
+    int ID;
     String name;
     String description;
     int price;
@@ -9,11 +10,20 @@ public class Item {
 
     public Item() {};
 
-    public Item(String name, String description, int price, String image){
+    public Item(int ID, String name, String description, int price, String image){
+        this.ID=ID;
         this.name = name;
         this.description = description;
         this.price = price;
         this.image=image;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getImage() {

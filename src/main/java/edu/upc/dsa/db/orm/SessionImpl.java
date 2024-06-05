@@ -2,11 +2,11 @@ package edu.upc.dsa.db.orm;
 
 import edu.upc.dsa.db.orm.util.ObjectHelper;
 import edu.upc.dsa.db.orm.util.QueryHelper;
+import edu.upc.dsa.models.User;
 
 import java.sql.*;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class SessionImpl implements Session {
@@ -95,17 +95,29 @@ public class SessionImpl implements Session {
         return null;
     }
 
-    public void update(Object object) throws SQLException {
-        String updateQuery = QueryHelper.createQueryUPDATE(object);
-        PreparedStatement statement = conn.prepareStatement(updateQuery);
-        int i = 1;
-
-        for(String field: ObjectHelper.getFields(object)) {
-            statement.setObject(i++, ObjectHelper.getter(object, field));
+    public void update(Object object, int userId) throws SQLException {
+        // Verificar si el objeto es de tipo User
+        if (!(object instanceof User)) {
+            throw new IllegalArgumentException("El objeto proporcionado no es de tipo User");
         }
-        statement.setObject(i, ObjectHelper.getter(object, ObjectHelper.getAttributeName(object.getClass(), "id")));
-        statement.executeQuery();
+
+        String updateQuery = QueryHelper.createQueryUPDATEMoney();
+        PreparedStatement statement = conn.prepareStatement(updateQuery);
+
+        // Obtener el valor del campo 'money' del objeto
+        double money = ((User) object).getMoney();
+
+        // Establecer los parámetros en la consulta preparada
+        statement.setDouble(1, money);
+        statement.setInt(2, userId);
+
+        // Ejecutar la actualización
+        statement.executeUpdate();
+
+        // Cerrar la declaración
+        statement.close();
     }
+
 
     public void reupdate(Class theClass, String SET, String valueSET, String WHERE, String valueWHERE, String WHERE2, String valueWHERE2) {
         String updateQuery = QueryHelper.createQueryREUPDATE(theClass, SET, WHERE, WHERE2);
@@ -199,6 +211,7 @@ public class SessionImpl implements Session {
 
     public List<Object> findAll(Class theClass, HashMap params) {
         String query = QueryHelper.createQuerySelectWithParams(theClass, params);
+        //System.out.println("Consulta SQL generada: " + query);
         PreparedStatement pstm = null;
 
         try {
@@ -209,9 +222,6 @@ public class SessionImpl implements Session {
             for(Object v : params.values()){
                 pstm.setObject(i++, v);
             }
-
-
-            pstm.executeQuery();
 
             ResultSet rs = pstm.getResultSet();
 
@@ -247,4 +257,5 @@ public class SessionImpl implements Session {
     public List<Object> query(String query, Class theClass, HashMap params) {
         return null;
     }
+
 }

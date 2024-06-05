@@ -4,6 +4,7 @@ package edu.upc.dsa.db.orm.util;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,19 +12,20 @@ import java.util.NoSuchElementException;
 
 public class ObjectHelper {
     public static String[] getFields(Object entity) {
-
-        Class theClass = entity.getClass();
-
+        Class<?> theClass = entity.getClass();
         Field[] fields = theClass.getDeclaredFields();
-
         String[] sFields = new String[fields.length];
-        int i=0;
 
-        for (Field f: fields) sFields[i++]=f.getName();
+        int i = 0;
+        for (Field field : fields) {
+            if (!Modifier.isStatic(field.getModifiers())) {
+                sFields[i++] = field.getName();
+            }
+        }
 
-        return sFields;
-
+        return Arrays.copyOf(sFields, i);
     }
+
 
 
     public static void setter(Object object, String property, Object value) {

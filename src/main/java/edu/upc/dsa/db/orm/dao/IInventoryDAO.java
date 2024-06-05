@@ -9,5 +9,6 @@ import java.util.List;
 
 public interface IInventoryDAO {
     public List<Inventory> getInventoryitems();
-    public List<Inventory> getInventory(String idUser) throws SQLException, NonExistentItemException, NotInInventoryException;
+    public List<Inventory> getInventory(int idUser) throws SQLException, NonExistentItemException, NotInInventoryException;
+
 }

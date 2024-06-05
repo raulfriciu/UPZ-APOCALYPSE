@@ -60,19 +60,24 @@ public class QueryHelper {
         StringBuffer buffer = new StringBuffer();
         buffer.append("UPDATE ").append(entity.getClass().getSimpleName().toLowerCase());
         buffer.append(" SET ");
-        String[] fields = ObjectHelper.getFields(entity);
-        String[] var3 = fields;
-        int var4 = fields.length;
 
-        for(int var5 = 0; var5 < var4; ++var5) {
-            String field = var3[var5];
-            buffer.append(field).append(" = ?, ");
+        String[] fields = ObjectHelper.getFields(entity);
+        for (String field : fields) {
+            if (!field.equals(ObjectHelper.getIdAttributeName(entity.getClass()))) {
+                buffer.append(field).append(" = ?, ");
+            }
         }
 
         buffer.setLength(buffer.length() - 2);
         buffer.append(" WHERE ").append(ObjectHelper.getIdAttributeName(entity.getClass())).append(" = ?");
+
         return buffer.toString();
     }
+
+    public static String createQueryUPDATEMoney() {
+        return "UPDATE User SET money = ? WHERE id = ?";
+    }
+
 
     public static String createQueryREUPDATE(Class clase, String SET, String Where, String Where2) {
         StringBuffer sb = new StringBuffer();
@@ -99,7 +104,7 @@ public class QueryHelper {
 
     public static String createQuerySelectWithParams(Class theClass, HashMap params) {
         StringBuffer sb = new StringBuffer();
-        sb.append("SELECT * FROM ").append(theClass.getSimpleName());
+        sb.append("SELECT * FROM ").append(theClass.getSimpleName().toLowerCase());
         sb.append(" WHERE (");
 
         params.forEach((k,v) ->{
@@ -115,4 +120,6 @@ public class QueryHelper {
 
         return sb.toString();
     }
+
+
 }

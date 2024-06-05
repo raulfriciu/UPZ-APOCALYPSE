@@ -20,34 +20,29 @@ public class UserDAOImpl implements IUserDAO {
     //AÑADIR USUARIO, crea y guarda user en la database
     public int addUser(String name, String email, String password) {
         Session session = null;
-        int userID = 0;
         try {
             session = FactorySession.openSession();
             User user = new User(name, email, password);
             session.save(user);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             // LOG
-        }
-        finally {
+        } finally {
             session.close();
         }
 
-        return userID;
+        return 0;
     }
 
     //GET USUARIO, selecciona un user por su id de la database
-    public User getUser(String userID) {
+    public User getUser(int userID) {
         Session session = null;
         User user = null;
         try {
             session = FactorySession.openSession();
-            user = (User)session.get(User.class, "id", userID);
-        }
-        catch (Exception e) {
+            user = (User) session.get(User.class, "ID", userID);
+        } catch (Exception e) {
             // LOG
-        }
-        finally {
+        } finally {
             session.close();
         }
 
@@ -60,13 +55,11 @@ public class UserDAOImpl implements IUserDAO {
         User user = null;
         try {
             session = FactorySession.openSession();
-            user = (User)session.get(User.class, "email", email);
-        }
-        catch (Exception e) {
+            user = (User) session.get(User.class, "email", email);
+        } catch (Exception e) {
             e.printStackTrace();
             // LOG
-        }
-        finally {
+        } finally {
             session.close();
         }
 
@@ -74,17 +67,15 @@ public class UserDAOImpl implements IUserDAO {
     }
 
     //ELIMINA USER, elimina un user por su id de la database
-    public void deleteUser(String employeeID) {
+    public void deleteUser(int employeeID) {
         User user = this.getUser(employeeID);
         Session session = null;
         try {
             session = FactorySession.openSession();
             session.delete(user);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             // LOG
-        }
-        finally {
+        } finally {
             session.close();
         }
 
@@ -94,26 +85,22 @@ public class UserDAOImpl implements IUserDAO {
     public List<Item> getItems() {
 
         Session session = null;
-        List<Item> items=null;
+        List<Item> items = null;
         try {
             session = FactorySession.openSession();
             items = session.findAll(User.class);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             // LOG
-        }
-        finally {
+        } finally {
             session.close();
         }
         return items;
     }
 
 
-
     //COMPRA OBJETO, selecciona el item por el nombre, excepcion dinero insuficiente
-    public void buyItem(String idItem, String idUser) throws MoneyException,  SQLException {
-
-        logger.info("Buying item "+ idItem + " for User " +idUser);
+    public void buyItem(int idItem, int idUser) throws MoneyException, SQLException {
+        logger.info("Buying item " + idItem + " for User " + idUser);
         Session session = null;
         IItemDAO itemDAO = new ItemDAOImpl();
         Item item = itemDAO.getItem(idItem);
@@ -122,22 +109,21 @@ public class UserDAOImpl implements IUserDAO {
         try {
             session = FactorySession.openSession();
             user.compraItem(item);
-            logger.info("Objeto comprado");
-            session.update(user);
+            session.update(user, idUser);
             Inventory inventory = new Inventory(idItem, idUser);
             session.save(inventory);
-
+            logger.info("Objeto comprado");
         } catch (MoneyException e) {
-            logger.warn("No tienes suficiente dinero");
-            throw new MoneyException();
-        } catch(SQLException e){
-            logger.warn("Objeto ya en el inventario");
-            throw new SQLException();
-        }
-        finally {
-
-            session.close();
+            logger.warn("No tienes suficiente dinero", e);
+            throw e;
+        } catch (SQLException e) {
+            logger.warn("Objeto ya en el inventario", e);
+            throw e;
+        } finally {
+            if (session != null) {
+                session.close();
+            }
         }
     }
-
 }
+

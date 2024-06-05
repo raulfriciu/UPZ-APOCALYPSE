@@ -26,7 +26,10 @@
                 })
                     .done(function (data, status) {
                         alert("Bienvenido!");
-                        location.href = "/main.html"
+                        // Guardar el ID del usuario en sessionStorage
+                        sessionStorage.setItem('idUser', data.ID);
+                        // Redirigir a la página principal
+                        location.href = "main.html"
                     })
                     .fail(function (xhr, err) {
                         if (xhr.status === 401) { // Unauthorized
@@ -37,6 +40,7 @@
                         location.reload();
                     })
             });
+
         });
     </script>
 </head>
