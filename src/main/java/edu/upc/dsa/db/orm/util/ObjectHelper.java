@@ -26,8 +26,6 @@ public class ObjectHelper {
         return Arrays.copyOf(sFields, i);
     }
 
-
-
     public static void setter(Object object, String property, Object value) {
         // Method // invoke
         List<Method> methods = new ArrayList<>(Arrays.asList(object.getClass().getDeclaredMethods()));
@@ -42,25 +40,6 @@ public class ObjectHelper {
 
     public static String getMethodName(String property) {
         return property.substring(0,1).toUpperCase()+property.substring(1);
-    }
-
-    public static String getAttributeName(Class theClass, String attribute) {
-        Field field = (Field)Arrays.stream(theClass.getDeclaredFields()).filter((x) -> {
-            return x.getName().matches("(?i).*"+ attribute +".*");
-        }).findFirst().orElse((Field) null);
-
-        assert field != null;
-
-        return field.getName();
-    }
-    public static String getIdAttributeName(Class theClass) {
-        Field field = (Field)Arrays.stream(theClass.getDeclaredFields()).filter((x) -> {
-            return x.getName().matches("(?i).*id.*");
-        }).findFirst().orElse((Field) null);
-
-        assert field != null;
-
-        return field.getName();
     }
 
     public static Object getter(Object object, String property) {
@@ -79,4 +58,5 @@ public class ObjectHelper {
             return null;
         }
     }
+
 }

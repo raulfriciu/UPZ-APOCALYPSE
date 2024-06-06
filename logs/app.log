@@ -1777,3 +1777,282 @@ java.lang.IllegalArgumentException: argument type mismatch
 2024-06-05 22:04:49 INFO  UserDAOImpl:103 - Buying item 1 for User 90
 2024-06-05 22:04:49 INFO  UserDAOImpl:108 - 250
 2024-06-05 22:04:49 INFO  UserDAOImpl:115 - Objeto comprado
+2024-06-05 22:24:40 INFO  UserDAOImpl:103 - Buying item 1 for User 89
+2024-06-05 22:24:40 INFO  UserDAOImpl:108 - 250
+2024-06-05 22:24:40 WARN  UserDAOImpl:117 - No tienes suficiente dinero
+edu.upc.dsa.exception.MoneyException
+	at edu.upc.dsa.models.User.compraItem(User.java:56)
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.buyItem(UserDAOImpl.java:111)
+	at edu.upc.dsa.services.GameService.buyItems(GameService.java:120)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 22:25:11 INFO  UserDAOImpl:103 - Buying item 2 for User 90
+2024-06-05 22:25:11 INFO  UserDAOImpl:108 - 100
+2024-06-05 22:25:11 INFO  UserDAOImpl:115 - Objeto comprado
+2024-06-05 22:26:01 INFO  UserDAOImpl:103 - Buying item 2 for User 90
+2024-06-05 22:26:01 INFO  UserDAOImpl:108 - 100
+2024-06-05 22:26:01 INFO  UserDAOImpl:115 - Objeto comprado
+2024-06-05 22:26:39 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-05 22:26:39 INFO  GameManagerImpl:92 - 1
+2024-06-05 22:26:39 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-05 22:26:40 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 09:50:53 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 09:51:10 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-06 09:51:10 INFO  GameManagerImpl:92 - 1
+2024-06-06 09:51:10 INFO  GameManagerImpl:94 - Succesful login luis@gmail.com
+2024-06-06 09:51:18 INFO  GameManagerImpl:91 - luis@gmail.com
+2024-06-06 09:51:18 INFO  GameManagerImpl:92 - 1
+2024-06-06 09:51:18 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 09:51:25 INFO  GameManagerImpl:91 - 
+2024-06-06 09:51:25 INFO  GameManagerImpl:92 - 
+2024-06-06 09:51:25 INFO  GameManagerImpl:101 - Error
+2024-06-06 09:51:25 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 09:51:41 INFO  GameManagerImpl:71 - User registered
+2024-06-06 09:51:52 INFO  GameManagerImpl:74 - This email is already being used
+2024-06-06 09:51:52 INFO  GameManagerImpl:78 - This email is already being used
+2024-06-06 10:11:18 INFO  GameManagerImpl:71 - User registered
+2024-06-06 10:11:28 INFO  GameManagerImpl:91 - q
+2024-06-06 10:11:28 INFO  GameManagerImpl:92 - q
+2024-06-06 10:11:28 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 10:11:31 INFO  GameManagerImpl:91 - q
+2024-06-06 10:11:31 INFO  GameManagerImpl:92 - q
+2024-06-06 10:11:31 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 10:11:31 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 10:12:29 INFO  GameManagerImpl:91 - q
+2024-06-06 10:12:29 INFO  GameManagerImpl:92 - q
+2024-06-06 10:12:29 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 10:12:30 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 10:13:12 INFO  GameManagerImpl:91 - 
+2024-06-06 10:13:12 INFO  GameManagerImpl:92 - 
+2024-06-06 10:13:12 INFO  GameManagerImpl:101 - Error
+2024-06-06 10:13:12 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 10:13:40 INFO  GameManagerImpl:91 - 
+2024-06-06 10:13:40 INFO  GameManagerImpl:92 - 
+2024-06-06 10:13:40 INFO  GameManagerImpl:101 - Error
+2024-06-06 10:13:40 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 10:13:49 INFO  GameManagerImpl:91 - q
+2024-06-06 10:13:49 INFO  GameManagerImpl:92 - q
+2024-06-06 10:13:49 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 10:13:50 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 10:25:25 INFO  GameManagerImpl:91 - q
+2024-06-06 10:25:25 INFO  GameManagerImpl:92 - q
+2024-06-06 10:25:25 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 10:28:39 INFO  GameManagerImpl:91 - a
+2024-06-06 10:28:39 INFO  GameManagerImpl:92 - a
+2024-06-06 10:28:39 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 10:28:45 INFO  GameManagerImpl:91 - q
+2024-06-06 10:28:45 INFO  GameManagerImpl:92 - q
+2024-06-06 10:28:45 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 10:28:46 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 10:35:35 INFO  GameManagerImpl:91 - q
+2024-06-06 10:35:35 INFO  GameManagerImpl:92 - q
+2024-06-06 10:35:35 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 10:48:11 INFO  GameManagerImpl:91 - q
+2024-06-06 10:48:11 INFO  GameManagerImpl:92 - q
+2024-06-06 10:48:11 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 10:48:13 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 10:55:16 INFO  GameManagerImpl:91 - q
+2024-06-06 10:55:16 INFO  GameManagerImpl:92 - q
+2024-06-06 10:55:16 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 10:55:17 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:02:53 INFO  GameManagerImpl:91 - q
+2024-06-06 11:02:53 INFO  GameManagerImpl:92 - q
+2024-06-06 11:02:53 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 11:02:53 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:03:27 INFO  GameManagerImpl:91 - q
+2024-06-06 11:03:27 INFO  GameManagerImpl:92 - q
+2024-06-06 11:03:27 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 11:03:28 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:04:51 INFO  GameManagerImpl:91 - q
+2024-06-06 11:04:51 INFO  GameManagerImpl:92 - q
+2024-06-06 11:04:51 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 11:04:52 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:08:35 INFO  GameManagerImpl:91 - q
+2024-06-06 11:08:35 INFO  GameManagerImpl:92 - q
+2024-06-06 11:08:35 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 11:08:36 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:23:01 INFO  GameManagerImpl:91 - 
+2024-06-06 11:23:01 INFO  GameManagerImpl:92 - 
+2024-06-06 11:23:01 INFO  GameManagerImpl:101 - Error
+2024-06-06 11:23:01 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-06 11:25:24 INFO  GameManagerImpl:91 - q
+2024-06-06 11:25:24 INFO  GameManagerImpl:92 - q
+2024-06-06 11:25:24 INFO  GameManagerImpl:94 - Succesful login q
+2024-06-06 11:25:26 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:27:38 INFO  GameManagerImpl:91 - q
+2024-06-06 11:27:38 INFO  GameManagerImpl:92 - q
+2024-06-06 11:27:38 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:27:40 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:29:12 INFO  GameManagerImpl:91 - q
+2024-06-06 11:29:12 INFO  GameManagerImpl:92 - q
+2024-06-06 11:29:12 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:29:19 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:29:51 INFO  GameManagerImpl:91 - q
+2024-06-06 11:29:51 INFO  GameManagerImpl:92 - q
+2024-06-06 11:29:51 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:29:56 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:31:23 INFO  GameManagerImpl:91 - q
+2024-06-06 11:31:23 INFO  GameManagerImpl:92 - q
+2024-06-06 11:31:23 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:31:25 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:32:28 INFO  GameManagerImpl:91 - q
+2024-06-06 11:32:28 INFO  GameManagerImpl:92 - q
+2024-06-06 11:32:28 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:32:29 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:37:45 INFO  GameManagerImpl:91 - q
+2024-06-06 11:37:45 INFO  GameManagerImpl:92 - q
+2024-06-06 11:37:45 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:37:46 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:40:43 INFO  GameManagerImpl:91 - q
+2024-06-06 11:40:43 INFO  GameManagerImpl:92 - q
+2024-06-06 11:40:43 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:40:44 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:42:05 INFO  GameManagerImpl:91 - q
+2024-06-06 11:42:05 INFO  GameManagerImpl:92 - q
+2024-06-06 11:42:05 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:42:06 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:42:35 INFO  GameManagerImpl:91 - q
+2024-06-06 11:42:35 INFO  GameManagerImpl:92 - q
+2024-06-06 11:42:35 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:42:36 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:43:42 INFO  GameManagerImpl:91 - q
+2024-06-06 11:43:42 INFO  GameManagerImpl:92 - q
+2024-06-06 11:43:42 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:43:43 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:44:48 INFO  GameManagerImpl:91 - q
+2024-06-06 11:44:48 INFO  GameManagerImpl:92 - q
+2024-06-06 11:44:48 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:44:49 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:45:10 INFO  GameManagerImpl:91 - q
+2024-06-06 11:45:10 INFO  GameManagerImpl:92 - q
+2024-06-06 11:45:10 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:45:59 INFO  GameManagerImpl:91 - q
+2024-06-06 11:45:59 INFO  GameManagerImpl:92 - q
+2024-06-06 11:45:59 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:46:00 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:46:03 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:53:26 INFO  GameManagerImpl:91 - q
+2024-06-06 11:53:26 INFO  GameManagerImpl:92 - q
+2024-06-06 11:53:26 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:53:54 INFO  GameManagerImpl:91 - q
+2024-06-06 11:53:54 INFO  GameManagerImpl:92 - q
+2024-06-06 11:53:54 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:54:27 INFO  GameManagerImpl:91 - pl
+2024-06-06 11:54:27 INFO  GameManagerImpl:92 - a
+2024-06-06 11:54:27 INFO  GameManagerImpl:94 - Successful login pl
+2024-06-06 11:54:41 INFO  GameManagerImpl:91 - q
+2024-06-06 11:54:41 INFO  GameManagerImpl:92 - q
+2024-06-06 11:54:41 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:55:10 INFO  GameManagerImpl:91 - q
+2024-06-06 11:55:10 INFO  GameManagerImpl:92 - q
+2024-06-06 11:55:10 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:55:12 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:57:36 INFO  GameManagerImpl:91 - q
+2024-06-06 11:57:36 INFO  GameManagerImpl:92 - q
+2024-06-06 11:57:36 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:57:37 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:58:57 INFO  GameManagerImpl:91 - q
+2024-06-06 11:58:57 INFO  GameManagerImpl:92 - q
+2024-06-06 11:58:57 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:58:58 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 11:59:41 INFO  GameManagerImpl:91 - q
+2024-06-06 11:59:41 INFO  GameManagerImpl:92 - q
+2024-06-06 11:59:41 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 11:59:42 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:02:37 INFO  GameManagerImpl:91 - q
+2024-06-06 12:02:37 INFO  GameManagerImpl:92 - q
+2024-06-06 12:02:37 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 12:02:39 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:03:11 INFO  GameManagerImpl:91 - pl
+2024-06-06 12:03:11 INFO  GameManagerImpl:92 - a
+2024-06-06 12:03:11 INFO  GameManagerImpl:94 - Successful login pl
+2024-06-06 12:03:12 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:08:41 INFO  GameManagerImpl:91 - q
+2024-06-06 12:08:41 INFO  GameManagerImpl:92 - q
+2024-06-06 12:08:41 INFO  GameManagerImpl:94 - Successful login q
+2024-06-06 12:08:42 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:09:15 INFO  GameManagerImpl:71 - User registered
+2024-06-06 12:09:26 INFO  GameManagerImpl:91 - juan
+2024-06-06 12:09:26 INFO  GameManagerImpl:92 - 1
+2024-06-06 12:09:26 INFO  GameManagerImpl:94 - Successful login juan
+2024-06-06 12:09:27 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:33:59 INFO  GameManagerImpl:71 - User registered
+2024-06-06 12:34:01 INFO  GameManagerImpl:74 - This email is already being used
+2024-06-06 12:34:01 INFO  GameManagerImpl:78 - This email is already being used
+2024-06-06 12:34:07 INFO  GameManagerImpl:91 - and
+2024-06-06 12:34:07 INFO  GameManagerImpl:92 - and
+2024-06-06 12:34:07 INFO  GameManagerImpl:94 - Successful login and
+2024-06-06 12:34:09 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:38:25 INFO  GameManagerImpl:91 - and
+2024-06-06 12:38:25 INFO  GameManagerImpl:92 - and
+2024-06-06 12:38:25 INFO  GameManagerImpl:94 - Successful login and
+2024-06-06 12:38:26 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:42:16 INFO  GameManagerImpl:91 - and
+2024-06-06 12:42:16 INFO  GameManagerImpl:92 - and
+2024-06-06 12:42:16 INFO  GameManagerImpl:94 - Successful login and
+2024-06-06 12:42:17 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:43:19 INFO  GameManagerImpl:91 - juan
+2024-06-06 12:43:19 INFO  GameManagerImpl:92 - 1
+2024-06-06 12:43:19 INFO  GameManagerImpl:94 - Successful login juan
+2024-06-06 12:43:20 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:45:00 INFO  GameManagerImpl:91 - and
+2024-06-06 12:45:00 INFO  GameManagerImpl:92 - and
+2024-06-06 12:45:00 INFO  GameManagerImpl:94 - Successful login and
+2024-06-06 12:45:02 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:47:44 INFO  GameManagerImpl:91 - and
+2024-06-06 12:47:44 INFO  GameManagerImpl:92 - and
+2024-06-06 12:47:44 INFO  GameManagerImpl:94 - Successful login and
+2024-06-06 12:47:45 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:49:44 INFO  GameManagerImpl:91 - juan
+2024-06-06 12:49:44 INFO  GameManagerImpl:92 - 1
+2024-06-06 12:49:44 INFO  GameManagerImpl:94 - Successful login juan
+2024-06-06 12:49:45 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 12:50:01 INFO  GameManagerImpl:71 - User registered
+2024-06-06 12:50:05 INFO  GameManagerImpl:91 - o
+2024-06-06 12:50:05 INFO  GameManagerImpl:92 - o
+2024-06-06 12:50:05 INFO  GameManagerImpl:94 - Successful login o
+2024-06-06 12:50:06 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 13:30:46 INFO  GameManagerImpl:91 - and
+2024-06-06 13:30:46 INFO  GameManagerImpl:92 - and
+2024-06-06 13:30:46 INFO  GameManagerImpl:94 - Successful login and
+2024-06-06 13:30:48 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 13:31:13 INFO  GameManagerImpl:71 - User registered
+2024-06-06 13:31:18 INFO  GameManagerImpl:91 - w
+2024-06-06 13:31:18 INFO  GameManagerImpl:92 - w
+2024-06-06 13:31:18 INFO  GameManagerImpl:94 - Successful login w
+2024-06-06 13:31:19 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 13:32:52 INFO  GameManagerImpl:91 - w
+2024-06-06 13:32:52 INFO  GameManagerImpl:92 - w
+2024-06-06 13:32:52 INFO  GameManagerImpl:94 - Successful login w
+2024-06-06 13:32:53 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 13:33:36 INFO  GameManagerImpl:91 - w
+2024-06-06 13:33:36 INFO  GameManagerImpl:92 - w
+2024-06-06 13:33:36 INFO  GameManagerImpl:94 - Successful login w
+2024-06-06 13:33:38 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-06 13:34:41 INFO  GameManagerImpl:71 - User registered
+2024-06-06 13:34:44 INFO  GameManagerImpl:91 - e
+2024-06-06 13:34:44 INFO  GameManagerImpl:92 - e
+2024-06-06 13:34:44 INFO  GameManagerImpl:94 - Successful login e
+2024-06-06 13:34:46 INFO  GameManagerImpl:111 - Lista Objetos Correcta

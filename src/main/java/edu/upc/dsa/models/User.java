@@ -10,11 +10,6 @@ public class User {
     String password;
     int money;
 
-    public static int getLastId() {
-        return lastId;
-    }
-    static int lastId;
-
     public User() {};
 
     public User( String name, String email, String password) {
@@ -50,17 +45,6 @@ public class User {
 
     public void setMoney(int money) {
         this.money = money;
-    }
-    public void compraItem(Item item) throws MoneyException {
-        if(item.getPrice()>this.money){
-            throw new MoneyException();
-        }
-        this.money = this.money - item.getPrice();
-    }
-    public void update(String name, String surname, String email, String password){
-        this.name = name;
-        this.email = email;
-        this.password = password;
     }
     @Override
     public String toString() {

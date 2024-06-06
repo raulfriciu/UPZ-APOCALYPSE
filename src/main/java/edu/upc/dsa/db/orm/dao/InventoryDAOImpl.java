@@ -26,6 +26,23 @@ public class InventoryDAOImpl implements IInventoryDAO {
     }
 
     @Override
+    public List<Inventory> getInventoryitems() {
+        Session session = null;
+        List<Inventory> inventoryitems = null;
+        try {
+            session = FactorySession.openSession();
+            inventoryitems = session.findAll(Inventory.class);
+        } catch (Exception e) {
+            logger.error("Error getting inventory items", e);
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return inventoryitems;
+    }
+
+    @Override
     public List<Inventory> getInventory(int idUser) throws NonExistentItemException, SQLException, NotInInventoryException {
         Session session = null;
         IItemDAO itemDAO = new ItemDAOImpl();
@@ -56,24 +73,5 @@ public class InventoryDAOImpl implements IInventoryDAO {
         return userItems;
     }
 
-
-
-
-    @Override
-    public List<Inventory> getInventoryitems() {
-        Session session = null;
-        List<Inventory> inventoryitems = null;
-        try {
-            session = FactorySession.openSession();
-            inventoryitems = session.findAll(Inventory.class);
-        } catch (Exception e) {
-            logger.error("Error getting inventory items", e);
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
-        return inventoryitems;
-    }
 }
 

@@ -91,7 +91,7 @@ public class GameManagerImpl implements GameManager {
             logger.info(userLogIn.getEmail());
             logger.info(userLogIn.getPassword());
             if (userLogIn.getPassword().equals(credenciales.getPassword())) {
-                logger.info("Succesful login " + credenciales.getEmail());
+                logger.info("Successful login " + credenciales.getEmail());
                 return userLogIn;
             } else if (userLogIn.getEmail() == null) {
                 logger.info("User not registered");
@@ -110,15 +110,6 @@ public class GameManagerImpl implements GameManager {
         List<Item> lItemDAO = itemDAO.getItems();
         logger.info("Lista Objetos Correcta");
         return lItemDAO;
-    }
-
-    //LISTA INVENTARIO, selecciona lisat de la database
-    public List<Inventory> Inventory ()
-    {
-        IInventoryDAO inventoryDAO = new InventoryDAOImpl();
-        List<Inventory> lInventoryDAO = inventoryDAO.getInventoryitems();
-        logger.info("Lista Inventario Correcta");
-        return lInventoryDAO;
     }
 
     //DELETE USUARIO, elimina el usuario con el nombre y la contraseña recibidos

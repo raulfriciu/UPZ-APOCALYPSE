@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,37 +10,69 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#loginButton").click(function () {
+        $(document).ready(function(){
+            console.log("Successful LOG")
+            localStorage = window.localStorage;
+        });
 
-                var dataBody=
-                    {
-                        email: $("#email").val(),
-                        password: $("#password").val()
+        $(function(){
+            $('#loginButton').on('click',function(e){
+                e.preventDefault();
+
+                var email = document.getElementById("textEmail");
+                var password = document.getElementById("textPassword");
+                var empty = 0;
+
+                if(email.value.trim() === '' || password.value.trim() === '' ){
+                    if(email.value.trim() === '') {
+                        empty = 1;
                     }
-                var URL = "dsaApp/game/usuarios/login";
-                $.post({
-                    url: URL,
-                    data: JSON.stringify(dataBody),
-                    contentType: 'application/json; charset=utf-8'
-                })
-                    .done(function (data, status) {
-                        alert("Bienvenido!");
-                        // Guardar el ID del usuario en sessionStorage
-                        sessionStorage.setItem('idUser', data.ID);
-                        // Redirigir a la página principal
-                        location.href = "main.html"
-                    })
-                    .fail(function (xhr, err) {
-                        if (xhr.status === 401) { // Unauthorized
-                            alert("Contraseña incorrecta. Por favor, inténtalo de nuevo");
-                        } else {
-                            alert("No estás registrado");
-                        }
-                        location.reload();
-                    })
-            });
+                    if(password.value.trim() === '') {
+                        empty = 2;
+                    }
+                    if((password.value.trim() === '')&(email.value.trim() === '')){
+                        alert("Por favor, completa todos los campos");
+                    }
+                    else if(empty===1){
+                        alert("Por favor, introduce el email");
+                    }
+                    else if(empty===2){
+                        alert("Por favor, introduce la contraseña");
+                    }
+                }
 
+                if (empty === 0){
+                    var logInData = {
+                        "email": email.value,
+                        "password": password.value
+                    };
+
+                    $.ajax({
+                        type: "POST",
+                        url: "dsaApp/game/usuarios/login",
+                        data: JSON.stringify(logInData),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function(data) {
+                            console.log("Successful");
+                            alert("Bienvenido! :)");
+                            localStorage.setItem("email",data.email);
+                            window.location.pathname = "main.html";
+                        },
+                        error: function(xhr, status, error) {
+                            if(xhr.status == 401){
+                                alert("Credenciales incorectas. Por favor, inténtalo de nuevo");
+                            }
+                            else if (xhr.status == 404){
+                                alert("No estás registrado");
+                            }
+                            else {
+                                alert("ERROR: " + xhr.status);
+                            }
+                        }
+                    });
+                }
+            });
         });
     </script>
 </head>
@@ -50,25 +82,24 @@
         <h1>Inicia sesión en UPZ-APOCALYPSE!</h1>
         <p>Introduce tus datos:</p>
         <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Email:</label>
+            <label class="control-label col-sm-2" for="textEmail">Email:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="email" placeholder="Introduce un correo electrónico">
+                <input type="text" class="form-control" id="textEmail" placeholder="Introduce un correo electrónico">
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-sm-2" for="password">Contraseña:</label>
+            <label class="control-label col-sm-2" for="textPassword">Contraseña:</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="password" placeholder="Introduce una contraseña">
+                <input type="password" class="form-control" id="textPassword" placeholder="Introduce una contraseña">
             </div>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block mt-5" id = "loginButton">LOGIN</button>
+            <button type="submit" class="btn btn-primary btn-block mt-5" id="loginButton">LOGIN</button>
             <div class="signup_link" style="text-align:center">
                 You don't have an account? <a href="register.html">Sign up!</a>
             </div>
         </div>
     </div>
 </div>
-
 </body>
 </html>

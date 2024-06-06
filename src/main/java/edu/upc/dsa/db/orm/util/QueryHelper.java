@@ -36,69 +36,34 @@ public class QueryHelper {
 
         return sb.toString();
     }
+    public static String createQuerySELECTobject(Object entity) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("SELECT * FROM ").append(entity.getClass().getSimpleName());
+        sb.append(" WHERE ID = ?");
+
+        return sb.toString();
+    }
     public static String createQuerySELECTAll(Class theClass) {
         StringBuffer sb = new StringBuffer();
         sb.append("SELECT * FROM ").append(theClass.getSimpleName());
         return sb.toString();
     }
 
-
-    public static String createSelectFindAll(Class theClass, HashMap<String, String> params) {
-
-        Set<Map.Entry<String, String>> set = params.entrySet();
-
-        StringBuffer sb = new StringBuffer("SELECT * FROM "+theClass.getSimpleName()+" WHERE 1=1");
-        for (String key: params.keySet()) {
-            sb.append(" AND "+key+"=?");
-        }
-
-
-        return sb.toString();
-    }
-
     public static String createQueryUPDATE(Object entity) {
-        StringBuffer buffer = new StringBuffer();
-        buffer.append("UPDATE ").append(entity.getClass().getSimpleName().toLowerCase());
-        buffer.append(" SET ");
-
         String[] fields = ObjectHelper.getFields(entity);
-        for (String field : fields) {
-            if (!field.equals(ObjectHelper.getIdAttributeName(entity.getClass()))) {
-                buffer.append(field).append(" = ?, ");
+        StringBuffer sb = new StringBuffer("UPDATE ");
+        sb.append(entity.getClass().getSimpleName().toLowerCase());
+        sb.append(" SET ");
+
+        for (int i = 1; i < fields.length; i++) {
+            if (i > 1) {
+                sb.append(", ");
             }
+            sb.append(fields[i]).append(" = ?");
         }
 
-        buffer.setLength(buffer.length() - 2);
-        buffer.append(" WHERE ").append(ObjectHelper.getIdAttributeName(entity.getClass())).append(" = ?");
+        sb.append(" WHERE ").append(fields[0]).append(" = ?");
 
-        return buffer.toString();
-    }
-
-    public static String createQueryUPDATEMoney() {
-        return "UPDATE User SET money = ? WHERE id = ?";
-    }
-
-
-    public static String createQueryREUPDATE(Class clase, String SET, String Where, String Where2) {
-        StringBuffer sb = new StringBuffer();
-        sb.append("UPDATE ").append(clase.getSimpleName());
-        if (Objects.equals(SET, "PASSWORD")){
-            sb.append(" SET ").append(SET);
-            sb.append(" = MD5(?) ");
-            sb.append(" WHERE ");
-            sb.append(Where);
-            sb.append(" = ?");
-        }
-        else{
-            sb.append(" SET ").append(SET);
-            sb.append(" = ? ");
-            sb.append(" WHERE ");
-            sb.append(Where);
-            sb.append(" = ? ");
-            sb.append(" AND ");
-            sb.append(Where2);
-            sb.append(" = ?");
-        }
         return sb.toString();
     }
 
@@ -121,5 +86,10 @@ public class QueryHelper {
         return sb.toString();
     }
 
-
+    public static String createQuerySELECTAllByEmail(Object entity) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("SELECT * FROM ").append(entity.getClass().getSimpleName());
+        sb.append(" WHERE emailUser = ?");
+        return sb.toString();
+    }
 }

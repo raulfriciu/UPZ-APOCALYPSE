@@ -6,7 +6,6 @@ import edu.upc.dsa.models.User;
 
 import java.sql.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public class SessionImpl implements Session {
@@ -95,44 +94,37 @@ public class SessionImpl implements Session {
         return null;
     }
 
-    public void update(Object object, int userId) throws SQLException {
-        // Verificar si el objeto es de tipo User
-        if (!(object instanceof User)) {
-            throw new IllegalArgumentException("El objeto proporcionado no es de tipo User");
-        }
+    public void update(Object object) throws SQLException {
+        String updateQuery = QueryHelper.createQueryUPDATE(object);
+        System.out.println("Generated UPDATE Query: " + updateQuery);
 
-        String updateQuery = QueryHelper.createQueryUPDATEMoney();
-        PreparedStatement statement = conn.prepareStatement(updateQuery);
-
-        // Obtener el valor del campo 'money' del objeto
-        double money = ((User) object).getMoney();
-
-        // Establecer los parámetros en la consulta preparada
-        statement.setDouble(1, money);
-        statement.setInt(2, userId);
-
-        // Ejecutar la actualización
-        statement.executeUpdate();
-
-        // Cerrar la declaración
-        statement.close();
-    }
-
-
-    public void reupdate(Class theClass, String SET, String valueSET, String WHERE, String valueWHERE, String WHERE2, String valueWHERE2) {
-        String updateQuery = QueryHelper.createQueryREUPDATE(theClass, SET, WHERE, WHERE2);
-        ResultSet rs;
-        PreparedStatement pstm;
+        PreparedStatement pstm = null;
+        String[] fields = ObjectHelper.getFields(object);
 
         try {
             pstm = conn.prepareStatement(updateQuery);
-            pstm.setObject(1, valueSET);
-            pstm.setObject(2, valueWHERE);
-            pstm.setObject(3, valueWHERE2);
-            pstm.executeQuery();
-        }
-        catch (SQLException e) {
+
+            // Set parameters for the fields to be updated
+            for (int i = 1; i < fields.length; i++) {
+                String field = fields[i];
+                Object value = ObjectHelper.getter(object, field);
+                System.out.println("Setting parameter " + i + ": " + value);
+                pstm.setObject(i, value);
+            }
+
+            // Set the ID as the last parameter
+            Object idValue = ObjectHelper.getter(object, fields[0]);
+            System.out.println("Setting ID parameter " + fields.length + ": " + idValue);
+            pstm.setObject(fields.length, idValue);
+
+            // Execute the update
+            pstm.executeUpdate();
+        } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            if (pstm != null) {
+                pstm.close();
+            }
         }
     }
 
@@ -256,6 +248,51 @@ public class SessionImpl implements Session {
 
     public List<Object> query(String query, Class theClass, HashMap params) {
         return null;
+    }
+    public List<Object> findAllByEmail(Object theObject, String email) {
+        String selectQuery = QueryHelper.createQuerySELECTAllByEmail(theObject);
+        PreparedStatement pstm = null;
+        List<Object> ListObject = new ArrayList<Object>();
+        try {
+            pstm = conn.prepareStatement(selectQuery);
+            pstm.setObject(1, email);
+            pstm.executeQuery();
+            ResultSet rs = pstm.getResultSet();
+            while (rs.next()) {
+                Class theClass = theObject.getClass();
+                Object object = theClass.newInstance();
+                for (int i=1;i<=rs.getMetaData().getColumnCount();i++)
+                    ObjectHelper.setter(object,rs.getMetaData().getColumnName(i),rs.getObject(i));
+                ListObject.add(object);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
+        return ListObject;
+    }
+    public Object getByID(Object theObject, int id) throws SQLException {
+        String selectQuery = QueryHelper.createQuerySELECTobject(theObject);
+        PreparedStatement pstm = null;
+        try {
+            pstm = conn.prepareStatement(selectQuery);
+            pstm.setObject(1, id);
+            pstm.executeQuery();
+            ResultSet rs = pstm.getResultSet();
+            if (rs.next()){
+                for (int i=1;i<=rs.getMetaData().getColumnCount();i++)
+                    ObjectHelper.setter(theObject,rs.getMetaData().getColumnName(i),rs.getObject(i));
+            }
+            return theObject;
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

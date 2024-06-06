@@ -8,7 +8,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface IInventoryDAO {
-    public List<Inventory> getInventoryitems();
-    public List<Inventory> getInventory(int idUser) throws SQLException, NonExistentItemException, NotInInventoryException;
+    List<Inventory> getInventoryitems();
+    List<Inventory> getInventory(int idUser) throws SQLException, NonExistentItemException, NotInInventoryException;
+
 
 }

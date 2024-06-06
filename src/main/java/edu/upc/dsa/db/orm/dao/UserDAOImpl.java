@@ -97,33 +97,5 @@ public class UserDAOImpl implements IUserDAO {
         return items;
     }
 
-
-    //COMPRA OBJETO, selecciona el item por el nombre, excepcion dinero insuficiente
-    public void buyItem(int idItem, int idUser) throws MoneyException, SQLException {
-        logger.info("Buying item " + idItem + " for User " + idUser);
-        Session session = null;
-        IItemDAO itemDAO = new ItemDAOImpl();
-        Item item = itemDAO.getItem(idItem);
-        User user = getUser(idUser);
-        logger.info(item.getPrice());
-        try {
-            session = FactorySession.openSession();
-            user.compraItem(item);
-            session.update(user, idUser);
-            Inventory inventory = new Inventory(idItem, idUser);
-            session.save(inventory);
-            logger.info("Objeto comprado");
-        } catch (MoneyException e) {
-            logger.warn("No tienes suficiente dinero", e);
-            throw e;
-        } catch (SQLException e) {
-            logger.warn("Objeto ya en el inventario", e);
-            throw e;
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
-    }
 }
 

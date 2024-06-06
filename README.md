@@ -2,9 +2,9 @@
 
 register.html, index.html (login), main.html
 
-Falta: Shop comprar(funciona en Swagger), anular , Inventario y bug
+Falta: Anular compra, compra objeto ya en el inventario y bug registrar
 
-Funciones BBDD
+Funciones
 
 -	Registrar(save): Sí
 
@@ -14,7 +14,7 @@ Funciones BBDD
 
 -	Actualizar usuario: Sí
 
--	Shop(findall): Sí -> Con foto
+-	Shop(findall): Sí -> Con foto, OK comprar, OK inventario
 
 -	Minimo 2: Sí
 

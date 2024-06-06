@@ -1,29 +1,28 @@
 package edu.upc.dsa.models;
 
 public class Inventory {
-    public int item;
-    public int user;
+    public int idItem;
+    public String emailUser;
     public Inventory() {}
-    public Inventory(int item, int user)
+    public Inventory( int idItem, String emailUser)
     {
-        this.item = item;
-        this.user = user;
+        this.idItem = idItem;
+        this.emailUser = emailUser;
     }
 
-
-    public int getItem() {
-        return item;
+    public int getIdItem() {
+        return idItem;
     }
 
-    public void setItem(int item) {
-        this.item = item;
+    public void setIdItem(int idItem) {
+        this.idItem = idItem;
     }
 
-    public int getUser() {
-        return user;
+    public String getEmailUser() {
+        return emailUser;
     }
 
-    public void setUser(int user) {
-        this.user = user;
+    public void setEmailUser(String emailUser) {
+        this.emailUser = emailUser;
     }
 }
