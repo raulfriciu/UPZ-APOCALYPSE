@@ -33,23 +33,22 @@
                 }
             });
         }
-        /*
-        function updateUserMoney() {
+        function cancelItem(idItem) {
             const email = localStorage.getItem("email");
+
             $.ajax({
-                type: 'GET',
-                url: '/dsaApp/game/user/' + email,
-                dataType: 'json',
-                success: function(data) {
-                    $('#userMoney').text(data.money + ' coins');
+                type: 'PUT',
+                url: "/dsaApp/game/tienda/cancelarCompra/" + email + "/" + idItem,
+                success: function () {
+                    alert("Compra cancelada!");
+                    // Actualizar la vista del inventario después de la cancelación
+                    $("#inventoryButton").click(); // Llamar de nuevo a la carga del inventario
                 },
-                error: function () {
-                    alert("Failed to load user money.");
+                error: function (xhr, status, error) {
+                    alert("Error al cancelar compra: " + xhr.status + " - " + error);
                 }
             });
         }
-
-         */
 
         $(document).ready(function () {
             const email = localStorage.getItem("email");
@@ -58,7 +57,7 @@
                 alert("No user logged in!");
                 return;
             }
-            //updateUserMoney();
+
             $.ajax({
                 type: 'GET',
                 url: '/dsaApp/game/tienda/objetos',
@@ -73,7 +72,7 @@
                             }
                             htmlLine += '<div class="col-md-4">' +
                                 '<div class="card">' +
-                                '<img src="' + data[i].image + '" class="card-img-top" alt="' + data[i].name + '" width="200" height="200">' +
+                                '<img src="' + data[i].image + '" class="card-img-top" alt="' + data[i].name + '" width="200" height="500">' +
                                 '<div class="card-body">' +
                                 '<h5 class="card-title display-5">' + data[i].name + '</h5>' +
                                 '<p class="card-text">' + data[i].description + '</p>' +
@@ -114,12 +113,16 @@
                         if (data.length > 0) {
                             htmlLine += '<div class="row">';
                             for (let i = 0; i < data.length; i++) {
-                                htmlLine += '<div class="col-md-4">' +
+                                htmlLine += '<div class="col-md-4 mb-3">' + // Añadido mb-3 para margen inferior
                                     '<div class="card">' +
-                                    '<img src="' + data[i].image + '" class="card-img-top" alt="' + data[i].name + '" width="200" height="200">' +
+                                    '<img src="' + data[i].image + '" class="card-img-top" alt="' + data[i].name + '" width="200" height="500">' +
                                     '<div class="card-body">' +
                                     '<h5 class="card-title display-5">' + data[i].name + '</h5>' +
                                     '<p class="card-text">' + data[i].description + '</p>' +
+                                    '<p class="card-text"><strong>' + data[i].price + ' coins</strong></p>' +
+                                    '<div class="d-flex justify-content-center">' +
+                                    '<button type="button" class="btn btn-outline-danger btn-block mt-2" onclick="cancelItem(' + data[i].ID + ')">CANCEL</button>' +
+                                    '</div>' +
                                     '</div>' +
                                     '</div>' +
                                     '</div>';
@@ -135,6 +138,7 @@
                     }
                 });
             });
+
         });
     </script>
 </head>
@@ -143,9 +147,6 @@
     <h1 class="display-3">UPZ-APOCALYPSE!</h1>
     <p class="lead display-6">Tienda</p>
 </div>
-<!-- <div class="container-fluid position-fixed top-0 end-0 m-2">
-    <span id="userMoney" class="badge bg-secondary">0 coins</span>
-</div> -->
 <div id="itemCards" class="container"></div>
 <div id="inventoryCards" class="container mt-3"></div>
 <div class="container mt-3">

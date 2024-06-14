@@ -25,6 +25,7 @@ public class InventoryDAOImpl implements IInventoryDAO {
         return instance;
     }
 
+    //LISTA ITEMS INVENTARIO, devuelve una lista de todos los objetos
     @Override
     public List<Inventory> getInventoryitems() {
         Session session = null;
@@ -42,6 +43,7 @@ public class InventoryDAOImpl implements IInventoryDAO {
         return inventoryitems;
     }
 
+    //LISTA ITEMS INVENTARIO, devuelve una lista de todos los objetos que tiene el usuario, con ese id
     @Override
     public List<Inventory> getInventory(int idUser) throws NonExistentItemException, SQLException, NotInInventoryException {
         Session session = null;

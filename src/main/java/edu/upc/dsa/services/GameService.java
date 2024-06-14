@@ -45,15 +45,15 @@ public class GameService {
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "User successfully registered", response = User.class),
             @ApiResponse(code = 404, message = "This email address is already in use"),
-            @ApiResponse(code = 500, message = "Empty credentials")
+            @ApiResponse(code = 403, message = "Empty credentials")
     })
     @Path("/usuarios/register")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response register(User user) throws EmailUsedException, SQLIntegrityConstraintViolationException {
+    public Response register(User user) throws EmailUsedException {
         if (user.getName() == null || user.getName().isEmpty() ||
                 user.getEmail() == null || user.getEmail().isEmpty() ||
                 user.getPassword() == null || user.getPassword().isEmpty()) {
-            return Response.status(500).entity(user).build();
+            return Response.status(403).entity(user).build();
         }
         try {
             this.gm.registrarUser(new User(user.getName(), user.getEmail(), user.getPassword()));
@@ -61,9 +61,9 @@ public class GameService {
         } catch (EmailUsedException e) {
             e.printStackTrace();
             return Response.status(404).entity(user).build();
-        }catch (SQLIntegrityConstraintViolationException e) {
+        }catch (Exception e) {
             e.printStackTrace();
-            return Response.status(404).entity(user).build();
+            return Response.status(500).entity(user).build();
         }
     }
 
@@ -75,7 +75,6 @@ public class GameService {
             @ApiResponse(code = 401, message = "Incorrect credentials")
 
     })
-
     @Path("/usuarios/login")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -87,7 +86,8 @@ public class GameService {
             return Response.status(404).build();
         } catch (IncorrectPasswordException e) {
             return Response.status(401).build();
-        }}
+        }
+    }
 
     @GET
     @ApiOperation(value = "Lista de objetos", notes = "View items")
@@ -103,6 +103,7 @@ public class GameService {
         };
         return Response.status(201).entity(entity).build();
     }
+
     @PUT
     @ApiOperation(value = "Comprar Objeto", notes = "Buy items")
     @ApiResponses(value = {
@@ -113,7 +114,6 @@ public class GameService {
 
 
     })
-
     @Path("/tienda/comprarObjeto/{email}/{idItem}")
     public Response BuyObject(@PathParam("email") String email, @PathParam("idItem") int idItem) {
 
@@ -135,6 +135,31 @@ public class GameService {
 
     }
 
+    @PUT
+    @ApiOperation(value = "Cancelar Compra", notes = "Cancel item purchase")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Compra cancelada exitosamente"),
+            @ApiResponse(code = 404, message = "Objeto no encontrado en el inventario"),
+            @ApiResponse(code = 503, message = "Error")
+    })
+    @Path("/tienda/cancelarCompra/{email}/{idItem}")
+    public Response cancelarCompra(@PathParam("email") String email, @PathParam("idItem") int idItem) {
+        try {
+            User user = userDAO.getUserByEmail(email);
+            int error = itemDAO.cancelItemForUser(user, idItem);
+            if (error == 0) {
+                return Response.status(200).build();
+            } else if (error == 8) {
+                return Response.status(404).build();
+            } else {
+                return Response.status(503).build();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(503).build();
+        }
+    }
+
     @GET
     @ApiOperation(value = "Visualizar inventario", notes = "Inventorio")
     @ApiResponses(value = {
@@ -143,7 +168,6 @@ public class GameService {
             @ApiResponse(code = 503, message = "Exception")
 
     })
-
     @Path("/inventory/{email}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getInventory(@PathParam("email") String email) {
@@ -178,6 +202,7 @@ public class GameService {
         //En caso de un valor inesperado, devolver código de Internal Server Error
         return Response.status(500).build();
     }
+
     @PUT
     @ApiOperation(value = "Actualizar usuario", notes = "Actualiza la información del usuario")
     @ApiResponses(value = {
@@ -201,6 +226,7 @@ public class GameService {
             return Response.status(404).build(); // Retornar código 404 para indicar que el usuario no fue encontrado
         }
     }
+
     @GET
     @ApiOperation(value = "Lista de denuncias", notes = "devuelve la lista de denuncias")
     @ApiResponses(value = {
@@ -214,6 +240,7 @@ public class GameService {
         GenericEntity<List<Denuncia>> entity = new GenericEntity<List<Denuncia>>(lDen) {};
         return Response.status(201).entity(entity).build();
     }
+
     @PUT
     @ApiOperation(value = "Enviar denuncia", notes = "Envia una denuncia")
     @ApiResponses(value = {
@@ -225,6 +252,7 @@ public class GameService {
         gm.addDenuncia(denuncia);
         return Response.status(201).build();
     }
+
     @POST
     @ApiOperation(value = "Consulta sobre la app", notes = "consulta")
     @ApiResponses(value = {
@@ -239,6 +267,7 @@ public class GameService {
         //En caso de un valor inesperado, devolver código de Internal Server Error
         return Response.status(500).build();
     }
+
     @GET
     @ApiOperation(value = "get all Questions", notes = "asdasd")
     @ApiResponses(value = {

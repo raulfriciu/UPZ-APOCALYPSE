@@ -2056,3 +2056,127 @@ edu.upc.dsa.exception.MoneyException
 2024-06-06 13:34:44 INFO  GameManagerImpl:92 - e
 2024-06-06 13:34:44 INFO  GameManagerImpl:94 - Successful login e
 2024-06-06 13:34:46 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:25:09 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:25:09 INFO  GameManagerImpl:92 - a
+2024-06-14 13:25:09 WARN  GameManagerImpl:103 - Incorrect password
+2024-06-14 13:25:11 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:25:11 INFO  GameManagerImpl:92 - a
+2024-06-14 13:25:11 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:25:12 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:37:29 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:37:29 INFO  GameManagerImpl:92 - a
+2024-06-14 13:37:29 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:37:30 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:37:34 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:37:35 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:37:54 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:37:54 INFO  GameManagerImpl:92 - a
+2024-06-14 13:37:54 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:37:55 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:14 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:38:14 INFO  GameManagerImpl:92 - a
+2024-06-14 13:38:14 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:38:15 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:16 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:17 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:17 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:19 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:38:19 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:39:18 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:39:20 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:39:21 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:39:22 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:39:22 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:39:28 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:39:28 INFO  GameManagerImpl:92 - a
+2024-06-14 13:39:28 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:39:29 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:40:23 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:40:30 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:40:30 INFO  GameManagerImpl:92 - a
+2024-06-14 13:40:30 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:40:32 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:40:44 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:40:46 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:41:26 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:41:26 INFO  GameManagerImpl:92 - a
+2024-06-14 13:41:26 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:41:27 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:41:35 INFO  GameManagerImpl:71 - User registered
+2024-06-14 13:41:40 INFO  GameManagerImpl:91 - a
+2024-06-14 13:41:40 INFO  GameManagerImpl:92 - a
+2024-06-14 13:41:40 INFO  GameManagerImpl:94 - Successful login a
+2024-06-14 13:41:40 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:43:00 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:43:00 INFO  GameManagerImpl:92 - a
+2024-06-14 13:43:00 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:43:01 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:44:41 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:44:41 INFO  GameManagerImpl:92 - a
+2024-06-14 13:44:41 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:44:42 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:44:47 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:48:43 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 13:48:43 INFO  GameManagerImpl:92 - a
+2024-06-14 13:48:43 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 13:48:44 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:48:47 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:49:24 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:52:55 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:53:33 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:54:20 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:54:23 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 13:54:48 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 16:42:43 INFO  GameManagerImpl:91 - bob@gmail.com
+2024-06-14 16:42:43 INFO  GameManagerImpl:92 - a
+2024-06-14 16:42:43 INFO  GameManagerImpl:94 - Successful login bob@gmail.com
+2024-06-14 16:42:44 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 17:03:16 INFO  GameManagerImpl:91 - a
+2024-06-14 17:03:16 INFO  GameManagerImpl:92 - a
+2024-06-14 17:03:16 INFO  GameManagerImpl:94 - Successful login a
+2024-06-14 17:03:17 INFO  GameManagerImpl:111 - Lista Objetos Correcta
+2024-06-14 17:07:39 INFO  GameManagerImpl:71 - User registered
+2024-06-14 17:09:44 INFO  GameManagerImpl:71 - User registered
+2024-06-14 17:27:21 INFO  GameManagerImpl:72 - This email is already being used
+2024-06-14 17:29:39 INFO  GameManagerImpl:72 - This email is already being used
+2024-06-14 17:29:39 INFO  GameManagerImpl:76 - This email is already being used
+2024-06-14 18:00:39 INFO  GameManagerImpl:89 - a
+2024-06-14 18:00:39 INFO  GameManagerImpl:90 - a
+2024-06-14 18:00:39 INFO  GameManagerImpl:92 - Successful login a
+2024-06-14 18:00:40 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:09:23 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:09:35 INFO  GameManagerImpl:89 - a
+2024-06-14 18:09:35 INFO  GameManagerImpl:90 - a
+2024-06-14 18:09:35 INFO  GameManagerImpl:92 - Successful login a
+2024-06-14 18:09:36 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:15:35 INFO  GameManagerImpl:89 - a
+2024-06-14 18:15:35 INFO  GameManagerImpl:90 - a
+2024-06-14 18:15:35 INFO  GameManagerImpl:92 - Successful login a
+2024-06-14 18:15:36 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:19:12 INFO  GameManagerImpl:89 - a
+2024-06-14 18:19:12 INFO  GameManagerImpl:90 - a
+2024-06-14 18:19:12 INFO  GameManagerImpl:92 - Successful login a
+2024-06-14 18:19:13 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:20:56 INFO  GameManagerImpl:89 - a
+2024-06-14 18:20:56 INFO  GameManagerImpl:90 - a
+2024-06-14 18:20:56 INFO  GameManagerImpl:92 - Successful login a
+2024-06-14 18:20:58 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:21:08 INFO  GameManagerImpl:89 - a
+2024-06-14 18:21:08 INFO  GameManagerImpl:90 - a
+2024-06-14 18:21:08 INFO  GameManagerImpl:92 - Successful login a
+2024-06-14 18:21:09 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:24:40 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:24:58 INFO  GameManagerImpl:89 - a
+2024-06-14 18:24:58 INFO  GameManagerImpl:90 - a
+2024-06-14 18:24:58 INFO  GameManagerImpl:92 - Successful login a
+2024-06-14 18:24:59 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:27:24 INFO  GameManagerImpl:89 - a
+2024-06-14 18:27:24 INFO  GameManagerImpl:90 - a
+2024-06-14 18:27:24 INFO  GameManagerImpl:92 - Successful login a
+2024-06-14 18:27:25 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:28:23 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-14 18:29:30 INFO  GameManagerImpl:109 - Lista Objetos Correcta

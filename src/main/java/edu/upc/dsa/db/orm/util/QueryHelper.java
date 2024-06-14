@@ -36,6 +36,20 @@ public class QueryHelper {
 
         return sb.toString();
     }
+    public static String createQuerySELECTinventory(Class theClass, String[] pks) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("SELECT * FROM ");
+        sb.append(theClass.getSimpleName());
+        sb.append(" WHERE ");
+        for (int i = 0; i < pks.length; i++) {
+            sb.append(pks[i]).append(" = ?");
+            if (i < pks.length - 1) {
+                sb.append(" AND ");
+            }
+        }
+        return sb.toString();
+    }
+
     public static String createQuerySELECTobject(Object entity) {
         StringBuffer sb = new StringBuffer();
         sb.append("SELECT * FROM ").append(entity.getClass().getSimpleName());

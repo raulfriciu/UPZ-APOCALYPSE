@@ -7,6 +7,7 @@ import edu.upc.dsa.exception.UserNotRegisteredException;
 import edu.upc.dsa.models.*;
 import org.apache.log4j.Logger;
 
+import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.*;
 
@@ -57,26 +58,23 @@ public class GameManagerImpl implements GameManager {
 
     //REGISTRAR USUARIO, datos del html, excepcion email
     @Override
-    public User registrarUser(User user) throws EmailUsedException, SQLIntegrityConstraintViolationException {
+    public User registrarUser(User user) throws EmailUsedException {
         String email = user.getEmail().trim().toLowerCase();  // Normaliza email
-        User u = HMUser.get(email);
-
-        try{
-        if (u == null) {
-            String name = user.getName();
-            String password = user.getPassword();
-            IUserDAO userDAO = new UserDAOImpl();
-            userDAO.addUser(name, email, password);
-            HMUser.put(email, user);
-            logger.info("User registered");
-            return user;
-        } else {
+        IUserDAO userDAO = new UserDAOImpl();
+        try {
+            if (userDAO.getUserByEmail(email) == null) {
+                String name = user.getName();
+                String password = user.getPassword();
+                userDAO.addUser(name, email, password);
+                logger.info("User registered");
+                return user;
+            } else {
+                logger.info("This email is already being used");
+                throw new EmailUsedException();
+            }
+        } catch (Exception e) {
             logger.info("This email is already being used");
             throw new EmailUsedException();
-        }}
-        catch(Exception e){
-            logger.info("This email is already being used");
-            throw new SQLIntegrityConstraintViolationException();
         }
     }
 

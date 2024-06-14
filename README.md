@@ -1,8 +1,6 @@
 # REST API de UPZ-APOCALYPSE
 
-register.html, index.html (login), main.html
-
-Falta: Anular compra, compra objeto ya en el inventario y bug registrar
+register.html, index.html (login), main.html (tienda)
 
 Funciones
 
@@ -14,7 +12,7 @@ Funciones
 
 -	Actualizar usuario: Sí
 
--	Shop(findall): Sí -> Con foto, OK comprar, OK inventario
+-	Shop(findall): Sí -> Con foto, OK comprar, OK inventario, OK devolver
 
 -	Minimo 2: Sí
 

@@ -51,6 +51,53 @@ public class SessionImpl implements Session {
         }
     }
 
+    public Object getInventory(Class theClass, String[] pks, Object[] values) {
+        if (pks.length != values.length) {
+            throw new IllegalArgumentException("Keys and values must have the same length");
+        }
+
+        String selectQuery = QueryHelper.createQuerySELECTinventory(theClass, pks);
+        ResultSet rs;
+        PreparedStatement pstm = null;
+        Object o = null;
+
+        try {
+            pstm = conn.prepareStatement(selectQuery);
+
+            for (int i = 0; i < values.length; i++) {
+                pstm.setObject(i + 1, values[i]); // los ? en la consulta
+            }
+
+            rs = pstm.executeQuery();
+
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int numberOfColumns = rsmd.getColumnCount();
+
+            if (rs.next()) {
+                o = theClass.newInstance();
+                for (int i = 1; i <= numberOfColumns; i++) {
+                    String columnName = rsmd.getColumnName(i);
+                    ObjectHelper.setter(o, columnName, rs.getObject(i));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (pstm != null) {
+                try {
+                    pstm.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return o;
+    }
 
 
     public Object get(Class theClass, String pk, Object value) {
@@ -128,9 +175,43 @@ public class SessionImpl implements Session {
         }
     }
 
-    public void delete(Object object) {
+    public void delete(Object object) throws SQLException {
+        String tableName = object.getClass().getSimpleName().toLowerCase();
+        String[] fields = ObjectHelper.getFields(object);
+        String deleteQuery = "DELETE FROM " + tableName + " WHERE ";
 
+        for (int i = 0; i < fields.length; i++) {
+            deleteQuery += fields[i] + " = ?";
+            if (i < fields.length - 1) {
+                deleteQuery += " AND ";
+            }
+        }
+
+        System.out.println("Generated DELETE Query: " + deleteQuery);
+
+        PreparedStatement pstm = null;
+
+        try {
+            pstm = conn.prepareStatement(deleteQuery);
+
+            // Set parameters for the fields to be used in WHERE clause
+            for (int i = 0; i < fields.length; i++) {
+                Object value = ObjectHelper.getter(object, fields[i]);
+                System.out.println("Setting parameter " + (i + 1) + ": " + value);
+                pstm.setObject(i + 1, value);
+            }
+
+            // Execute the delete
+            pstm.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (pstm != null) {
+                pstm.close();
+            }
+        }
     }
+
 
     public List<Object> findAll(Class theClass) {
         String query = QueryHelper.createQuerySELECTAll(theClass);

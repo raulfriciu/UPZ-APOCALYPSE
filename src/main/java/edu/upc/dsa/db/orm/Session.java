@@ -9,9 +9,10 @@ public interface Session<E> {
     void close();
 
     Object get(Class theClass, String pk, Object value);
+    Object getInventory(Class theClass, String[] pks, Object[] values);
     Object getByID(Object theObject, int id) throws SQLException;
     void update(Object object) throws SQLException;
-    void delete(Object object);                                         // cruD
+    void delete(Object object) throws SQLException;
 
     List<Object> findAll(Class theClass);                               // cR
     List<Object> findAllByEmail(Object theObject, String email);

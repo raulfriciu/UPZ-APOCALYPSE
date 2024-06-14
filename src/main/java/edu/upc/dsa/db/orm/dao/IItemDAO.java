@@ -12,5 +12,6 @@ public interface IItemDAO {
     List<Item> getInventory(String email) throws SQLException;
 
     int buyItemForUser(User user, int idItem ) throws SQLException;
+    int cancelItemForUser(User user, int idItem) throws SQLException;
 }
 
