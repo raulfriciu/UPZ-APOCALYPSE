@@ -40,31 +40,41 @@ public class GameService {
         }*/
     }
 
+    @GET
+    @ApiOperation(value = "Lista de usuarios", notes = "View usuarios")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful", response = User.class, responseContainer = "List"),
+    })
+    @Path("/usuarios/lUsuarios")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUsers() {
+
+        List<User> users = userDAO.getUsers();
+        GenericEntity<List<User>> entity = new GenericEntity<List<User>>(users) {};
+        return Response.status(201).entity(entity).build();
+    }
+
     @POST
     @ApiOperation(value = "Registrar usuario", notes = "Register a new user")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "User successfully registered", response = User.class),
-            @ApiResponse(code = 404, message = "This email address is already in use"),
-            @ApiResponse(code = 403, message = "Empty credentials")
+            @ApiResponse(code = 404, message = "El email ya está registrado"),
+            @ApiResponse(code = 403, message = "Empty credentials"),
+            @ApiResponse(code = 500, message = "Error inesperado")
     })
     @Path("/usuarios/register")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response register(User user) throws EmailUsedException {
+    public Response register(User user) {
         if (user.getName() == null || user.getName().isEmpty() ||
                 user.getEmail() == null || user.getEmail().isEmpty() ||
                 user.getPassword() == null || user.getPassword().isEmpty()) {
             return Response.status(403).entity(user).build();
         }
-        try {
-            this.gm.registrarUser(new User(user.getName(), user.getEmail(), user.getPassword()));
-            return Response.status(201).entity(user).build();
-        } catch (EmailUsedException e) {
-            e.printStackTrace();
-            return Response.status(404).entity(user).build();
-        }catch (Exception e) {
-            e.printStackTrace();
-            return Response.status(500).entity(user).build();
-        }
+        int n = this.gm.registrarUser(user);
+        if (n==1) return Response.status(404).build();
+        if (n==0) return Response.status(201).build();
+
+        return Response.status(500).build();
     }
 
     @POST
@@ -161,7 +171,7 @@ public class GameService {
     }
 
     @GET
-    @ApiOperation(value = "Visualizar inventario", notes = "Inventorio")
+    @ApiOperation(value = "Visualizar inventario", notes = "Inventario")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful", response = Item.class, responseContainer = "List"),
             @ApiResponse(code = 401, message = "Error en los datos"),
@@ -232,7 +242,7 @@ public class GameService {
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Éxito", response = Denuncia.class, responseContainer="List"),
     })
-    @Path("denuncia/getDenuncias")
+    @Path("/denuncia/getDenuncias")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getDenuncias() {
         List<Denuncia> lDen = gm.getDenuncias();
@@ -246,7 +256,7 @@ public class GameService {
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Actualización exitosa")
     })
-    @Path("denuncia/addDenuncia")
+    @Path("/denuncia/addDenuncia")
     @Produces(MediaType.APPLICATION_JSON)
     public Response addDenuncia(Denuncia denuncia) {
         gm.addDenuncia(denuncia);

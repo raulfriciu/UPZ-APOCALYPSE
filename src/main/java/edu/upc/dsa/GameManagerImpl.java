@@ -57,25 +57,20 @@ public class GameManagerImpl implements GameManager {
     }
 
     //REGISTRAR USUARIO, datos del html, excepcion email
-    @Override
-    public User registrarUser(User user) throws EmailUsedException {
-        String email = user.getEmail().trim().toLowerCase();  // Normaliza email
-        IUserDAO userDAO = new UserDAOImpl();
-        try {
-            if (userDAO.getUserByEmail(email) == null) {
-                String name = user.getName();
-                String password = user.getPassword();
-                userDAO.addUser(name, email, password);
-                logger.info("User registered");
-                return user;
-            } else {
-                logger.info("This email is already being used");
-                throw new EmailUsedException();
+    public int registrarUser(User user) {
+        IUserDAO usuarioDAO = new UserDAOImpl();
+        List<User> lUsuarios = usuarioDAO.getUsers();
+        for (User u : lUsuarios) {
+            if (u.getEmail().equals(user.getEmail())){
+                return 1;
             }
-        } catch (Exception e) {
-            logger.info("This email is already being used");
-            throw new EmailUsedException();
         }
+        int res = usuarioDAO.addUser(user.getName(),user.getEmail(),user.getPassword());
+        if (res == 0) {
+            logger.info("Registrado correctamente en la base de datos");
+            return res;
+        }
+        return 0;
     }
 
     //LOGIN USUARIO, login user sin credenciales OK, excepcion password y sin registrar

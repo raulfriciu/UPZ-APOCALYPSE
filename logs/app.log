@@ -2180,3 +2180,200 @@ edu.upc.dsa.exception.MoneyException
 2024-06-14 18:27:25 INFO  GameManagerImpl:109 - Lista Objetos Correcta
 2024-06-14 18:28:23 INFO  GameManagerImpl:109 - Lista Objetos Correcta
 2024-06-14 18:29:30 INFO  GameManagerImpl:109 - Lista Objetos Correcta
+2024-06-15 11:55:11 INFO  GameManagerImpl:72 - This email is already being used
+2024-06-15 11:55:11 INFO  GameManagerImpl:76 - This email is already being used
+2024-06-15 11:55:24 INFO  GameManagerImpl:72 - This email is already being used
+2024-06-15 11:55:24 INFO  GameManagerImpl:76 - This email is already being used
+2024-06-15 11:55:30 INFO  GameManagerImpl:89 - 
+2024-06-15 11:55:30 INFO  GameManagerImpl:90 - 
+2024-06-15 11:55:30 INFO  GameManagerImpl:99 - Error
+2024-06-15 11:55:30 WARN  GameManagerImpl:101 - Incorrect password
+2024-06-15 11:55:58 INFO  GameManagerImpl:89 - a
+2024-06-15 11:55:58 INFO  GameManagerImpl:90 - a
+2024-06-15 11:55:58 INFO  GameManagerImpl:92 - Successful login a
+2024-06-15 11:56:27 INFO  GameManagerImpl:72 - This email is already being used
+2024-06-15 11:56:27 INFO  GameManagerImpl:76 - This email is already being used
+2024-06-15 11:56:43 INFO  GameManagerImpl:72 - This email is already being used
+2024-06-15 11:56:43 INFO  GameManagerImpl:76 - This email is already being used
+2024-06-15 11:56:49 INFO  GameManagerImpl:89 - 
+2024-06-15 11:56:49 INFO  GameManagerImpl:90 - 
+2024-06-15 11:56:49 INFO  GameManagerImpl:99 - Error
+2024-06-15 11:56:49 WARN  GameManagerImpl:101 - Incorrect password
+2024-06-15 11:56:57 INFO  GameManagerImpl:89 - a
+2024-06-15 11:56:57 INFO  GameManagerImpl:90 - a
+2024-06-15 11:56:57 INFO  GameManagerImpl:92 - Successful login a
+2024-06-15 16:57:17 INFO  GameManagerImpl:72 - This email is already being used
+2024-06-15 16:57:17 INFO  GameManagerImpl:76 - This email is already being used
+2024-06-15 16:57:37 INFO  GameManagerImpl:72 - This email is already being used
+2024-06-15 16:57:37 INFO  GameManagerImpl:76 - This email is already being used
+2024-06-15 17:14:41 INFO  GameManagerImpl:72 - User registered
+2024-06-15 17:14:49 INFO  GameManagerImpl:75 - This email is already being used
+2024-06-15 17:14:49 INFO  GameManagerImpl:79 - This email is already being used
+2024-06-15 17:15:00 INFO  GameManagerImpl:72 - User registered
+2024-06-15 17:16:19 INFO  GameManagerImpl:72 - User registered
+2024-06-15 17:17:23 INFO  GameManagerImpl:72 - User registered
+2024-06-15 17:24:19 INFO  GameManagerImpl:75 - User registered
+2024-06-15 17:42:14 INFO  GameManagerImpl:69 - Este correo ya está en uso: a
+2024-06-15 17:42:14 ERROR GameManagerImpl:80 - Error al registrar el usuario: a
+edu.upc.dsa.exception.EmailUsedException
+	at edu.upc.dsa.GameManagerImpl.registrarUser(GameManagerImpl.java:70)
+	at edu.upc.dsa.services.GameService.register(GameService.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-15 17:42:28 INFO  GameManagerImpl:69 - Este correo ya está en uso: w
+2024-06-15 17:42:28 ERROR GameManagerImpl:80 - Error al registrar el usuario: w
+edu.upc.dsa.exception.EmailUsedException
+	at edu.upc.dsa.GameManagerImpl.registrarUser(GameManagerImpl.java:70)
+	at edu.upc.dsa.services.GameService.register(GameService.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-15 17:49:03 INFO  GameManagerImpl:69 - Este correo ya está en uso: j
+2024-06-15 17:49:10 ERROR GameManagerImpl:80 - Error al registrar el usuario: j
+edu.upc.dsa.exception.EmailUsedException
+	at edu.upc.dsa.GameManagerImpl.registrarUser(GameManagerImpl.java:70)
+	at edu.upc.dsa.services.GameService.register(GameService.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-15 17:55:16 INFO  GameManagerImpl:69 - Este correo ya está en uso: p
+2024-06-15 17:55:16 ERROR GameManagerImpl:80 - Error al registrar el usuario: p
+edu.upc.dsa.exception.EmailUsedException
+	at edu.upc.dsa.GameManagerImpl.registrarUser(GameManagerImpl.java:70)
+	at edu.upc.dsa.services.GameService.register(GameService.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-15 18:04:00 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-15 18:04:19 INFO  GameManagerImpl:84 - c
+2024-06-15 18:04:19 INFO  GameManagerImpl:85 - c
+2024-06-15 18:04:19 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-15 18:04:23 INFO  GameManagerImpl:84 - c
+2024-06-15 18:04:23 INFO  GameManagerImpl:85 - c
+2024-06-15 18:04:23 INFO  GameManagerImpl:87 - Successful login c
+2024-06-15 18:04:24 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-15 18:12:21 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-15 18:15:48 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-15 18:16:59 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-15 18:18:23 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-16 18:58:41 INFO  GameManagerImpl:84 - a
+2024-06-16 18:58:41 INFO  GameManagerImpl:85 - a
+2024-06-16 18:58:41 INFO  GameManagerImpl:87 - Successful login a
+2024-06-16 18:58:43 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 18:59:07 INFO  GameManagerImpl:84 - a
+2024-06-16 18:59:07 INFO  GameManagerImpl:85 - a
+2024-06-16 18:59:07 INFO  GameManagerImpl:87 - Successful login a
+2024-06-16 19:20:41 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:20:57 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:21:09 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:25:00 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:25:09 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:31:57 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:33:13 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-16 19:33:34 INFO  GameManagerImpl:84 - aa
+2024-06-16 19:33:34 INFO  GameManagerImpl:85 - aa
+2024-06-16 19:33:34 INFO  GameManagerImpl:87 - Successful login aa
+2024-06-16 19:33:36 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:33:50 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:35:53 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:39:10 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:40:12 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:40:38 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:41:38 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:57:37 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 19:58:24 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 20:01:50 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 20:02:19 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 20:04:41 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 20:06:29 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 20:07:03 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-16 20:09:21 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-16 20:09:27 INFO  GameManagerImpl:84 - t
+2024-06-16 20:09:27 INFO  GameManagerImpl:85 - t
+2024-06-16 20:09:27 INFO  GameManagerImpl:87 - Successful login t
+2024-06-16 20:09:29 INFO  GameManagerImpl:104 - Lista Objetos Correcta

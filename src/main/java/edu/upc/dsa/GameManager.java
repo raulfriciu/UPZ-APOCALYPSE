@@ -9,7 +9,7 @@ import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
 public interface GameManager {
-    User registrarUser(User user) throws EmailUsedException;
+    int registrarUser(User user) ;
     User login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException;
     int deleteUser(Credenciales credenciales);
     User updateUser(String mail, String newName, String newPassword, String newMail);

@@ -2,6 +2,7 @@ package edu.upc.dsa.db.orm.dao;
 
 import edu.upc.dsa.db.orm.FactorySession;
 import edu.upc.dsa.db.orm.Session;
+import edu.upc.dsa.db.orm.SessionImpl;
 import edu.upc.dsa.exception.MoneyException;
 import edu.upc.dsa.models.Inventory;
 import edu.upc.dsa.models.Item;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+
 
 public class UserDAOImpl implements IUserDAO {
     final static Logger logger = Logger.getLogger(UserDAOImpl.class);
@@ -47,6 +49,22 @@ public class UserDAOImpl implements IUserDAO {
         }
 
         return user;
+    }
+
+    //LISTA USUARIOS, selecciona todos los usuarios y los almacena en una lista
+    public List<User> getUsers() {
+
+        Session sesion = null;
+        List<User> listaUsuarios = null;
+        try {
+            sesion = FactorySession.openSession();
+            listaUsuarios = sesion.findAll(User.class);
+        } catch (Exception e) {
+
+        } finally {
+            sesion.close();
+        }
+        return listaUsuarios;
     }
 
     //GET USER POR SU EMAIL, selecciona un user por su email de la database
