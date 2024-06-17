@@ -18,6 +18,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
+import java.util.LinkedList;
 import java.util.List;
 
 @Api(value = "/game", description = "Endpoint to Game Service")
@@ -32,6 +33,10 @@ public class GameService {
         this.gm = GameManagerImpl.getInstance();
         this.userDAO = new UserDAOImpl(); // Inicialización manual
         this.itemDAO=new ItemDAOImpl();
+        List<FAQ> preguntasFrequentes = new LinkedList<>();
+        preguntasFrequentes.add(new FAQ("¿Como se llaman los creadores?", "Pere, Andrea y Raul"));
+        preguntasFrequentes.add(new FAQ("¿Porque crearon este juego?", "Nos gusta programar"));
+        gm.addPreguntasFrequentes(preguntasFrequentes);
 
         /*if (gm.findAll().size()==0) {
             this.gm.registrarUser(new User("Juan","juan356@gmail.com", "pWmJ85"));
@@ -290,6 +295,21 @@ public class GameService {
         GenericEntity<List<Question>> entity = new GenericEntity<List<Question>>(consultas) {};
         return Response.status(201).entity(entity).build();
 
+    }
+
+    @GET
+    @ApiOperation(value = "get all FAQs", notes = "asdasd")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful", response = FAQ.class, responseContainer="List"),
+    })
+
+    @Path("/FAQs")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getPreguntasFrequentes() {
+        List<FAQ> faqs = this.gm.getPreguntasFrequentes();
+
+        GenericEntity<List<FAQ>> entity = new GenericEntity<List<FAQ>>(faqs) {};
+        return Response.status(201).entity(entity).build();
     }
 }
 

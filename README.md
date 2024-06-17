@@ -14,7 +14,7 @@ Funciones
 
 -	Shop(findall): Sí -> Con foto, OK comprar, OK inventario, OK devolver
 
--	Minimo 2: Sí
+-	Minimo 2: Sí (Con el FAQsService modificado y perfecto)
 
 
 
