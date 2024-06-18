@@ -2377,3 +2377,28 @@ edu.upc.dsa.exception.EmailUsedException
 2024-06-16 20:09:27 INFO  GameManagerImpl:85 - t
 2024-06-16 20:09:27 INFO  GameManagerImpl:87 - Successful login t
 2024-06-16 20:09:29 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-17 11:33:41 INFO  GameManagerImpl:84 - w
+2024-06-17 11:33:41 INFO  GameManagerImpl:85 - w
+2024-06-17 11:33:41 INFO  GameManagerImpl:87 - Successful login w
+2024-06-17 11:33:56 INFO  GameManagerImpl:84 - w
+2024-06-17 11:33:56 INFO  GameManagerImpl:85 - w
+2024-06-17 11:33:56 INFO  GameManagerImpl:87 - Successful login w
+2024-06-17 11:34:44 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-17 11:34:54 INFO  GameManagerImpl:84 - z
+2024-06-17 11:34:54 INFO  GameManagerImpl:85 - z
+2024-06-17 11:34:54 INFO  GameManagerImpl:87 - Successful login z
+2024-06-17 11:35:19 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-17 11:38:15 INFO  GameManagerImpl:130 - actualizar(z)
+2024-06-17 11:38:15 WARN  GameManagerImpl:160 - Usuario con correo electrónico z no encontrado
+2024-06-17 11:40:21 INFO  GameManagerImpl:167 - getName(z)
+2024-06-17 11:40:21 WARN  GameManagerImpl:174 - z not found
+2024-06-17 11:41:08 INFO  GameManagerImpl:181 - Denuncia añadida
+2024-06-17 11:43:30 INFO  GameManagerImpl:206 - Consulta Realizada
+2024-06-17 11:57:26 INFO  GameManagerImpl:206 - Consulta Realizada
+2024-06-17 12:02:03 INFO  GameManagerImpl:206 - Consulta Realizada
+2024-06-17 12:07:02 INFO  GameManagerImpl:206 - Consulta Realizada
+2024-06-17 12:12:19 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-17 12:50:57 INFO  GameManagerImpl:206 - Consulta Realizada
+2024-06-17 20:55:44 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-17 21:18:47 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-17 21:28:36 INFO  GameManagerImpl:200 - Pregunta añadida
