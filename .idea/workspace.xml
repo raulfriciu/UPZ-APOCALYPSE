@@ -6,10 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="2a6a21f6-aec1-4ff2-b28a-c15fda948413" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/GameManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/GameManagerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/db/orm/SessionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/db/orm/SessionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/db/orm/dao/IUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/db/orm/dao/IUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/db/orm/dao/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/db/orm/dao/UserDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/db/orm/util/QueryHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/db/orm/util/QueryHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/services/GameService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +127,8 @@
       <workItem from="1718615968104" duration="128000" />
       <workItem from="1718616098224" duration="6813000" />
       <workItem from="1718696596832" duration="3069000" />
+      <workItem from="1718719377192" duration="11076000" />
+      <workItem from="1718734626067" duration="36000" />
     </task>
     <servers />
   </component>

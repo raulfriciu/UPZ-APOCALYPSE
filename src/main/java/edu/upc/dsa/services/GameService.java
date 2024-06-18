@@ -200,45 +200,45 @@ public class GameService {
 
     }
 
-    @DELETE
-    @ApiOperation(value = "delete user", notes = "asdasd")
+    @POST
+    @ApiOperation(value = "Eliminar usuario", notes = "Delete user using credentials")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successful"),
-            @ApiResponse(code = 404, message = "User not found"),
-            @ApiResponse(code = 301, message = "Contraseña incorrecta")
+            @ApiResponse(code = 404, message = "Usuario no encontrado"),
+            @ApiResponse(code = 401, message = "Incorrect credentials")
     })
-    @Path("/usuarios/delete/{email}/{password}")
+    @Path("/usuarios/delete")
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response deleteUser(@PathParam("email") String email, @PathParam("password") String password) {
-        Credenciales credenciales = new Credenciales(email, password);
-        if (gm.getUser(email) == null) return Response.status(404).build();
-        if(this.gm.deleteUser(credenciales) == 1)
+    public Response deleteUser(Credenciales credenciales) throws IncorrectPasswordException, UserNotRegisteredException {
+        try {
+            this.gm.deleteUser(credenciales);
             return Response.status(201).build();
-        //En caso de un valor inesperado, devolver código de Internal Server Error
-        return Response.status(500).build();
+        } catch (IncorrectPasswordException e) {
+            return Response.status(401).build();
+        } catch (Exception e) {
+            return Response.status(404).build();
+        }
     }
 
     @PUT
-    @ApiOperation(value = "Actualizar usuario", notes = "Actualiza la información del usuario")
+    @ApiOperation(value = "Actualizar usuario", notes = "Update user")
     @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Actualización exitosa"),
-            @ApiResponse(code = 404, message = "Usuario no encontrado"),
-            @ApiResponse(code = 301, message = "Contraseña incorrecta"),
-            @ApiResponse(code = 5, message = "Correo electrónico ya en uso")
-    })
-    @Path("/usuarios/actualizar/{email}/{newPassword}/{newName}/{newMail}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response actualizarUsuario(
-            @PathParam("email") String mail,
-            @PathParam("newPassword") String newPassword,
-            @PathParam("newName") String newName,
-            @PathParam("newMail") String newMail) {
-        User usuarioActualizado = this.gm.updateUser(mail, newName, newPassword, newMail);
+            @ApiResponse(code = 201, message = "Successful"),
+            @ApiResponse(code = 404, message = "Usuario no encontrado")
 
-        if (usuarioActualizado != null) {
-            return Response.status(201).entity(usuarioActualizado).build(); // Retornar código 201 para indicar actualización exitosa
-        } else {
-            return Response.status(404).build(); // Retornar código 404 para indicar que el usuario no fue encontrado
+    })
+    @Path("/usuarios/actualizar/{email}/{name}/{password}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateUser(
+            @PathParam("email") String email,
+            @PathParam("name") String name,
+            @PathParam("password") String password) {
+        try {
+            this.userDAO.updateUser(email, name, password);
+            return Response.status(201).build();
+        } catch (SQLException e) {
+            return Response.status(404).build();
         }
     }
 

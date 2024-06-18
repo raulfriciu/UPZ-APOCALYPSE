@@ -62,20 +62,14 @@ public class QueryHelper {
         return sb.toString();
     }
 
-    public static String createQueryUPDATE(Object entity) {
-        String[] fields = ObjectHelper.getFields(entity);
-        StringBuffer sb = new StringBuffer("UPDATE ");
-        sb.append(entity.getClass().getSimpleName().toLowerCase());
-        sb.append(" SET ");
+    public static String createQueryUPDATE(Object object) {
+        String[] fields = ObjectHelper.getFields(object);
+        String tableName = object.getClass().getSimpleName().toLowerCase();
+        StringBuilder sb = new StringBuilder("UPDATE ").append(tableName).append(" SET ");
 
-        for (int i = 1; i < fields.length; i++) {
-            if (i > 1) {
-                sb.append(", ");
-            }
-            sb.append(fields[i]).append(" = ?");
-        }
-
-        sb.append(" WHERE ").append(fields[0]).append(" = ?");
+        sb.append("name = ?, ");
+        sb.append("password = ? ");
+        sb.append("WHERE email = ?");
 
         return sb.toString();
     }
@@ -86,7 +80,6 @@ public class QueryHelper {
         sb.append(" WHERE (");
 
         params.forEach((k,v) ->{
-            //k = k.substring(0, 1).toUpperCase() + k.substring(1);
             if(k.equals("password")){
                 sb.append(k).append(" = MD5(").append("?").append(") AND ");
             }else {

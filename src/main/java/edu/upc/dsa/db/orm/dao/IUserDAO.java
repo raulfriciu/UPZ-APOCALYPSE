@@ -16,8 +16,9 @@ public interface IUserDAO {
 
     int addUser (String name, String email, String password);
     User getUser(int userID);
-    User getUserByEmail(String email)throws EmailUsedException;
-    void deleteUser(int employeeID);
+    User getUserByEmail(String email) throws EmailUsedException;
+    void deleteUser(String email);
+    void updateUser(String email, String name, String password) throws SQLException;
 
     List<Item> getItems();
     List<User> getUsers();

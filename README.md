@@ -2,7 +2,9 @@
 
 LISTO PARA PRODUCCION
 
-register.html, index.html (login), main.html (tienda)
+- register.html
+- index.html (login)
+- main.html: juego, tienda, inventario, actualizar cuenta, eliminar cuenta y log out
 
 Funciones
 
@@ -10,13 +12,13 @@ Funciones
 
 -	Login(get): Sí
 
--	Borrar usuario: Sí
+-	Borrar usuario: Sí -> con BBDD
 
--	Actualizar usuario: Sí
+-	Actualizar usuario: Sí -> con BBDD
 
--	Shop(findall): Sí -> Con foto, OK comprar, OK inventario, OK devolver
+-	Shop(findall): Sí
 
--	Minimo 2: Sí (Con el FAQsService modificado y perfecto)
+-	Minimo 2: Sí
 
 
 

@@ -11,9 +11,7 @@ import java.util.List;
 public interface GameManager {
     int registrarUser(User user) ;
     User login(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException;
-    int deleteUser(Credenciales credenciales);
-    User updateUser(String mail, String newName, String newPassword, String newMail);
-    User getUser(String email);
+    void deleteUser(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException;
     List<Item> Shop();
     int size();
 

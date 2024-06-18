@@ -85,8 +85,8 @@ public class UserDAOImpl implements IUserDAO {
     }
 
     //ELIMINA USER, elimina un user por su id de la database
-    public void deleteUser(int employeeID) {
-        User user = this.getUser(employeeID);
+    public void deleteUser(String email) {
+        User user = this.getUserByEmail(email);
         Session session = null;
         try {
             session = FactorySession.openSession();
@@ -96,7 +96,31 @@ public class UserDAOImpl implements IUserDAO {
         } finally {
             session.close();
         }
+    }
 
+    //ACTUALIZA USER, pasado como parametro sus datos
+    public void updateUser(String email, String nameNew, String passwordNew) throws SQLException {
+        Session session = null;
+        try {
+            session = FactorySession.openSession();
+            User user = (User) session.get(User.class, "email", email);
+            if (user != null && (user.getName() != null || user.getPassword() != null)) {
+                user.setName(nameNew);
+                user.setPassword(passwordNew);
+                session.update(user);
+                logger.info("Successfully updated");
+            } else {
+                logger.info("User with email " + email + " not found or no update parameters provided");
+                throw new SQLException("User not found");
+            }
+        } catch (SQLException e) {
+            logger.error("Couldn't update user", e);
+            throw e;
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 
     //LISTA OBJETOS, selecciona los objetos de la database

@@ -105,75 +105,28 @@ public class GameManagerImpl implements GameManager {
         return lItemDAO;
     }
 
-    //DELETE USUARIO, elimina el usuario con el nombre y la contraseña recibidos
-    public int deleteUser(Credenciales credenciales) {
-        // Verificar si el usuario existe
-        if (HMUser.containsKey(credenciales.getEmail())) {
-            User usuario = HMUser.get(credenciales.getEmail());
-            // Verificar la contraseña
-            if (usuario.getPassword().equals(credenciales.getPassword())) {
-                HMUser.remove(credenciales.getEmail());
-                logger.info("delete(" + credenciales + ")" + usuario);
-                return 1;
+    //DELETE USUARIO, elimina el usuario con el email y la contraseña recibidos
+    public void deleteUser(Credenciales credenciales) throws UserNotRegisteredException, IncorrectPasswordException {
+        try {
+            IUserDAO userDAO = new UserDAOImpl();
+            User userToDelete = userDAO.getUserByEmail(credenciales.getEmail());
+
+            if (userToDelete == null || !userToDelete.getEmail().equals(credenciales.getEmail())) {
+                logger.info("User not registered");
+                throw new UserNotRegisteredException();
+            } else if (userToDelete.getPassword().equals(credenciales.getPassword())) {
+                userDAO.deleteUser(credenciales.getEmail());
+                logger.info("User successfully deleted: " + credenciales.getEmail());
             } else {
-                logger.warn("Incorrect password for user: " + usuario.getName());
-                return 301; // Código para contraseña incorrecta
+                logger.warn("Incorrect password for user: " + credenciales.getEmail());
+                throw new IncorrectPasswordException();
             }
-        } else {
-            logger.warn("User with email " + credenciales.getEmail() + " not found");
-            return 404; // Código para usuario no encontrado
+        } catch (EmailUsedException e) {
+            logger.error("EmailUsedException occurred: " + e.getMessage());
+            throw new UserNotRegisteredException();
         }
     }
 
-    //UPDATE USUARIO, recibe un usuario y actualiza sus datos
-    public User updateUser(String mail, String newName, String newPassword, String newMail) {
-        logger.info("actualizar(" + mail + ")");
-        // Verificar si el usuario existe
-        if (HMUser.containsKey(mail)) {
-            User usuario = HMUser.get(mail);
-            // Verificar que la nueva contraseña sea diferente de la contraseña actual
-            if (newPassword != null && !newPassword.isEmpty() && !usuario.getPassword().equals(newPassword)) {
-                usuario.setPassword(newPassword);
-            }
-            // Actualizar la información del usuario
-            if (newName != null && !newName.isEmpty()) {
-                usuario.setName(newName);
-            }
-            if (newMail != null && !newMail.isEmpty()) {
-                // Verificar si el nuevo correo es diferente del anterior
-                if (!newMail.equals(mail)) {
-                    // Verificar si el nuevo correo ya está en uso por otro usuario
-                    if (!HMUser.containsKey(newMail)) {
-                        // Eliminar la entrada antigua y agregar la entrada actualizada con la nueva clave
-                        HMUser.remove(mail);
-                        HMUser.put(newMail, usuario);
-                        usuario.setEmail(newMail);  // Actualizar el correo en el objeto usuario
-                    } else {
-                        logger.warn("El nuevo correo electrónico ya está en uso");
-                        return null; // Retornar null para indicar que el nuevo correo ya está en uso
-                    }
-                }
-            }
-            logger.info("Usuario actualizado exitosamente: " + usuario.getName());
-            return usuario; // Retornar el objeto Usuario actualizado
-        } else {
-            logger.warn("Usuario con correo electrónico " + mail + " no encontrado");
-            return null; // Retornar null para indicar que el usuario no fue encontrado
-        }
-    }
-
-    //GET USUARIO, selecciona usuario por su email
-    public User getUser(String email) {
-        logger.info("getName(" + email + ")");
-
-        if (HMUser.containsKey(email)) {
-            User U = HMUser.get(email);
-            logger.info("Encontrado(" + email + ")" + U);
-            return U;
-        }
-        logger.warn(email + " not found");
-        return null;
-    }
 
     //AÑADIR DENUNCIA, al mapa lDenuncias
     public void addDenuncia(Denuncia denuncia){

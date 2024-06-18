@@ -2408,3 +2408,426 @@ edu.upc.dsa.exception.EmailUsedException
 2024-06-18 12:16:51 INFO  GameManagerImpl:87 - Successful login t
 2024-06-18 12:16:53 INFO  GameManagerImpl:200 - Pregunta añadida
 2024-06-18 12:16:53 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 16:06:48 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-18 16:06:49 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 16:07:06 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-18 16:07:06 INFO  GameManagerImpl:84 - pep@gmail.com
+2024-06-18 16:07:06 INFO  GameManagerImpl:85 - 1
+2024-06-18 16:07:06 INFO  GameManagerImpl:87 - Successful login pep@gmail.com
+2024-06-18 16:07:08 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-18 16:07:08 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 16:07:10 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-18 16:07:13 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-18 16:07:22 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-18 16:07:23 INFO  GameManagerImpl:200 - Pregunta añadida
+2024-06-18 16:26:29 INFO  GameManagerImpl:154 - Pregunta añadida
+2024-06-18 16:26:29 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 16:28:21 INFO  GameManagerImpl:154 - Pregunta añadida
+2024-06-18 16:28:22 INFO  GameManagerImpl:84 - and
+2024-06-18 16:28:22 INFO  GameManagerImpl:85 - and
+2024-06-18 16:28:22 INFO  GameManagerImpl:87 - Successful login and
+2024-06-18 16:28:23 INFO  GameManagerImpl:154 - Pregunta añadida
+2024-06-18 16:28:23 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 16:30:05 INFO  GameManagerImpl:154 - Pregunta añadida
+2024-06-18 16:30:05 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 16:30:24 INFO  GameManagerImpl:154 - Pregunta añadida
+2024-06-18 16:30:24 INFO  GameManagerImpl:119 - User successfully deleted: and
+2024-06-18 17:17:25 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:17:26 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 17:17:37 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:17:37 INFO  GameManagerImpl:84 - 
+2024-06-18 17:17:37 INFO  GameManagerImpl:85 - 
+2024-06-18 17:17:37 INFO  GameManagerImpl:94 - Error
+2024-06-18 17:17:37 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 17:17:47 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:17:47 INFO  GameManagerImpl:84 - w
+2024-06-18 17:17:47 INFO  GameManagerImpl:85 - ww
+2024-06-18 17:17:47 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:18:06 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:18:06 INFO  GameManagerImpl:119 - User successfully deleted: w
+2024-06-18 17:18:30 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:18:30 INFO  GameManagerImpl:84 - 
+2024-06-18 17:18:30 INFO  GameManagerImpl:85 - 
+2024-06-18 17:18:30 INFO  GameManagerImpl:94 - Error
+2024-06-18 17:18:30 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 17:19:24 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:19:24 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 17:19:34 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:19:34 INFO  GameManagerImpl:84 - w
+2024-06-18 17:19:34 INFO  GameManagerImpl:85 - w
+2024-06-18 17:19:34 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:19:45 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:19:45 WARN  GameManagerImpl:121 - Incorrect password for user: w
+2024-06-18 17:19:45 INFO  GameManagerImpl:125 - Error
+2024-06-18 17:19:57 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:19:57 INFO  GameManagerImpl:119 - User successfully deleted: w
+2024-06-18 17:20:09 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:20:09 INFO  GameManagerImpl:84 - 
+2024-06-18 17:20:09 INFO  GameManagerImpl:85 - 
+2024-06-18 17:20:09 INFO  GameManagerImpl:94 - Error
+2024-06-18 17:20:09 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 17:24:09 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:24:09 INFO  GameManagerImpl:84 - 
+2024-06-18 17:24:09 INFO  GameManagerImpl:85 - 
+2024-06-18 17:24:09 INFO  GameManagerImpl:94 - Error
+2024-06-18 17:24:09 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 17:24:14 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:24:14 INFO  GameManagerImpl:84 - 
+2024-06-18 17:24:14 INFO  GameManagerImpl:85 - 
+2024-06-18 17:24:14 INFO  GameManagerImpl:94 - Error
+2024-06-18 17:24:14 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 17:24:30 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:24:30 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 17:24:32 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:24:36 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:24:41 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:24:41 INFO  GameManagerImpl:84 - w
+2024-06-18 17:24:41 INFO  GameManagerImpl:85 - w
+2024-06-18 17:24:41 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:24:52 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:24:52 INFO  GameManagerImpl:119 - User successfully deleted: w
+2024-06-18 17:25:16 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:25:16 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 17:25:23 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:25:23 INFO  GameManagerImpl:84 - w
+2024-06-18 17:25:23 INFO  GameManagerImpl:85 - w
+2024-06-18 17:25:23 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:25:34 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:25:34 INFO  GameManagerImpl:125 - Error
+2024-06-18 17:31:57 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:31:57 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:32:57 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:32:57 WARN  GameManagerImpl:121 - Incorrect password for user: w
+2024-06-18 17:32:57 INFO  GameManagerImpl:125 - Error
+2024-06-18 17:34:45 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:34:45 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:35:04 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:35:04 INFO  GameManagerImpl:119 - User successfully deleted: w
+2024-06-18 17:35:18 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:35:18 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 17:35:23 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:35:23 INFO  GameManagerImpl:84 - w
+2024-06-18 17:35:23 INFO  GameManagerImpl:85 - w
+2024-06-18 17:35:23 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:35:46 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:35:46 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:37:04 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:37:04 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:37:19 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:37:19 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:40:30 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:40:30 INFO  GameManagerImpl:84 - w
+2024-06-18 17:40:30 INFO  GameManagerImpl:85 - ww
+2024-06-18 17:40:30 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:40:50 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:40:50 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:45:36 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:45:36 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:47:01 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:47:01 INFO  GameManagerImpl:84 - w
+2024-06-18 17:47:01 INFO  GameManagerImpl:85 - juan
+2024-06-18 17:47:01 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:47:17 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:47:17 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:50:10 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:50:10 INFO  GameManagerImpl:84 - w
+2024-06-18 17:50:10 INFO  GameManagerImpl:85 - w
+2024-06-18 17:50:10 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:50:27 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:50:27 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:50:57 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:50:57 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 17:51:16 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:51:16 INFO  GameManagerImpl:119 - User successfully deleted: w
+2024-06-18 17:52:37 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:52:37 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 17:52:44 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:52:44 INFO  GameManagerImpl:84 - w
+2024-06-18 17:52:44 INFO  GameManagerImpl:85 - w
+2024-06-18 17:52:44 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:53:16 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:53:16 INFO  GameManagerImpl:125 - Error
+2024-06-18 17:53:38 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:53:38 INFO  GameManagerImpl:125 - Error
+2024-06-18 17:53:48 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:53:48 INFO  GameManagerImpl:125 - Error
+2024-06-18 17:54:10 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:54:10 INFO  GameManagerImpl:119 - User successfully deleted: w
+2024-06-18 17:59:13 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:59:13 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 17:59:19 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:59:19 INFO  GameManagerImpl:84 - w
+2024-06-18 17:59:19 INFO  GameManagerImpl:85 - w
+2024-06-18 17:59:19 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 17:59:33 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 17:59:33 INFO  GameManagerImpl:125 - Error
+2024-06-18 18:15:34 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:15:34 INFO  GameManagerImpl:84 - w
+2024-06-18 18:15:34 INFO  GameManagerImpl:85 - w
+2024-06-18 18:15:34 INFO  GameManagerImpl:87 - Successful login w
+2024-06-18 18:15:51 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:15:51 INFO  GameManagerImpl:125 - Error
+2024-06-18 18:17:07 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:17:07 INFO  GameManagerImpl:125 - Error
+2024-06-18 18:17:18 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:17:18 INFO  GameManagerImpl:125 - Error
+2024-06-18 18:17:30 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:17:30 INFO  GameManagerImpl:119 - User successfully deleted: w
+2024-06-18 18:21:55 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:21:55 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:21:55 INFO  GameManagerImpl:85 - a
+2024-06-18 18:21:55 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:21:57 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:21:57 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:22:19 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:22:19 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:22:19 INFO  GameManagerImpl:85 - a
+2024-06-18 18:22:19 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:22:20 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:22:20 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:23:34 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:23:35 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:23:35 INFO  GameManagerImpl:85 - a
+2024-06-18 18:23:35 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:23:36 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:23:36 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:25:39 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:25:39 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:25:39 INFO  GameManagerImpl:85 - a
+2024-06-18 18:25:39 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:25:42 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:25:42 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:25:45 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:25:48 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:25:48 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:25:49 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:25:55 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:25:56 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:25:59 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:25:59 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:26:02 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:26:12 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:26:12 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:26:12 INFO  GameManagerImpl:85 - a
+2024-06-18 18:26:12 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:26:15 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:26:16 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:26:16 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:26:17 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:26:20 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:26:20 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:26:20 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:26:22 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:26:22 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:33:26 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:33:27 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:33:27 INFO  GameManagerImpl:85 - a
+2024-06-18 18:33:27 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:35:36 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:35:36 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:35:36 INFO  GameManagerImpl:85 - a
+2024-06-18 18:35:36 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:41:10 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:41:11 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:41:11 INFO  GameManagerImpl:85 - a
+2024-06-18 18:41:11 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:51:54 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:51:55 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:51:55 INFO  GameManagerImpl:85 - a
+2024-06-18 18:51:55 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 18:51:57 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:51:57 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 18:51:59 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:52:02 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:52:02 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:54:16 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 18:54:17 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 18:54:17 INFO  GameManagerImpl:85 - a
+2024-06-18 18:54:17 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 19:01:45 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:01:45 INFO  GameManagerImpl:84 - bob@gmail.com
+2024-06-18 19:01:45 INFO  GameManagerImpl:85 - a
+2024-06-18 19:01:45 INFO  GameManagerImpl:87 - Successful login bob@gmail.com
+2024-06-18 19:01:58 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:01:58 INFO  GameManagerImpl:119 - User successfully deleted: bob@gmail.com
+2024-06-18 19:03:13 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:03:13 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 19:03:20 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:03:20 INFO  GameManagerImpl:84 - q
+2024-06-18 19:03:20 INFO  GameManagerImpl:85 - q
+2024-06-18 19:03:20 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 19:03:24 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:03:24 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:03:38 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:03:38 INFO  GameManagerImpl:84 - q
+2024-06-18 19:03:38 INFO  GameManagerImpl:85 - q
+2024-06-18 19:03:38 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 19:03:44 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:03:44 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:06:16 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:06:17 INFO  GameManagerImpl:84 - q
+2024-06-18 19:06:17 INFO  GameManagerImpl:85 - q
+2024-06-18 19:06:17 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 19:06:29 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:06:29 WARN  GameManagerImpl:121 - Incorrect password for user: q
+2024-06-18 19:06:29 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:06:51 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:06:51 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:07:57 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:08:34 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:12:17 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:12:35 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:14:13 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:14:41 INFO  GameManagerImpl:119 - User successfully deleted: q
+2024-06-18 19:16:32 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:16:33 INFO  GameManagerImpl:115 - User not registered
+2024-06-18 19:16:33 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:17:30 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:17:31 INFO  GameManagerImpl:115 - User not registered
+2024-06-18 19:17:31 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:17:38 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:17:38 INFO  GameManagerImpl:115 - User not registered
+2024-06-18 19:17:38 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:18:22 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:18:23 INFO  GameManagerImpl:84 - 
+2024-06-18 19:18:23 INFO  GameManagerImpl:85 - 
+2024-06-18 19:18:23 INFO  GameManagerImpl:94 - Error
+2024-06-18 19:18:23 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 19:18:32 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:18:32 INFO  GameManagerImpl:84 - 
+2024-06-18 19:18:32 INFO  GameManagerImpl:85 - 
+2024-06-18 19:18:32 INFO  GameManagerImpl:94 - Error
+2024-06-18 19:18:32 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 19:18:46 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:18:46 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 19:18:50 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:18:50 INFO  GameManagerImpl:84 - q
+2024-06-18 19:18:50 INFO  GameManagerImpl:85 - q
+2024-06-18 19:18:50 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 19:18:56 INFO  GameManagerImpl:151 - Pregunta añadida
+2024-06-18 19:18:56 INFO  GameManagerImpl:115 - User not registered
+2024-06-18 19:18:56 INFO  GameManagerImpl:125 - Error
+2024-06-18 19:27:06 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:27:23 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:27:23 WARN  GameManagerImpl:121 - Incorrect password for user: q
+2024-06-18 19:27:37 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:27:49 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:27:49 INFO  GameManagerImpl:119 - User successfully deleted: q
+2024-06-18 19:28:41 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:28:41 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 19:28:46 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:28:46 INFO  GameManagerImpl:84 - q
+2024-06-18 19:28:46 INFO  GameManagerImpl:85 - q
+2024-06-18 19:28:46 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 19:28:49 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:28:49 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 19:28:51 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:28:52 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:28:52 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 19:28:53 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:28:55 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:28:56 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:29:03 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:29:12 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:29:12 WARN  GameManagerImpl:121 - Incorrect password for user: q
+2024-06-18 19:29:18 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:30:22 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:31:18 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:31:18 INFO  GameManagerImpl:84 - q
+2024-06-18 19:31:18 INFO  GameManagerImpl:85 - q
+2024-06-18 19:31:18 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 19:31:32 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:31:42 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:31:42 WARN  GameManagerImpl:121 - Incorrect password for user: q
+2024-06-18 19:33:37 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:33:38 INFO  GameManagerImpl:70 - Registrado correctamente en la base de datos
+2024-06-18 19:33:58 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:33:58 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:34:05 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:34:05 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:34:12 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:34:12 INFO  UserDAOImpl:113 - User with email qqqq not found or no update parameters provided
+2024-06-18 19:34:12 ERROR UserDAOImpl:117 - Couldn't update user
+java.sql.SQLException: User not found
+	at edu.upc.dsa.db.orm.dao.UserDAOImpl.updateUser(UserDAOImpl.java:114)
+	at edu.upc.dsa.services.GameService.updateUser(GameService.java:238)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:384)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:224)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-18 19:37:24 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:37:24 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:37:39 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:37:39 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:38:12 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:38:12 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:42:06 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:42:06 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:48:20 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:48:21 INFO  GameManagerImpl:84 - q
+2024-06-18 19:48:21 INFO  GameManagerImpl:85 - k
+2024-06-18 19:48:21 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 19:48:43 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:48:43 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:50:35 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:50:35 INFO  GameManagerImpl:84 - string
+2024-06-18 19:50:35 INFO  GameManagerImpl:85 - string
+2024-06-18 19:50:35 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 19:50:42 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:50:42 INFO  GameManagerImpl:84 - string
+2024-06-18 19:50:42 INFO  GameManagerImpl:85 - string
+2024-06-18 19:50:42 INFO  GameManagerImpl:87 - Successful login string
+2024-06-18 19:50:59 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:50:59 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:54:48 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:54:49 INFO  GameManagerImpl:84 - string
+2024-06-18 19:54:49 INFO  GameManagerImpl:85 - 1
+2024-06-18 19:54:49 INFO  GameManagerImpl:87 - Successful login string
+2024-06-18 19:56:58 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:56:58 INFO  UserDAOImpl:111 - Successfully updated
+2024-06-18 19:57:18 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:57:35 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 19:57:35 INFO  GameManagerImpl:119 - User successfully deleted: string
+2024-06-18 20:07:25 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:07:25 INFO  GameManagerImpl:84 - 
+2024-06-18 20:07:25 INFO  GameManagerImpl:85 - 
+2024-06-18 20:07:25 INFO  GameManagerImpl:94 - Error
+2024-06-18 20:07:25 WARN  GameManagerImpl:96 - Incorrect password
+2024-06-18 20:07:49 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:07:49 INFO  GameManagerImpl:84 - q
+2024-06-18 20:07:49 INFO  GameManagerImpl:85 - wwwwwwwww
+2024-06-18 20:07:49 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 20:07:54 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:08:00 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:08:00 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 20:08:16 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:08:35 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:08:35 INFO  GameManagerImpl:104 - Lista Objetos Correcta
+2024-06-18 20:08:37 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:08:42 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:10:53 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:10:53 INFO  GameManagerImpl:84 - q
+2024-06-18 20:10:53 INFO  GameManagerImpl:85 - wwwwwwwww
+2024-06-18 20:10:53 INFO  GameManagerImpl:87 - Successful login q
+2024-06-18 20:10:57 INFO  GameManagerImpl:153 - Pregunta añadida
+2024-06-18 20:11:18 INFO  GameManagerImpl:153 - Pregunta añadida

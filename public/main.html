@@ -33,6 +33,7 @@
                 }
             });
         }
+
         function cancelItem(idItem) {
             const email = localStorage.getItem("email");
 
@@ -41,8 +42,7 @@
                 url: "/dsaApp/game/tienda/cancelarCompra/" + email + "/" + idItem,
                 success: function () {
                     alert("Compra cancelada!");
-                    // Actualizar la vista del inventario después de la cancelación
-                    $("#inventoryButton").click(); // Llamar de nuevo a la carga del inventario
+                    $("#inventoryButton").click();
                 },
                 error: function (xhr, status, error) {
                     alert("Error al cancelar compra: " + xhr.status + " - " + error);
@@ -50,60 +50,141 @@
             });
         }
 
-        $(document).ready(function () {
-            const email = localStorage.getItem("email");
+        function deleteUser() {
+            var emailUser = document.getElementById("deleteEmail");
+            var passwordUser = document.getElementById("deletePassword");
+            var empty = 0;
 
-            if (!email) {
-                alert("No user logged in!");
+            if(emailUser.value.trim() === '' || passwordUser.value.trim() === '' ){
+                if(emailUser.value.trim() === '') {
+                    empty = 1;
+                }
+                if(passwordUser.value.trim() === '') {
+                    empty = 2;
+                }
+                if((passwordUser.value.trim() === '')&(emailUser.value.trim() === '')){
+                    alert("Por favor, completa todos los campos");
+                }
+                else if(empty===1){
+                    alert("Por favor, introduce el email");
+                }
+                else if(empty===2){
+                    alert("Por favor, introduce la contraseña");
+                }
+            }
+
+            if (empty === 0) {
+                var deleteData = {
+                    "email": emailUser.value,
+                    "password": passwordUser.value
+                };
+                $.ajax({
+                    type: 'POST',
+                    url: 'dsaApp/game/usuarios/delete',
+                    contentType: 'application/json',
+                    data: JSON.stringify(deleteData),
+                    success: function (data) {
+                        console.log("Successful");
+                        alert("Cuenta eliminada exitosamente.");
+                        window.location.href = "index.html";
+                    },
+                    error: function(xhr, status, error) {
+                        if (xhr.status == 401) {
+                            alert("Credenciales incorrectas. Verifica tu email y contraseña.");
+                        }
+                        if (xhr.status == 404) {
+                            alert("Usuario no encontrado.");
+                        }
+                        else {
+                            alert("Error al intentar eliminar cuenta: " + xhr.status + " - " + error);
+                        }
+                    }
+                });
+            }
+        }
+
+        function updateUser() {
+            var currentEmail = localStorage.getItem("email");
+            var newName = document.getElementById("updateName").value;
+            var newPassword = document.getElementById("updatePassword").value;
+
+            if(newName.trim() === '' || newPassword.trim() === '') {
+                alert("Por favor, completa todos los campos");
                 return;
             }
 
             $.ajax({
-                type: 'GET',
-                url: '/dsaApp/game/tienda/objetos',
-                dataType: 'json',
-                success: function (data) {
-                    var htmlLine = '';
-
-                    if (data.length > 0) {
-                        for (let i = 0; i < data.length; i++) {
-                            if (i % 3 === 0) {
-                                htmlLine += '<div class="row">';
-                            }
-                            htmlLine += '<div class="col-md-4">' +
-                                '<div class="card">' +
-                                '<img src="' + data[i].image + '" class="card-img-top" alt="' + data[i].name + '" width="200" height="500">' +
-                                '<div class="card-body">' +
-                                '<h5 class="card-title display-5">' + data[i].name + '</h5>' +
-                                '<p class="card-text">' + data[i].description + '</p>' +
-                                '<p class="card-text"><strong>' + data[i].price + ' coins</strong></p>' +
-                                '<div class="d-flex justify-content-center">' +
-                                '<button type="button" class="btn btn-outline-info" onclick="buyItem(' + data[i].ID + ')">BUY</button>' +
-                                '</div>' +
-                                '</div>' +
-                                '</div>' +
-                                '</div>';
-                            if ((i + 1) % 3 === 0) {
-                                htmlLine += '</div>';
-                            }
-                        }
-                        if (data.length % 3 !== 0) {
-                            htmlLine += '</div>';
-                        }
-                        $('#itemCards').html(htmlLine);
-                    }
+                type: 'PUT',
+                url: 'dsaApp/game/usuarios/actualizar/' + currentEmail + '/' + newName + '/' + newPassword,
+                contentType: 'application/json',
+                success: function () {
+                    alert("Cuenta actualizada exitosamente.");
+                    localStorage.setItem("email", newEmail);
                 },
-                error: function() {
-                    alert("Failed to load items.");
+                error: function(xhr, status, error) {
+                    if (xhr.status == 404) {
+                        alert("Usuario no encontrado.");
+                    } else {
+                        alert("Error al intentar actualizar cuenta: " + xhr.status + " - " + error);
+                    }
                 }
             });
+        }
 
-            $("#logoutButton").click(function () {
-                localStorage.removeItem("email");
-                window.location.href = "index.html";
+        $(document).ready(function () {
+            $("#shopButton").click(function () {
+                const email = localStorage.getItem("email");
+
+                if (!email) {
+                    alert("No user logged in!");
+                    return;
+                }
+
+                $.ajax({
+                    type: 'GET',
+                    url: '/dsaApp/game/tienda/objetos',
+                    dataType: 'json',
+                    success: function (data) {
+                        var htmlLine = '<h2 class="text-center display-6">Shop</h2>';
+                        if (data.length > 0) {
+                            for (let i = 0; i < data.length; i++) {
+                                if (i % 3 === 0) {
+                                    htmlLine += '<div class="row">';
+                                }
+                                htmlLine += '<div class="col-md-4">' +
+                                    '<div class="card">' +
+                                    '<img src="' + data[i].image + '" class="card-img-top" alt="' + data[i].name + '" width="200" height="500">' +
+                                    '<div class="card-body">' +
+                                    '<h5 class="card-title display-5">' + data[i].name + '</h5>' +
+                                    '<p class="card-text">' + data[i].description + '</p>' +
+                                    '<p class="card-text"><strong>' + data[i].price + ' coins</strong></p>' +
+                                    '<div class="d-flex justify-content-center">' +
+                                    '<button type="button" class="btn btn-outline-info" onclick="buyItem(' + data[i].ID + ')">BUY</button>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>';
+                                if ((i + 1) % 3 === 0) {
+                                    htmlLine += '</div>';
+                                }
+                            }
+                            if (data.length % 3 !== 0) {
+                                htmlLine += '</div>';
+                            }
+                            $('#itemCards').html(htmlLine);
+                            $('#itemCards').show();
+                            $('#inventoryCards').hide();
+                        }
+                    },
+                    error: function() {
+                        alert("Failed to load items.");
+                    }
+                });
             });
 
             $("#inventoryButton").click(function(){
+                const email = localStorage.getItem("email");
+
                 $.ajax({
                     type: 'GET',
                     url: '/dsaApp/game/inventory/' + email,
@@ -113,7 +194,7 @@
                         if (data.length > 0) {
                             htmlLine += '<div class="row">';
                             for (let i = 0; i < data.length; i++) {
-                                htmlLine += '<div class="col-md-4 mb-3">' + // Añadido mb-3 para margen inferior
+                                htmlLine += '<div class="col-md-4 mb-3">' +
                                     '<div class="card">' +
                                     '<img src="' + data[i].image + '" class="card-img-top" alt="' + data[i].name + '" width="200" height="500">' +
                                     '<div class="card-body">' +
@@ -129,8 +210,12 @@
                             }
                             htmlLine += '</div>';
                             $('#inventoryCards').html(htmlLine);
+                            $('#inventoryCards').show();
+                            $('#itemCards').hide();
                         } else {
                             $('#inventoryCards').html('<h2 class="text-center display-6">Inventario Vacío</h2>');
+                            $('#inventoryCards').show();
+                            $('#itemCards').hide();
                         }
                     },
                     error: function () {
@@ -139,22 +224,107 @@
                 });
             });
 
+            $("#logoutButton").click(function () {
+                localStorage.removeItem("email");
+                window.location.href = "index.html";
+            });
+
+            $("#deleteAccountButton").click(function() {
+                $('#deleteModal').modal('show');
+            });
+
+            $("#confirmDelete").click(function() {
+                deleteUser();
+            });
+
+            $("#updateAccountButton").click(function() {
+                $('#updateModal').modal('show');
+            });
+
+            $("#confirmUpdate").click(function() {
+                updateUser();
+            });
         });
     </script>
 </head>
 <body>
 <div class="container mt-3 text-center">
     <h1 class="display-3">UPZ-APOCALYPSE!</h1>
-    <p class="lead display-6">Tienda</p>
 </div>
-<div id="itemCards" class="container"></div>
-<div id="inventoryCards" class="container mt-3"></div>
+<div id="itemCards" class="container" style="display: none;"></div>
+<div id="inventoryCards" class="container mt-3" style="display: none;"></div>
 <div class="container mt-3">
-    <button type="button" class="btn btn-primary btn-block" id="inventoryButton">Inventory</button>
+    <button type="button" class="btn btn-primary btn-block" id="gameButton">Jugar</button>
 </div>
+<div class="container mt-3">
+    <button type="button" class="btn btn-primary btn-block" id="shopButton">Tienda</button>
+</div>
+<div class="container mt-3">
+    <button type="button" class="btn btn-primary btn-block" id="inventoryButton">Inventario</button>
+</div>
+<div class="container mt-3">
+    <button type="button" class="btn btn-info btn-block" id="updateAccountButton">Actualizar Cuenta</button>
+</div>
+<div class="container mt-3">
+    <button type="button" class="btn btn-danger btn-block" id="deleteAccountButton">Eliminar Cuenta</button>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Eliminar Cuenta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="deleteEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="deleteEmail" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="deletePassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="deletePassword">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                <button type="button" class="btn btn-danger" id="confirmDelete">Eliminar Cuenta</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateModalLabel">Actualizar Cuenta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="updateName" class="form-label">Nuevo Nombre</label>
+                        <input type="text" class="form-control" id="updateName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="updatePassword" class="form-label">Nueva Contraseña</label>
+                        <input type="password" class="form-control" id="updatePassword">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                <button type="button" class="btn btn-info" id="confirmUpdate">Actualizar Cuenta</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container mt-3">
     <button type="button" class="btn btn-primary btn-block" id="logoutButton">Log Out</button>
 </div>
 </body>
 </html>
-

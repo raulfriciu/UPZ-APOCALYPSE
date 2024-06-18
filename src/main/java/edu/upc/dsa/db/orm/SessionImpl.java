@@ -143,34 +143,26 @@ public class SessionImpl implements Session {
 
     public void update(Object object) throws SQLException {
         String updateQuery = QueryHelper.createQueryUPDATE(object);
-        System.out.println("Generated UPDATE Query: " + updateQuery);
-
-        PreparedStatement pstm = null;
-        String[] fields = ObjectHelper.getFields(object);
+        PreparedStatement statement = null;
 
         try {
-            pstm = conn.prepareStatement(updateQuery);
+            statement = conn.prepareStatement(updateQuery);
 
-            // Set parameters for the fields to be updated
-            for (int i = 1; i < fields.length; i++) {
-                String field = fields[i];
-                Object value = ObjectHelper.getter(object, field);
-                System.out.println("Setting parameter " + i + ": " + value);
-                pstm.setObject(i, value);
-            }
+            String[] fields = ObjectHelper.getFields(object);
 
-            // Set the ID as the last parameter
-            Object idValue = ObjectHelper.getter(object, fields[0]);
-            System.out.println("Setting ID parameter " + fields.length + ": " + idValue);
-            pstm.setObject(fields.length, idValue);
+            statement.setObject(1, ObjectHelper.getter(object, "name"));
+            statement.setObject(2, ObjectHelper.getter(object, "password"));
+            statement.setObject(3, ObjectHelper.getter(object, "email"));
 
-            // Execute the update
-            pstm.executeUpdate();
-        } catch (Exception e) {
+            int rowsUpdated = statement.executeUpdate();
+            System.out.println("Rows updated: " + rowsUpdated);
+
+        } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
-            if (pstm != null) {
-                pstm.close();
+            if (statement != null) {
+                statement.close();
             }
         }
     }
@@ -194,14 +186,12 @@ public class SessionImpl implements Session {
         try {
             pstm = conn.prepareStatement(deleteQuery);
 
-            // Set parameters for the fields to be used in WHERE clause
             for (int i = 0; i < fields.length; i++) {
                 Object value = ObjectHelper.getter(object, fields[i]);
                 System.out.println("Setting parameter " + (i + 1) + ": " + value);
                 pstm.setObject(i + 1, value);
             }
 
-            // Execute the delete
             pstm.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
