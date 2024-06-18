@@ -10,7 +10,7 @@ public class QueryHelper {
     public static String createQueryINSERT(Object entity) {
 
         StringBuffer sb = new StringBuffer("INSERT INTO ");
-        sb.append(entity.getClass().getSimpleName()).append(" ");
+        sb.append(entity.getClass().getSimpleName().toLowerCase()).append(" ");
         sb.append("(");
 
         String [] fields = ObjectHelper.getFields(entity);
@@ -25,13 +25,12 @@ public class QueryHelper {
             if (!field.equals("ID"))  sb.append(", ?");
         }
         sb.append(")");
-        // INSERT INTO User (ID, lastName, firstName, address, city) VALUES (0, ?, ?, ?,?)
         return sb.toString();
     }
 
     public static String createQuerySELECT(Class theClass, String pk) {
         StringBuffer sb = new StringBuffer();
-        sb.append("SELECT * FROM ").append(theClass.getSimpleName());
+        sb.append("SELECT * FROM ").append(theClass.getSimpleName().toLowerCase());
         sb.append(" WHERE "+pk+"= ?");
 
         return sb.toString();
@@ -39,7 +38,7 @@ public class QueryHelper {
     public static String createQuerySELECTinventory(Class theClass, String[] pks) {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT * FROM ");
-        sb.append(theClass.getSimpleName());
+        sb.append(theClass.getSimpleName().toLowerCase());
         sb.append(" WHERE ");
         for (int i = 0; i < pks.length; i++) {
             sb.append(pks[i]).append(" = ?");
@@ -52,14 +51,14 @@ public class QueryHelper {
 
     public static String createQuerySELECTobject(Object entity) {
         StringBuffer sb = new StringBuffer();
-        sb.append("SELECT * FROM ").append(entity.getClass().getSimpleName());
+        sb.append("SELECT * FROM ").append(entity.getClass().getSimpleName().toLowerCase());
         sb.append(" WHERE ID = ?");
 
         return sb.toString();
     }
     public static String createQuerySELECTAll(Class theClass) {
         StringBuffer sb = new StringBuffer();
-        sb.append("SELECT * FROM ").append(theClass.getSimpleName());
+        sb.append("SELECT * FROM ").append(theClass.getSimpleName().toLowerCase());
         return sb.toString();
     }
 
@@ -102,7 +101,7 @@ public class QueryHelper {
 
     public static String createQuerySELECTAllByEmail(Object entity) {
         StringBuffer sb = new StringBuffer();
-        sb.append("SELECT * FROM ").append(entity.getClass().getSimpleName());
+        sb.append("SELECT * FROM ").append(entity.getClass().getSimpleName().toLowerCase());
         sb.append(" WHERE emailUser = ?");
         return sb.toString();
     }

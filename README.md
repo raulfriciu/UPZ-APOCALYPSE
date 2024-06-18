@@ -1,5 +1,7 @@
 # REST API de UPZ-APOCALYPSE
 
+LISTO PARA PRODUCCION
+
 register.html, index.html (login), main.html (tienda)
 
 Funciones
